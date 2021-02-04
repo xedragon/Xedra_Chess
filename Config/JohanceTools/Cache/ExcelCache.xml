@@ -1,0 +1,13 @@
+<ExcelCache>
+    <Excel Name="Card" Package="Data" Vertical="false" FileName="Card.xlsx" FileSize="23159" ModifyTime="132358582420000000" Md5="e165f4429f079ffaa13ad3b9fc27499c">
+        <Field Name="id" Type="int" Split="RepeatCheck:true MakeIndex:true" Comment="id"/>
+        <Field Name="card_id" Type="int" Split="" Comment="卡牌id"/>
+        <Field Name="desc" Type="string" Split="" Comment="说明"/>
+        <Field Name="image" Type="string" Split="" Comment="图片说明"/>
+        <Field Name="card_type" Type="int" Split="" Comment="卡牌类型"/>
+        <Field Name="card_attribute" Type="int" Split="" Comment="属性"/>
+        <Field Name="card_point" Type="int" Split="" Comment="点数"/>
+        <Field Name="card_name" Type="string" Split="" Comment="中文名"/>
+        <Field Name="card_num" Type="int" Split="" Comment="配置张数"/>
+    </Excel>
+</ExcelCache>
