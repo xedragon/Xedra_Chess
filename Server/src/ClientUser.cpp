@@ -1,8 +1,16 @@
 ﻿#include <ClientUser.h>
+using namespace std;
 
 ClientUser::ClientUser(SOCKET socket)
 {
 	_socket = socket;
+}
+
+bool ClientUser::Init()
+{
+	MsgMgr mg;
+	//mg.RegisterProMsg(this,&ClientUser::onLogin);
+	return true;
 }
 
 bool ClientUser::Update()
@@ -79,4 +87,9 @@ void ClientUser::SendMsg(char* pMsg, int len)
 {
 	memcpy(m_SendBuf + m_SendBufLen, pMsg, len);
 	m_SendBufLen += len;
+}
+
+void ClientUser::onLogin(Msg_Login_C2S msg)
+{
+	cout << "reg succed";
 }

@@ -1,9 +1,8 @@
 ﻿#include <Facade.h>
 #include <thread>
 #include <Moudle/Moudle.h>
-#include <Moudle/NetMoudle.h>
 #include <libconfig/source/DataService.h>
-#include <msg/source/msg/Msg.pb.h>
+#include <Moudle/NetMoudle.h>
 
 using namespace std;
 
@@ -35,14 +34,14 @@ bool Facade::Update()
 
 void Facade::Start()
 {
-	/*Init();
+	Init();
 
 	while (true)
 	{
 		if (!Update())
 			break;
-		std::this_thread::sleep_for(std::chrono::milliseconds(1));
-	}*/
+		std::this_thread::sleep_for(std::chrono::milliseconds(100));
+	}
 }
 
 void Facade::RegisterMoudle(Moudle* moudle)

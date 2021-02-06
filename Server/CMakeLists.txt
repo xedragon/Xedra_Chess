@@ -5,6 +5,8 @@ cmake_minimum_required (VERSION 3.8)
 
 project ("Chess")
 
+set(CMAKE_CXX_STANDARD 11)
+
 # 包含库路径
 set(LIBRARY_PATH ${PROJECT_BINARY_DIR}/bin)
 set(EXECUTUBLE_PATH ${PROJECT_BINARY_DIR}/bin)

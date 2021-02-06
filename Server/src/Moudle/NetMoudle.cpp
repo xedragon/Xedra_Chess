@@ -5,11 +5,10 @@
 #include <libconfig/source/DataService.h>
 #include <libconfig/source/automake/tableconfig.h>
 using namespace std;
-#pragma comment(lib,"ws2_32")
 
 NetMoudle::NetMoudle()
 {
-	Facade::getInstance().RegisterMoudle(this);
+	
 }
 
 static NetMoudle* g_NetMoudle = nullptr;
@@ -24,7 +23,6 @@ NetMoudle& NetMoudle::getInstance()
 
 void NetMoudle::Init()
 {
-	auto&& GloabalCfg = DataService::getInstance().tbsGlobalCfgItemItem();
 	//初始化
 	WSADATA wsaData;
 	WSAStartup(MAKEWORD(2, 2), &wsaData);
@@ -32,8 +30,9 @@ void NetMoudle::Init()
 	_socket = socket(PF_INET, SOCK_STREAM, IPPROTO_TCP);
 	sockaddr_in sockaddr;
 	sockaddr.sin_family = PF_INET;
-	sockaddr.sin_addr.S_un.S_addr = inet_addr(GloabalCfg->ServerIP.c_str());
-	sockaddr.sin_port = htons(GloabalCfg->ServerPort);
+	sockaddr.sin_addr.S_un.S_addr = inet_addr("127.0.0.1");
+	sockaddr.sin_port = htons(235);
+	//sockaddr.sin_port = htons(GloabalCfg->ServerPort);
 
 	//非阻塞模式
 	int mode = 1;
@@ -43,17 +42,12 @@ void NetMoudle::Init()
 	bind(_socket, (const struct sockaddr*)&sockaddr, sizeof(sockaddr));
 	listen(_socket, 1);//开始监听
 
-	return;
+	Facade::getInstance().RegisterMoudle(this);
 }
 
 void NetMoudle::Update()
 {
 	Accept();
-
-	for (auto&& user : m_ClientUsersVec)
-	{
-		user->Update();
-	}
 }
 
 void NetMoudle::Shut()
@@ -66,7 +60,9 @@ void NetMoudle::Accept()
 	SOCKET client = accept(_socket, &clientAddr, &nsize);//连接阶段
 	if (client != INVALID_SOCKET)
 	{
-		ClientUser* user = new ClientUser(client);
+		cout << "新用户连接" << endl;
 	}
 }
+
+
 

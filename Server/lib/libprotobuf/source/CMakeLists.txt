@@ -38,6 +38,7 @@ set(ALL_FILES
 	google/protobuf/stubs/strutil.h
 	google/protobuf/stubs/substitute.cc
 	google/protobuf/stubs/substitute.h
+	google/protobuf/stubs/map-util.h
 	google/protobuf/text_format.cc
 	google/protobuf/text_format.h
 	google/protobuf/descriptor.cc

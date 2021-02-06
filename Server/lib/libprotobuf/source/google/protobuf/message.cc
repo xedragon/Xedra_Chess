@@ -1,6 +1,6 @@
 // Protocol Buffers - Google's data interchange format
 // Copyright 2008 Google Inc.  All rights reserved.
-// https://developers.google.com/protocol-buffers/
+// http://code.google.com/p/protobuf/
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -32,7 +32,7 @@
 //  Based on original Protocol Buffers design by
 //  Sanjay Ghemawat, Jeff Dean, and others.
 
-#include <iostream>
+#include <istream>
 #include <stack>
 #include <google/protobuf/stubs/hash.h>
 
@@ -48,7 +48,7 @@
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
 #include <google/protobuf/stubs/strutil.h>
-#include <google/protobuf/stubs/map_util.h>
+#include <google/protobuf/stubs/map-util.h>
 #include <google/protobuf/stubs/stl_util.h>
 
 namespace google {
@@ -75,7 +75,7 @@ void Message::CheckTypeAndMergeFrom(const MessageLite& other) {
 void Message::CopyFrom(const Message& from) {
   const Descriptor* descriptor = GetDescriptor();
   GOOGLE_CHECK_EQ(from.GetDescriptor(), descriptor)
-    << ": Tried to copy from a message with a different type. "
+    << ": Tried to copy from a message with a different type."
        "to: " << descriptor->full_name() << ", "
        "from:" << from.GetDescriptor()->full_name();
   ReflectionOps::Copy(from, this);
@@ -100,7 +100,7 @@ void Message::FindInitializationErrors(vector<string>* errors) const {
 string Message::InitializationErrorString() const {
   vector<string> errors;
   FindInitializationErrors(&errors);
-  return Join(errors, ", ");
+  return JoinStrings(errors, ", ");
 }
 
 void Message::CheckInitialized() const {
@@ -149,7 +149,7 @@ int Message::ByteSize() const {
   return size;
 }
 
-void Message::SetCachedSize(int /* size */) const {
+void Message::SetCachedSize(int size) const {
   GOOGLE_LOG(FATAL) << "Message class \"" << GetDescriptor()->full_name()
              << "\" implements neither SetCachedSize() nor ByteSize().  "
                 "Must implement one or the other.";
@@ -241,9 +241,7 @@ class GeneratedMessageFactory : public MessageFactory {
   void RegisterType(const Descriptor* descriptor, const Message* prototype);
 
   // implements MessageFactory ---------------------------------------
-  const Message* GetPrototype(const Descriptor* type) override;
-
-  virtual void GetMap(std::unordered_map<string, const Message*>& m) const override;
+  const Message* GetPrototype(const Descriptor* type);
 
  private:
   // Only written at static init time, so does not require locking.
@@ -336,24 +334,6 @@ const Message* GeneratedMessageFactory::GetPrototype(const Descriptor* type) {
   }
 
   return result;
-}
-
-void GeneratedMessageFactory::GetMap(std::unordered_map<string, const Message*>& m) const {
-	singleton();
-	auto pPool = DescriptorPool::generated_pool();
-
-	for (auto v : file_map_)
-	{
-		auto pFileDescriptor = pPool->FindFileByName(v.first);
-        if (pFileDescriptor == nullptr) {
-            continue;
-        }
-		for (int i = 0; i < pFileDescriptor->message_type_count(); ++i)
-		{
-			auto pDescriptor = pFileDescriptor->message_type(i);
-			m.emplace(pDescriptor->name(), generated_message_factory_->GetPrototype(pDescriptor));
-		}
-	}
 }
 
 }  // namespace

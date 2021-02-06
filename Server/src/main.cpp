@@ -3,11 +3,15 @@
 
 #include <main.h>
 #include "../config.h"
-#include <libconfig\source\DataService.h>
+
 #include <Facade.h>
+
 using namespace std;
 
 int main()
 {
 	Facade::getInstance().Start();
 }
+
+
+

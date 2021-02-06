@@ -20,6 +20,8 @@ set(EXECUTABLE_OUTPUT_PATH ${EXECUTUBLE_PATH})
 # 包含源码路径
 include_directories(${PROJECT_SOURCE_DIR}/lib)
 include_directories(${PROJECT_SOURCE_DIR}/src)
+include_directories(${PROJECT_SOURCE_DIR}/lib/libmsg/source)
+include_directories(${PROJECT_SOURCE_DIR}/lib/libprotobuf/source)
 
 link_directories(${LIBRARY_PATH})
 link_directories(${LIBRARY_PATH}/libmysql/source/lib)
@@ -33,6 +35,9 @@ main.cpp
 
 Facade.h
 Facade.cpp
+
+MsgMgr.h
+MsgMgr.cpp
 
 ClientUser.h
 ClientUser.cpp
@@ -53,5 +58,7 @@ target_link_libraries(${PROJECT_NAME} static_jsoncpp)
 target_link_libraries(${PROJECT_NAME} static_protobuf)
 target_link_libraries(${PROJECT_NAME} static_mysql)
 target_link_libraries(${PROJECT_NAME} static_config)
+target_link_libraries(${PROJECT_NAME} static_msg)
+target_link_libraries(${PROJECT_NAME} ws2_32)
 
 # TODO: 如有需要，请添加测试并安装目标。
