@@ -1,37 +1,27 @@
-//游戏模式
-enum  GamePattern
-	{
-		Standard=0;
-		Rank=1;
-	}
-//卡牌属性
-enum CardAttribute
-{
-	none=0;
-	fire=1;
-	water=2;
-	wood=3;
-	light=4;
-	dark=5;
-}
 //消息类型
 enum MsgType
  {
 	LOGIN_C2S=0;//登录
 	LOGIN_S2C=1;
+	Connect_S2C=2;
  }
 
 //登录消息
 message Msg_Login_C2S
 {
-    required MsgType MsgID=1[default = LOGIN_C2S];
-	required fixed32 conMethod=2;//注册还是登录
+    optional MsgType MsgID=1[default = LOGIN_C2S];
+	required int32 conMethod=2;//注册还是登录
 	required string szName=3;//账户名
 	required string szPassWord=4;//密码
 }
+
 message Msg_Login_S2C
 {
-	required MsgType MsgID=1[default = LOGIN_C2S];
-	required fixed32 clientId=2;//服务器端内部维护的客户ID
-	required bool conSuccess=3;//是否连接服务器成功
+	optional MsgType MsgID=1[default = LOGIN_S2C];
+	required int64 LoginTimeStamp=2;
+}
+
+message Msg_Connect_S2C
+{
+	optional MsgType MsgID=1[default = Connect_S2C];
 }

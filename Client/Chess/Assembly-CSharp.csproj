@@ -63,8 +63,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\script\Msg.cs" />
     <Compile Include="Assets\script\MsgMgr.cs" />
+    <Compile Include="Assets\script\MsgPB\Msg.cs" />
     <Compile Include="Assets\script\TableConfig.cs" />
     <Compile Include="Assets\script\TableStruct.cs" />
     <Compile Include="Assets\script\protobuf-net\BclHelpers.cs" />
@@ -162,6 +162,7 @@
     <Compile Include="Assets\script\tabtool\SingletonTable.cs" />
     <Compile Include="Assets\script\tabtool\TableManager.cs" />
     <Compile Include="Assets\script_GameManager.cs" />
+    <None Include="Assets\script\config\GlobalCfg.txt" />
     <None Include="Assets\script\config\ChessType.txt" />
     <None Include="Assets\script\protobuf-net\Web\TODO.txt" />
     <Reference Include="UnityEngine">
@@ -348,7 +349,7 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.17f1c1/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-      <HintPath>D:/CppWorkSpace/Chess/Client/Chess/Library/PackageCache/com.unity.ext.nunit@1.0.5/net35/unity-custom/nunit.framework.dll</HintPath>
+      <HintPath>D:/CppWorkSpace/Xedra_Chess/Client/Chess/Library/PackageCache/com.unity.ext.nunit@1.0.5/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.17f1c1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -696,31 +697,31 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.17f1c1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>D:/CppWorkSpace/Chess/Client/Chess/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>D:/CppWorkSpace/Xedra_Chess/Client/Chess/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>D:/CppWorkSpace/Chess/Client/Chess/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>D:/CppWorkSpace/Xedra_Chess/Client/Chess/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/CppWorkSpace/Chess/Client/Chess/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>D:/CppWorkSpace/Xedra_Chess/Client/Chess/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>D:/CppWorkSpace/Chess/Client/Chess/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>D:/CppWorkSpace/Xedra_Chess/Client/Chess/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>D:/CppWorkSpace/Chess/Client/Chess/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>D:/CppWorkSpace/Xedra_Chess/Client/Chess/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>D:/CppWorkSpace/Chess/Client/Chess/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>D:/CppWorkSpace/Xedra_Chess/Client/Chess/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>D:/CppWorkSpace/Chess/Client/Chess/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>D:/CppWorkSpace/Xedra_Chess/Client/Chess/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/CppWorkSpace/Chess/Client/Chess/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>D:/CppWorkSpace/Xedra_Chess/Client/Chess/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>D:/CppWorkSpace/Chess/Client/Chess/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>D:/CppWorkSpace/Xedra_Chess/Client/Chess/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>

@@ -24,8 +24,9 @@ const ::google::protobuf::internal::GeneratedMessageReflection*
 const ::google::protobuf::Descriptor* Msg_Login_S2C_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   Msg_Login_S2C_reflection_ = NULL;
-const ::google::protobuf::EnumDescriptor* GamePattern_descriptor_ = NULL;
-const ::google::protobuf::EnumDescriptor* CardAttribute_descriptor_ = NULL;
+const ::google::protobuf::Descriptor* Msg_Connect_S2C_descriptor_ = NULL;
+const ::google::protobuf::internal::GeneratedMessageReflection*
+  Msg_Connect_S2C_reflection_ = NULL;
 const ::google::protobuf::EnumDescriptor* MsgType_descriptor_ = NULL;
 
 }  // namespace
@@ -56,10 +57,9 @@ void protobuf_AssignDesc_Msg_2eproto() {
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(Msg_Login_C2S));
   Msg_Login_S2C_descriptor_ = file->message_type(1);
-  static const int Msg_Login_S2C_offsets_[3] = {
+  static const int Msg_Login_S2C_offsets_[2] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Msg_Login_S2C, msgid_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Msg_Login_S2C, clientid_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Msg_Login_S2C, consuccess_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Msg_Login_S2C, logintimestamp_),
   };
   Msg_Login_S2C_reflection_ =
     new ::google::protobuf::internal::GeneratedMessageReflection(
@@ -72,9 +72,22 @@ void protobuf_AssignDesc_Msg_2eproto() {
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
       sizeof(Msg_Login_S2C));
-  GamePattern_descriptor_ = file->enum_type(0);
-  CardAttribute_descriptor_ = file->enum_type(1);
-  MsgType_descriptor_ = file->enum_type(2);
+  Msg_Connect_S2C_descriptor_ = file->message_type(2);
+  static const int Msg_Connect_S2C_offsets_[1] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Msg_Connect_S2C, msgid_),
+  };
+  Msg_Connect_S2C_reflection_ =
+    new ::google::protobuf::internal::GeneratedMessageReflection(
+      Msg_Connect_S2C_descriptor_,
+      Msg_Connect_S2C::default_instance_,
+      Msg_Connect_S2C_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Msg_Connect_S2C, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Msg_Connect_S2C, _unknown_fields_),
+      -1,
+      ::google::protobuf::DescriptorPool::generated_pool(),
+      ::google::protobuf::MessageFactory::generated_factory(),
+      sizeof(Msg_Connect_S2C));
+  MsgType_descriptor_ = file->enum_type(0);
 }
 
 namespace {
@@ -91,6 +104,8 @@ void protobuf_RegisterTypes(const ::std::string&) {
     Msg_Login_C2S_descriptor_, &Msg_Login_C2S::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
     Msg_Login_S2C_descriptor_, &Msg_Login_S2C::default_instance());
+  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
+    Msg_Connect_S2C_descriptor_, &Msg_Connect_S2C::default_instance());
 }
 
 }  // namespace
@@ -100,6 +115,8 @@ void protobuf_ShutdownFile_Msg_2eproto() {
   delete Msg_Login_C2S_reflection_;
   delete Msg_Login_S2C::default_instance_;
   delete Msg_Login_S2C_reflection_;
+  delete Msg_Connect_S2C::default_instance_;
+  delete Msg_Connect_S2C_reflection_;
 }
 
 void protobuf_AddDesc_Msg_2eproto() {
@@ -110,21 +127,21 @@ void protobuf_AddDesc_Msg_2eproto() {
 
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
     "\n\tMsg.proto\"j\n\rMsg_Login_C2S\022\"\n\005MsgID\030\001 "
-    "\002(\0162\010.MsgType:\tLOGIN_C2S\022\021\n\tconMethod\030\002 "
-    "\002(\007\022\016\n\006szName\030\003 \002(\t\022\022\n\nszPassWord\030\004 \002(\t\""
-    "Y\n\rMsg_Login_S2C\022\"\n\005MsgID\030\001 \002(\0162\010.MsgTyp"
-    "e:\tLOGIN_C2S\022\020\n\010clientId\030\002 \002(\007\022\022\n\nconSuc"
-    "cess\030\003 \002(\010*%\n\013GamePattern\022\014\n\010Standard\020\000\022"
-    "\010\n\004Rank\020\001*M\n\rCardAttribute\022\010\n\004none\020\000\022\010\n\004"
-    "fire\020\001\022\t\n\005water\020\002\022\010\n\004wood\020\003\022\t\n\005light\020\004\022\010"
-    "\n\004dark\020\005*\'\n\007MsgType\022\r\n\tLOGIN_C2S\020\000\022\r\n\tLO"
-    "GIN_S2C\020\001", 369);
+    "\001(\0162\010.MsgType:\tLOGIN_C2S\022\021\n\tconMethod\030\002 "
+    "\002(\005\022\016\n\006szName\030\003 \002(\t\022\022\n\nszPassWord\030\004 \002(\t\""
+    "K\n\rMsg_Login_S2C\022\"\n\005MsgID\030\001 \001(\0162\010.MsgTyp"
+    "e:\tLOGIN_S2C\022\026\n\016LoginTimeStamp\030\002 \002(\003\"7\n\017"
+    "Msg_Connect_S2C\022$\n\005MsgID\030\001 \001(\0162\010.MsgType"
+    ":\013Connect_S2C*8\n\007MsgType\022\r\n\tLOGIN_C2S\020\000\022"
+    "\r\n\tLOGIN_S2C\020\001\022\017\n\013Connect_S2C\020\002", 311);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "Msg.proto", &protobuf_RegisterTypes);
   Msg_Login_C2S::default_instance_ = new Msg_Login_C2S();
   Msg_Login_S2C::default_instance_ = new Msg_Login_S2C();
+  Msg_Connect_S2C::default_instance_ = new Msg_Connect_S2C();
   Msg_Login_C2S::default_instance_->InitAsDefaultInstance();
   Msg_Login_S2C::default_instance_->InitAsDefaultInstance();
+  Msg_Connect_S2C::default_instance_->InitAsDefaultInstance();
   ::google::protobuf::internal::OnShutdown(&protobuf_ShutdownFile_Msg_2eproto);
 }
 
@@ -134,38 +151,6 @@ struct StaticDescriptorInitializer_Msg_2eproto {
     protobuf_AddDesc_Msg_2eproto();
   }
 } static_descriptor_initializer_Msg_2eproto_;
-const ::google::protobuf::EnumDescriptor* GamePattern_descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return GamePattern_descriptor_;
-}
-bool GamePattern_IsValid(int value) {
-  switch(value) {
-    case 0:
-    case 1:
-      return true;
-    default:
-      return false;
-  }
-}
-
-const ::google::protobuf::EnumDescriptor* CardAttribute_descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return CardAttribute_descriptor_;
-}
-bool CardAttribute_IsValid(int value) {
-  switch(value) {
-    case 0:
-    case 1:
-    case 2:
-    case 3:
-    case 4:
-    case 5:
-      return true;
-    default:
-      return false;
-  }
-}
-
 const ::google::protobuf::EnumDescriptor* MsgType_descriptor() {
   protobuf_AssignDescriptorsOnce();
   return MsgType_descriptor_;
@@ -174,6 +159,7 @@ bool MsgType_IsValid(int value) {
   switch(value) {
     case 0:
     case 1:
+    case 2:
       return true;
     default:
       return false;
@@ -207,7 +193,7 @@ Msg_Login_C2S::Msg_Login_C2S(const Msg_Login_C2S& from)
 void Msg_Login_C2S::SharedCtor() {
   _cached_size_ = 0;
   msgid_ = 0;
-  conmethod_ = 0u;
+  conmethod_ = 0;
   szname_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
   szpassword_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
@@ -252,7 +238,7 @@ Msg_Login_C2S* Msg_Login_C2S::New() const {
 void Msg_Login_C2S::Clear() {
   if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
     msgid_ = 0;
-    conmethod_ = 0u;
+    conmethod_ = 0;
     if (has_szname()) {
       if (szname_ != &::google::protobuf::internal::kEmptyString) {
         szname_->clear();
@@ -274,7 +260,7 @@ bool Msg_Login_C2S::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   while ((tag = input->ReadTag()) != 0) {
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // required .MsgType MsgID = 1 [default = LOGIN_C2S];
+      // optional .MsgType MsgID = 1 [default = LOGIN_C2S];
       case 1: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
@@ -290,17 +276,17 @@ bool Msg_Login_C2S::MergePartialFromCodedStream(
         } else {
           goto handle_uninterpreted;
         }
-        if (input->ExpectTag(21)) goto parse_conMethod;
+        if (input->ExpectTag(16)) goto parse_conMethod;
         break;
       }
 
-      // required fixed32 conMethod = 2;
+      // required int32 conMethod = 2;
       case 2: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED32) {
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
          parse_conMethod:
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_FIXED32>(
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
                  input, &conmethod_)));
           set_has_conmethod();
         } else {
@@ -362,15 +348,15 @@ bool Msg_Login_C2S::MergePartialFromCodedStream(
 
 void Msg_Login_C2S::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // required .MsgType MsgID = 1 [default = LOGIN_C2S];
+  // optional .MsgType MsgID = 1 [default = LOGIN_C2S];
   if (has_msgid()) {
     ::google::protobuf::internal::WireFormatLite::WriteEnum(
       1, this->msgid(), output);
   }
 
-  // required fixed32 conMethod = 2;
+  // required int32 conMethod = 2;
   if (has_conmethod()) {
-    ::google::protobuf::internal::WireFormatLite::WriteFixed32(2, this->conmethod(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(2, this->conmethod(), output);
   }
 
   // required string szName = 3;
@@ -399,15 +385,15 @@ void Msg_Login_C2S::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* Msg_Login_C2S::SerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
-  // required .MsgType MsgID = 1 [default = LOGIN_C2S];
+  // optional .MsgType MsgID = 1 [default = LOGIN_C2S];
   if (has_msgid()) {
     target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
       1, this->msgid(), target);
   }
 
-  // required fixed32 conMethod = 2;
+  // required int32 conMethod = 2;
   if (has_conmethod()) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFixed32ToArray(2, this->conmethod(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(2, this->conmethod(), target);
   }
 
   // required string szName = 3;
@@ -441,15 +427,17 @@ int Msg_Login_C2S::ByteSize() const {
   int total_size = 0;
 
   if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    // required .MsgType MsgID = 1 [default = LOGIN_C2S];
+    // optional .MsgType MsgID = 1 [default = LOGIN_C2S];
     if (has_msgid()) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::EnumSize(this->msgid());
     }
 
-    // required fixed32 conMethod = 2;
+    // required int32 conMethod = 2;
     if (has_conmethod()) {
-      total_size += 1 + 4;
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->conmethod());
     }
 
     // required string szName = 3;
@@ -522,7 +510,7 @@ void Msg_Login_C2S::CopyFrom(const Msg_Login_C2S& from) {
 }
 
 bool Msg_Login_C2S::IsInitialized() const {
-  if ((_has_bits_[0] & 0x0000000f) != 0x0000000f) return false;
+  if ((_has_bits_[0] & 0x0000000e) != 0x0000000e) return false;
 
   return true;
 }
@@ -552,8 +540,7 @@ void Msg_Login_C2S::Swap(Msg_Login_C2S* other) {
 
 #ifndef _MSC_VER
 const int Msg_Login_S2C::kMsgIDFieldNumber;
-const int Msg_Login_S2C::kClientIdFieldNumber;
-const int Msg_Login_S2C::kConSuccessFieldNumber;
+const int Msg_Login_S2C::kLoginTimeStampFieldNumber;
 #endif  // !_MSC_VER
 
 Msg_Login_S2C::Msg_Login_S2C()
@@ -572,9 +559,8 @@ Msg_Login_S2C::Msg_Login_S2C(const Msg_Login_S2C& from)
 
 void Msg_Login_S2C::SharedCtor() {
   _cached_size_ = 0;
-  msgid_ = 0;
-  clientid_ = 0u;
-  consuccess_ = false;
+  msgid_ = 1;
+  logintimestamp_ = GOOGLE_LONGLONG(0);
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
@@ -610,9 +596,8 @@ Msg_Login_S2C* Msg_Login_S2C::New() const {
 
 void Msg_Login_S2C::Clear() {
   if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    msgid_ = 0;
-    clientid_ = 0u;
-    consuccess_ = false;
+    msgid_ = 1;
+    logintimestamp_ = GOOGLE_LONGLONG(0);
   }
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
   mutable_unknown_fields()->Clear();
@@ -624,7 +609,7 @@ bool Msg_Login_S2C::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   while ((tag = input->ReadTag()) != 0) {
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // required .MsgType MsgID = 1 [default = LOGIN_C2S];
+      // optional .MsgType MsgID = 1 [default = LOGIN_S2C];
       case 1: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
@@ -640,35 +625,19 @@ bool Msg_Login_S2C::MergePartialFromCodedStream(
         } else {
           goto handle_uninterpreted;
         }
-        if (input->ExpectTag(21)) goto parse_clientId;
+        if (input->ExpectTag(16)) goto parse_LoginTimeStamp;
         break;
       }
 
-      // required fixed32 clientId = 2;
+      // required int64 LoginTimeStamp = 2;
       case 2: {
         if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_FIXED32) {
-         parse_clientId:
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_FIXED32>(
-                 input, &clientid_)));
-          set_has_clientid();
-        } else {
-          goto handle_uninterpreted;
-        }
-        if (input->ExpectTag(24)) goto parse_conSuccess;
-        break;
-      }
-
-      // required bool conSuccess = 3;
-      case 3: {
-        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
             ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
-         parse_conSuccess:
+         parse_LoginTimeStamp:
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &consuccess_)));
-          set_has_consuccess();
+                   ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
+                 input, &logintimestamp_)));
+          set_has_logintimestamp();
         } else {
           goto handle_uninterpreted;
         }
@@ -694,20 +663,15 @@ bool Msg_Login_S2C::MergePartialFromCodedStream(
 
 void Msg_Login_S2C::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // required .MsgType MsgID = 1 [default = LOGIN_C2S];
+  // optional .MsgType MsgID = 1 [default = LOGIN_S2C];
   if (has_msgid()) {
     ::google::protobuf::internal::WireFormatLite::WriteEnum(
       1, this->msgid(), output);
   }
 
-  // required fixed32 clientId = 2;
-  if (has_clientid()) {
-    ::google::protobuf::internal::WireFormatLite::WriteFixed32(2, this->clientid(), output);
-  }
-
-  // required bool conSuccess = 3;
-  if (has_consuccess()) {
-    ::google::protobuf::internal::WireFormatLite::WriteBool(3, this->consuccess(), output);
+  // required int64 LoginTimeStamp = 2;
+  if (has_logintimestamp()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt64(2, this->logintimestamp(), output);
   }
 
   if (!unknown_fields().empty()) {
@@ -718,20 +682,15 @@ void Msg_Login_S2C::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* Msg_Login_S2C::SerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
-  // required .MsgType MsgID = 1 [default = LOGIN_C2S];
+  // optional .MsgType MsgID = 1 [default = LOGIN_S2C];
   if (has_msgid()) {
     target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
       1, this->msgid(), target);
   }
 
-  // required fixed32 clientId = 2;
-  if (has_clientid()) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFixed32ToArray(2, this->clientid(), target);
-  }
-
-  // required bool conSuccess = 3;
-  if (has_consuccess()) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(3, this->consuccess(), target);
+  // required int64 LoginTimeStamp = 2;
+  if (has_logintimestamp()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(2, this->logintimestamp(), target);
   }
 
   if (!unknown_fields().empty()) {
@@ -745,20 +704,17 @@ int Msg_Login_S2C::ByteSize() const {
   int total_size = 0;
 
   if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    // required .MsgType MsgID = 1 [default = LOGIN_C2S];
+    // optional .MsgType MsgID = 1 [default = LOGIN_S2C];
     if (has_msgid()) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::EnumSize(this->msgid());
     }
 
-    // required fixed32 clientId = 2;
-    if (has_clientid()) {
-      total_size += 1 + 4;
-    }
-
-    // required bool conSuccess = 3;
-    if (has_consuccess()) {
-      total_size += 1 + 1;
+    // required int64 LoginTimeStamp = 2;
+    if (has_logintimestamp()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::Int64Size(
+          this->logintimestamp());
     }
 
   }
@@ -791,11 +747,8 @@ void Msg_Login_S2C::MergeFrom(const Msg_Login_S2C& from) {
     if (from.has_msgid()) {
       set_msgid(from.msgid());
     }
-    if (from.has_clientid()) {
-      set_clientid(from.clientid());
-    }
-    if (from.has_consuccess()) {
-      set_consuccess(from.consuccess());
+    if (from.has_logintimestamp()) {
+      set_logintimestamp(from.logintimestamp());
     }
   }
   mutable_unknown_fields()->MergeFrom(from.unknown_fields());
@@ -814,7 +767,7 @@ void Msg_Login_S2C::CopyFrom(const Msg_Login_S2C& from) {
 }
 
 bool Msg_Login_S2C::IsInitialized() const {
-  if ((_has_bits_[0] & 0x00000007) != 0x00000007) return false;
+  if ((_has_bits_[0] & 0x00000002) != 0x00000002) return false;
 
   return true;
 }
@@ -822,8 +775,7 @@ bool Msg_Login_S2C::IsInitialized() const {
 void Msg_Login_S2C::Swap(Msg_Login_S2C* other) {
   if (other != this) {
     std::swap(msgid_, other->msgid_);
-    std::swap(clientid_, other->clientid_);
-    std::swap(consuccess_, other->consuccess_);
+    std::swap(logintimestamp_, other->logintimestamp_);
     std::swap(_has_bits_[0], other->_has_bits_[0]);
     _unknown_fields_.Swap(&other->_unknown_fields_);
     std::swap(_cached_size_, other->_cached_size_);
@@ -835,6 +787,220 @@ void Msg_Login_S2C::Swap(Msg_Login_S2C* other) {
   ::google::protobuf::Metadata metadata;
   metadata.descriptor = Msg_Login_S2C_descriptor_;
   metadata.reflection = Msg_Login_S2C_reflection_;
+  return metadata;
+}
+
+
+// ===================================================================
+
+#ifndef _MSC_VER
+const int Msg_Connect_S2C::kMsgIDFieldNumber;
+#endif  // !_MSC_VER
+
+Msg_Connect_S2C::Msg_Connect_S2C()
+  : ::google::protobuf::Message() {
+  SharedCtor();
+}
+
+void Msg_Connect_S2C::InitAsDefaultInstance() {
+}
+
+Msg_Connect_S2C::Msg_Connect_S2C(const Msg_Connect_S2C& from)
+  : ::google::protobuf::Message() {
+  SharedCtor();
+  MergeFrom(from);
+}
+
+void Msg_Connect_S2C::SharedCtor() {
+  _cached_size_ = 0;
+  msgid_ = 2;
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+}
+
+Msg_Connect_S2C::~Msg_Connect_S2C() {
+  SharedDtor();
+}
+
+void Msg_Connect_S2C::SharedDtor() {
+  if (this != default_instance_) {
+  }
+}
+
+void Msg_Connect_S2C::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* Msg_Connect_S2C::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return Msg_Connect_S2C_descriptor_;
+}
+
+const Msg_Connect_S2C& Msg_Connect_S2C::default_instance() {
+  if (default_instance_ == NULL) protobuf_AddDesc_Msg_2eproto();
+  return *default_instance_;
+}
+
+Msg_Connect_S2C* Msg_Connect_S2C::default_instance_ = NULL;
+
+Msg_Connect_S2C* Msg_Connect_S2C::New() const {
+  return new Msg_Connect_S2C;
+}
+
+void Msg_Connect_S2C::Clear() {
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    msgid_ = 2;
+  }
+  ::memset(_has_bits_, 0, sizeof(_has_bits_));
+  mutable_unknown_fields()->Clear();
+}
+
+bool Msg_Connect_S2C::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!(EXPRESSION)) return false
+  ::google::protobuf::uint32 tag;
+  while ((tag = input->ReadTag()) != 0) {
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // optional .MsgType MsgID = 1 [default = Connect_S2C];
+      case 1: {
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_VARINT) {
+          int value;
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
+                 input, &value)));
+          if (::MsgType_IsValid(value)) {
+            set_msgid(static_cast< ::MsgType >(value));
+          } else {
+            mutable_unknown_fields()->AddVarint(1, value);
+          }
+        } else {
+          goto handle_uninterpreted;
+        }
+        if (input->ExpectAtEnd()) return true;
+        break;
+      }
+
+      default: {
+      handle_uninterpreted:
+        if (::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          return true;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+  return true;
+#undef DO_
+}
+
+void Msg_Connect_S2C::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // optional .MsgType MsgID = 1 [default = Connect_S2C];
+  if (has_msgid()) {
+    ::google::protobuf::internal::WireFormatLite::WriteEnum(
+      1, this->msgid(), output);
+  }
+
+  if (!unknown_fields().empty()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+}
+
+::google::protobuf::uint8* Msg_Connect_S2C::SerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // optional .MsgType MsgID = 1 [default = Connect_S2C];
+  if (has_msgid()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
+      1, this->msgid(), target);
+  }
+
+  if (!unknown_fields().empty()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  return target;
+}
+
+int Msg_Connect_S2C::ByteSize() const {
+  int total_size = 0;
+
+  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    // optional .MsgType MsgID = 1 [default = Connect_S2C];
+    if (has_msgid()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::EnumSize(this->msgid());
+    }
+
+  }
+  if (!unknown_fields().empty()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = total_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void Msg_Connect_S2C::MergeFrom(const ::google::protobuf::Message& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  const Msg_Connect_S2C* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const Msg_Connect_S2C*>(
+      &from);
+  if (source == NULL) {
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+    MergeFrom(*source);
+  }
+}
+
+void Msg_Connect_S2C::MergeFrom(const Msg_Connect_S2C& from) {
+  GOOGLE_CHECK_NE(&from, this);
+  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
+    if (from.has_msgid()) {
+      set_msgid(from.msgid());
+    }
+  }
+  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
+}
+
+void Msg_Connect_S2C::CopyFrom(const ::google::protobuf::Message& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void Msg_Connect_S2C::CopyFrom(const Msg_Connect_S2C& from) {
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Msg_Connect_S2C::IsInitialized() const {
+
+  return true;
+}
+
+void Msg_Connect_S2C::Swap(Msg_Connect_S2C* other) {
+  if (other != this) {
+    std::swap(msgid_, other->msgid_);
+    std::swap(_has_bits_[0], other->_has_bits_[0]);
+    _unknown_fields_.Swap(&other->_unknown_fields_);
+    std::swap(_cached_size_, other->_cached_size_);
+  }
+}
+
+::google::protobuf::Metadata Msg_Connect_S2C::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  ::google::protobuf::Metadata metadata;
+  metadata.descriptor = Msg_Connect_S2C_descriptor_;
+  metadata.reflection = Msg_Connect_S2C_reflection_;
   return metadata;
 }
 

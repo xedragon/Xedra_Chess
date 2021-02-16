@@ -1,50 +1,40 @@
 ﻿#include <ClientUser.h>
+#include <MsgMgr.h>
 using namespace std;
 
 ClientUser::ClientUser(SOCKET socket)
 {
-	_socket = socket;
+	m_MsgMgr = std::make_shared<MsgMgr>(socket);
 }
 
 bool ClientUser::Init()
 {
-	MsgMgr mg;
-	//mg.RegisterProMsg(this,&ClientUser::onLogin);
+	//注册消息
+	m_MsgMgr->RegisterProMsg(this,&ClientUser::onLogin);
+
+	//
+	Msg_Connect_S2C msg;
+	m_MsgMgr->SendMsg(msg);
 	return true;
+}
+
+void ClientUser::test()
+{
+	cout << "测试新用户" << endl;
+
+	Msg_Login_C2S msg;
+	msg.set_szname("wocao");
+	msg.set_szpassword("wocao");
+	msg.set_conmethod(1);
+	msg.set_msgid(MsgType::LOGIN_C2S);
+
+	m_MsgMgr->NotifyMsg(msg);
+	m_MsgMgr->SendMsg(msg);
 }
 
 bool ClientUser::Update()
 {
-	//Receive
-	{
-		char szBuf[255];
-		int nLen = recv(_socket, szBuf, 255, 0);
-		if (nLen > 0)
-		{
-			PushMsg(szBuf, nLen);
-		}
-		else
-		{
-			auto error = GetLastError();
-			if (error != WSAEWOULDBLOCK)
-			{
-				return false;
-			}
-			else
-			{
-				LogError(error);
-			}
-		}
-	}
-	//Send
-	{
-		int nLen = send(_socket, m_SendBuf, m_SendBufLen, 0);
-		if (nLen > 0)
-		{
-			memmove(m_SendBuf, m_SendBuf + nLen, m_SendBufLen - nLen);
-			m_SendBufLen -= nLen;
-		}
-	}
+	m_MsgMgr->Update();
 	return false;
 }
 
@@ -53,43 +43,18 @@ bool ClientUser::Shut()
 	return false;
 }
 
-void ClientUser::PushMsg(char* szMsg, int nLen)
+
+MsgMgr* ClientUser::getMsgMgr()
 {
-	memcpy(m_RecvBuf + m_RecvBufLen, szMsg, nLen);
-	m_RecvBufLen += nLen;
-
-	while (m_RecvBufLen >= MSGHEADLEN)
-	{
-		int msgType = (INT16)(m_RecvBufLen);
-		int msgSize = (INT16)(m_RecvBufLen + 2);
-
-		if (m_RecvBufLen >= msgSize + 4)
-		{
-			//contain a whole protomsg
-			
-		}
-		else
-		{
-			//don't contain a whole protomsg
-			break;
-		}
-
-		m_RecvBufLen -= msgSize;
-		memmove(m_RecvBuf, m_RecvBuf + msgSize, m_RecvBufLen);
-	}
+	return m_MsgMgr.get();
 }
 
-void ClientUser::LogError(DWORD error)
+void ClientUser::onLogin(const Msg_Login_C2S& msg)
 {
-}
+	cout << "Name:" << msg.szname() << "	Password:" << msg.szpassword() << endl;
 
-void ClientUser::SendMsg(char* pMsg, int len)
-{
-	memcpy(m_SendBuf + m_SendBufLen, pMsg, len);
-	m_SendBufLen += len;
-}
-
-void ClientUser::onLogin(Msg_Login_C2S msg)
-{
-	cout << "reg succed";
+	Msg_Login_S2C back;
+	back.set_logintimestamp(2254);
+	m_MsgMgr->SendMsg(back);
+	m_MsgMgr->SendMsg(back);
 }

@@ -7,214 +7,6 @@ public final class Msg {
       com.google.protobuf.ExtensionRegistry registry) {
   }
   /**
-   * Protobuf enum {@code GamePattern}
-   *
-   * <pre>
-   *游戏模式
-   * </pre>
-   */
-  public enum GamePattern
-      implements com.google.protobuf.ProtocolMessageEnum {
-    /**
-     * <code>Standard = 0;</code>
-     */
-    Standard(0, 0),
-    /**
-     * <code>Rank = 1;</code>
-     */
-    Rank(1, 1),
-    ;
-
-    /**
-     * <code>Standard = 0;</code>
-     */
-    public static final int Standard_VALUE = 0;
-    /**
-     * <code>Rank = 1;</code>
-     */
-    public static final int Rank_VALUE = 1;
-
-
-    public final int getNumber() { return value; }
-
-    public static GamePattern valueOf(int value) {
-      switch (value) {
-        case 0: return Standard;
-        case 1: return Rank;
-        default: return null;
-      }
-    }
-
-    public static com.google.protobuf.Internal.EnumLiteMap<GamePattern>
-        internalGetValueMap() {
-      return internalValueMap;
-    }
-    private static com.google.protobuf.Internal.EnumLiteMap<GamePattern>
-        internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<GamePattern>() {
-            public GamePattern findValueByNumber(int number) {
-              return GamePattern.valueOf(number);
-            }
-          };
-
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor() {
-      return getDescriptor().getValues().get(index);
-    }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType() {
-      return getDescriptor();
-    }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptor() {
-      return Msg.getDescriptor().getEnumTypes().get(0);
-    }
-
-    private static final GamePattern[] VALUES = values();
-
-    public static GamePattern valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-      if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException(
-          "EnumValueDescriptor is not for this type.");
-      }
-      return VALUES[desc.getIndex()];
-    }
-
-    private final int index;
-    private final int value;
-
-    private GamePattern(int index, int value) {
-      this.index = index;
-      this.value = value;
-    }
-
-    // @@protoc_insertion_point(enum_scope:GamePattern)
-  }
-
-  /**
-   * Protobuf enum {@code CardAttribute}
-   *
-   * <pre>
-   *卡牌属性
-   * </pre>
-   */
-  public enum CardAttribute
-      implements com.google.protobuf.ProtocolMessageEnum {
-    /**
-     * <code>none = 0;</code>
-     */
-    none(0, 0),
-    /**
-     * <code>fire = 1;</code>
-     */
-    fire(1, 1),
-    /**
-     * <code>water = 2;</code>
-     */
-    water(2, 2),
-    /**
-     * <code>wood = 3;</code>
-     */
-    wood(3, 3),
-    /**
-     * <code>light = 4;</code>
-     */
-    light(4, 4),
-    /**
-     * <code>dark = 5;</code>
-     */
-    dark(5, 5),
-    ;
-
-    /**
-     * <code>none = 0;</code>
-     */
-    public static final int none_VALUE = 0;
-    /**
-     * <code>fire = 1;</code>
-     */
-    public static final int fire_VALUE = 1;
-    /**
-     * <code>water = 2;</code>
-     */
-    public static final int water_VALUE = 2;
-    /**
-     * <code>wood = 3;</code>
-     */
-    public static final int wood_VALUE = 3;
-    /**
-     * <code>light = 4;</code>
-     */
-    public static final int light_VALUE = 4;
-    /**
-     * <code>dark = 5;</code>
-     */
-    public static final int dark_VALUE = 5;
-
-
-    public final int getNumber() { return value; }
-
-    public static CardAttribute valueOf(int value) {
-      switch (value) {
-        case 0: return none;
-        case 1: return fire;
-        case 2: return water;
-        case 3: return wood;
-        case 4: return light;
-        case 5: return dark;
-        default: return null;
-      }
-    }
-
-    public static com.google.protobuf.Internal.EnumLiteMap<CardAttribute>
-        internalGetValueMap() {
-      return internalValueMap;
-    }
-    private static com.google.protobuf.Internal.EnumLiteMap<CardAttribute>
-        internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<CardAttribute>() {
-            public CardAttribute findValueByNumber(int number) {
-              return CardAttribute.valueOf(number);
-            }
-          };
-
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor() {
-      return getDescriptor().getValues().get(index);
-    }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType() {
-      return getDescriptor();
-    }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptor() {
-      return Msg.getDescriptor().getEnumTypes().get(1);
-    }
-
-    private static final CardAttribute[] VALUES = values();
-
-    public static CardAttribute valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-      if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException(
-          "EnumValueDescriptor is not for this type.");
-      }
-      return VALUES[desc.getIndex()];
-    }
-
-    private final int index;
-    private final int value;
-
-    private CardAttribute(int index, int value) {
-      this.index = index;
-      this.value = value;
-    }
-
-    // @@protoc_insertion_point(enum_scope:CardAttribute)
-  }
-
-  /**
    * Protobuf enum {@code MsgType}
    *
    * <pre>
@@ -235,6 +27,10 @@ public final class Msg {
      * <code>LOGIN_S2C = 1;</code>
      */
     LOGIN_S2C(1, 1),
+    /**
+     * <code>Connect_S2C = 2;</code>
+     */
+    Connect_S2C(2, 2),
     ;
 
     /**
@@ -249,6 +45,10 @@ public final class Msg {
      * <code>LOGIN_S2C = 1;</code>
      */
     public static final int LOGIN_S2C_VALUE = 1;
+    /**
+     * <code>Connect_S2C = 2;</code>
+     */
+    public static final int Connect_S2C_VALUE = 2;
 
 
     public final int getNumber() { return value; }
@@ -257,6 +57,7 @@ public final class Msg {
       switch (value) {
         case 0: return LOGIN_C2S;
         case 1: return LOGIN_S2C;
+        case 2: return Connect_S2C;
         default: return null;
       }
     }
@@ -283,7 +84,7 @@ public final class Msg {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return Msg.getDescriptor().getEnumTypes().get(2);
+      return Msg.getDescriptor().getEnumTypes().get(0);
     }
 
     private static final MsgType[] VALUES = values();
@@ -311,19 +112,19 @@ public final class Msg {
   public interface Msg_Login_C2SOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
 
-    // required .MsgType MsgID = 1 [default = LOGIN_C2S];
+    // optional .MsgType MsgID = 1 [default = LOGIN_C2S];
     /**
-     * <code>required .MsgType MsgID = 1 [default = LOGIN_C2S];</code>
+     * <code>optional .MsgType MsgID = 1 [default = LOGIN_C2S];</code>
      */
     boolean hasMsgID();
     /**
-     * <code>required .MsgType MsgID = 1 [default = LOGIN_C2S];</code>
+     * <code>optional .MsgType MsgID = 1 [default = LOGIN_C2S];</code>
      */
     Msg.MsgType getMsgID();
 
-    // required fixed32 conMethod = 2;
+    // required int32 conMethod = 2;
     /**
-     * <code>required fixed32 conMethod = 2;</code>
+     * <code>required int32 conMethod = 2;</code>
      *
      * <pre>
      *注册还是登录
@@ -331,7 +132,7 @@ public final class Msg {
      */
     boolean hasConMethod();
     /**
-     * <code>required fixed32 conMethod = 2;</code>
+     * <code>required int32 conMethod = 2;</code>
      *
      * <pre>
      *注册还是登录
@@ -459,9 +260,9 @@ public final class Msg {
               }
               break;
             }
-            case 21: {
+            case 16: {
               bitField0_ |= 0x00000002;
-              conMethod_ = input.readFixed32();
+              conMethod_ = input.readInt32();
               break;
             }
             case 26: {
@@ -514,27 +315,27 @@ public final class Msg {
     }
 
     private int bitField0_;
-    // required .MsgType MsgID = 1 [default = LOGIN_C2S];
+    // optional .MsgType MsgID = 1 [default = LOGIN_C2S];
     public static final int MSGID_FIELD_NUMBER = 1;
     private Msg.MsgType msgID_;
     /**
-     * <code>required .MsgType MsgID = 1 [default = LOGIN_C2S];</code>
+     * <code>optional .MsgType MsgID = 1 [default = LOGIN_C2S];</code>
      */
     public boolean hasMsgID() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required .MsgType MsgID = 1 [default = LOGIN_C2S];</code>
+     * <code>optional .MsgType MsgID = 1 [default = LOGIN_C2S];</code>
      */
     public Msg.MsgType getMsgID() {
       return msgID_;
     }
 
-    // required fixed32 conMethod = 2;
+    // required int32 conMethod = 2;
     public static final int CONMETHOD_FIELD_NUMBER = 2;
     private int conMethod_;
     /**
-     * <code>required fixed32 conMethod = 2;</code>
+     * <code>required int32 conMethod = 2;</code>
      *
      * <pre>
      *注册还是登录
@@ -544,7 +345,7 @@ public final class Msg {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>required fixed32 conMethod = 2;</code>
+     * <code>required int32 conMethod = 2;</code>
      *
      * <pre>
      *注册还是登录
@@ -675,10 +476,6 @@ public final class Msg {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized != -1) return isInitialized == 1;
 
-      if (!hasMsgID()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
       if (!hasConMethod()) {
         memoizedIsInitialized = 0;
         return false;
@@ -702,7 +499,7 @@ public final class Msg {
         output.writeEnum(1, msgID_.getNumber());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeFixed32(2, conMethod_);
+        output.writeInt32(2, conMethod_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         output.writeBytes(3, getSzNameBytes());
@@ -725,7 +522,7 @@ public final class Msg {
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFixed32Size(2, conMethod_);
+          .computeInt32Size(2, conMethod_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
@@ -944,10 +741,6 @@ public final class Msg {
       }
 
       public final boolean isInitialized() {
-        if (!hasMsgID()) {
-          
-          return false;
-        }
         if (!hasConMethod()) {
           
           return false;
@@ -982,22 +775,22 @@ public final class Msg {
       }
       private int bitField0_;
 
-      // required .MsgType MsgID = 1 [default = LOGIN_C2S];
+      // optional .MsgType MsgID = 1 [default = LOGIN_C2S];
       private Msg.MsgType msgID_ = Msg.MsgType.LOGIN_C2S;
       /**
-       * <code>required .MsgType MsgID = 1 [default = LOGIN_C2S];</code>
+       * <code>optional .MsgType MsgID = 1 [default = LOGIN_C2S];</code>
        */
       public boolean hasMsgID() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required .MsgType MsgID = 1 [default = LOGIN_C2S];</code>
+       * <code>optional .MsgType MsgID = 1 [default = LOGIN_C2S];</code>
        */
       public Msg.MsgType getMsgID() {
         return msgID_;
       }
       /**
-       * <code>required .MsgType MsgID = 1 [default = LOGIN_C2S];</code>
+       * <code>optional .MsgType MsgID = 1 [default = LOGIN_C2S];</code>
        */
       public Builder setMsgID(Msg.MsgType value) {
         if (value == null) {
@@ -1009,7 +802,7 @@ public final class Msg {
         return this;
       }
       /**
-       * <code>required .MsgType MsgID = 1 [default = LOGIN_C2S];</code>
+       * <code>optional .MsgType MsgID = 1 [default = LOGIN_C2S];</code>
        */
       public Builder clearMsgID() {
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -1018,10 +811,10 @@ public final class Msg {
         return this;
       }
 
-      // required fixed32 conMethod = 2;
+      // required int32 conMethod = 2;
       private int conMethod_ ;
       /**
-       * <code>required fixed32 conMethod = 2;</code>
+       * <code>required int32 conMethod = 2;</code>
        *
        * <pre>
        *注册还是登录
@@ -1031,7 +824,7 @@ public final class Msg {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>required fixed32 conMethod = 2;</code>
+       * <code>required int32 conMethod = 2;</code>
        *
        * <pre>
        *注册还是登录
@@ -1041,7 +834,7 @@ public final class Msg {
         return conMethod_;
       }
       /**
-       * <code>required fixed32 conMethod = 2;</code>
+       * <code>required int32 conMethod = 2;</code>
        *
        * <pre>
        *注册还是登录
@@ -1054,7 +847,7 @@ public final class Msg {
         return this;
       }
       /**
-       * <code>required fixed32 conMethod = 2;</code>
+       * <code>required int32 conMethod = 2;</code>
        *
        * <pre>
        *注册还是登录
@@ -1277,51 +1070,25 @@ public final class Msg {
   public interface Msg_Login_S2COrBuilder
       extends com.google.protobuf.MessageOrBuilder {
 
-    // required .MsgType MsgID = 1 [default = LOGIN_C2S];
+    // optional .MsgType MsgID = 1 [default = LOGIN_S2C];
     /**
-     * <code>required .MsgType MsgID = 1 [default = LOGIN_C2S];</code>
+     * <code>optional .MsgType MsgID = 1 [default = LOGIN_S2C];</code>
      */
     boolean hasMsgID();
     /**
-     * <code>required .MsgType MsgID = 1 [default = LOGIN_C2S];</code>
+     * <code>optional .MsgType MsgID = 1 [default = LOGIN_S2C];</code>
      */
     Msg.MsgType getMsgID();
 
-    // required fixed32 clientId = 2;
+    // required int64 LoginTimeStamp = 2;
     /**
-     * <code>required fixed32 clientId = 2;</code>
-     *
-     * <pre>
-     *服务器端内部维护的客户ID
-     * </pre>
+     * <code>required int64 LoginTimeStamp = 2;</code>
      */
-    boolean hasClientId();
+    boolean hasLoginTimeStamp();
     /**
-     * <code>required fixed32 clientId = 2;</code>
-     *
-     * <pre>
-     *服务器端内部维护的客户ID
-     * </pre>
+     * <code>required int64 LoginTimeStamp = 2;</code>
      */
-    int getClientId();
-
-    // required bool conSuccess = 3;
-    /**
-     * <code>required bool conSuccess = 3;</code>
-     *
-     * <pre>
-     *是否连接服务器成功
-     * </pre>
-     */
-    boolean hasConSuccess();
-    /**
-     * <code>required bool conSuccess = 3;</code>
-     *
-     * <pre>
-     *是否连接服务器成功
-     * </pre>
-     */
-    boolean getConSuccess();
+    long getLoginTimeStamp();
   }
   /**
    * Protobuf type {@code Msg_Login_S2C}
@@ -1385,14 +1152,9 @@ public final class Msg {
               }
               break;
             }
-            case 21: {
+            case 16: {
               bitField0_ |= 0x00000002;
-              clientId_ = input.readFixed32();
-              break;
-            }
-            case 24: {
-              bitField0_ |= 0x00000004;
-              conSuccess_ = input.readBool();
+              loginTimeStamp_ = input.readInt64();
               break;
             }
           }
@@ -1435,89 +1197,48 @@ public final class Msg {
     }
 
     private int bitField0_;
-    // required .MsgType MsgID = 1 [default = LOGIN_C2S];
+    // optional .MsgType MsgID = 1 [default = LOGIN_S2C];
     public static final int MSGID_FIELD_NUMBER = 1;
     private Msg.MsgType msgID_;
     /**
-     * <code>required .MsgType MsgID = 1 [default = LOGIN_C2S];</code>
+     * <code>optional .MsgType MsgID = 1 [default = LOGIN_S2C];</code>
      */
     public boolean hasMsgID() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required .MsgType MsgID = 1 [default = LOGIN_C2S];</code>
+     * <code>optional .MsgType MsgID = 1 [default = LOGIN_S2C];</code>
      */
     public Msg.MsgType getMsgID() {
       return msgID_;
     }
 
-    // required fixed32 clientId = 2;
-    public static final int CLIENTID_FIELD_NUMBER = 2;
-    private int clientId_;
+    // required int64 LoginTimeStamp = 2;
+    public static final int LOGINTIMESTAMP_FIELD_NUMBER = 2;
+    private long loginTimeStamp_;
     /**
-     * <code>required fixed32 clientId = 2;</code>
-     *
-     * <pre>
-     *服务器端内部维护的客户ID
-     * </pre>
+     * <code>required int64 LoginTimeStamp = 2;</code>
      */
-    public boolean hasClientId() {
+    public boolean hasLoginTimeStamp() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>required fixed32 clientId = 2;</code>
-     *
-     * <pre>
-     *服务器端内部维护的客户ID
-     * </pre>
+     * <code>required int64 LoginTimeStamp = 2;</code>
      */
-    public int getClientId() {
-      return clientId_;
-    }
-
-    // required bool conSuccess = 3;
-    public static final int CONSUCCESS_FIELD_NUMBER = 3;
-    private boolean conSuccess_;
-    /**
-     * <code>required bool conSuccess = 3;</code>
-     *
-     * <pre>
-     *是否连接服务器成功
-     * </pre>
-     */
-    public boolean hasConSuccess() {
-      return ((bitField0_ & 0x00000004) == 0x00000004);
-    }
-    /**
-     * <code>required bool conSuccess = 3;</code>
-     *
-     * <pre>
-     *是否连接服务器成功
-     * </pre>
-     */
-    public boolean getConSuccess() {
-      return conSuccess_;
+    public long getLoginTimeStamp() {
+      return loginTimeStamp_;
     }
 
     private void initFields() {
-      msgID_ = Msg.MsgType.LOGIN_C2S;
-      clientId_ = 0;
-      conSuccess_ = false;
+      msgID_ = Msg.MsgType.LOGIN_S2C;
+      loginTimeStamp_ = 0L;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized != -1) return isInitialized == 1;
 
-      if (!hasMsgID()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasClientId()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasConSuccess()) {
+      if (!hasLoginTimeStamp()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -1532,10 +1253,7 @@ public final class Msg {
         output.writeEnum(1, msgID_.getNumber());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeFixed32(2, clientId_);
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeBool(3, conSuccess_);
+        output.writeInt64(2, loginTimeStamp_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -1552,11 +1270,7 @@ public final class Msg {
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFixed32Size(2, clientId_);
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(3, conSuccess_);
+          .computeInt64Size(2, loginTimeStamp_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -1674,12 +1388,10 @@ public final class Msg {
 
       public Builder clear() {
         super.clear();
-        msgID_ = Msg.MsgType.LOGIN_C2S;
+        msgID_ = Msg.MsgType.LOGIN_S2C;
         bitField0_ = (bitField0_ & ~0x00000001);
-        clientId_ = 0;
+        loginTimeStamp_ = 0L;
         bitField0_ = (bitField0_ & ~0x00000002);
-        conSuccess_ = false;
-        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -1715,11 +1427,7 @@ public final class Msg {
         if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
           to_bitField0_ |= 0x00000002;
         }
-        result.clientId_ = clientId_;
-        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
-          to_bitField0_ |= 0x00000004;
-        }
-        result.conSuccess_ = conSuccess_;
+        result.loginTimeStamp_ = loginTimeStamp_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1739,26 +1447,15 @@ public final class Msg {
         if (other.hasMsgID()) {
           setMsgID(other.getMsgID());
         }
-        if (other.hasClientId()) {
-          setClientId(other.getClientId());
-        }
-        if (other.hasConSuccess()) {
-          setConSuccess(other.getConSuccess());
+        if (other.hasLoginTimeStamp()) {
+          setLoginTimeStamp(other.getLoginTimeStamp());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
 
       public final boolean isInitialized() {
-        if (!hasMsgID()) {
-          
-          return false;
-        }
-        if (!hasClientId()) {
-          
-          return false;
-        }
-        if (!hasConSuccess()) {
+        if (!hasLoginTimeStamp()) {
           
           return false;
         }
@@ -1784,22 +1481,22 @@ public final class Msg {
       }
       private int bitField0_;
 
-      // required .MsgType MsgID = 1 [default = LOGIN_C2S];
-      private Msg.MsgType msgID_ = Msg.MsgType.LOGIN_C2S;
+      // optional .MsgType MsgID = 1 [default = LOGIN_S2C];
+      private Msg.MsgType msgID_ = Msg.MsgType.LOGIN_S2C;
       /**
-       * <code>required .MsgType MsgID = 1 [default = LOGIN_C2S];</code>
+       * <code>optional .MsgType MsgID = 1 [default = LOGIN_S2C];</code>
        */
       public boolean hasMsgID() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required .MsgType MsgID = 1 [default = LOGIN_C2S];</code>
+       * <code>optional .MsgType MsgID = 1 [default = LOGIN_S2C];</code>
        */
       public Msg.MsgType getMsgID() {
         return msgID_;
       }
       /**
-       * <code>required .MsgType MsgID = 1 [default = LOGIN_C2S];</code>
+       * <code>optional .MsgType MsgID = 1 [default = LOGIN_S2C];</code>
        */
       public Builder setMsgID(Msg.MsgType value) {
         if (value == null) {
@@ -1811,109 +1508,44 @@ public final class Msg {
         return this;
       }
       /**
-       * <code>required .MsgType MsgID = 1 [default = LOGIN_C2S];</code>
+       * <code>optional .MsgType MsgID = 1 [default = LOGIN_S2C];</code>
        */
       public Builder clearMsgID() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        msgID_ = Msg.MsgType.LOGIN_C2S;
+        msgID_ = Msg.MsgType.LOGIN_S2C;
         onChanged();
         return this;
       }
 
-      // required fixed32 clientId = 2;
-      private int clientId_ ;
+      // required int64 LoginTimeStamp = 2;
+      private long loginTimeStamp_ ;
       /**
-       * <code>required fixed32 clientId = 2;</code>
-       *
-       * <pre>
-       *服务器端内部维护的客户ID
-       * </pre>
+       * <code>required int64 LoginTimeStamp = 2;</code>
        */
-      public boolean hasClientId() {
+      public boolean hasLoginTimeStamp() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>required fixed32 clientId = 2;</code>
-       *
-       * <pre>
-       *服务器端内部维护的客户ID
-       * </pre>
+       * <code>required int64 LoginTimeStamp = 2;</code>
        */
-      public int getClientId() {
-        return clientId_;
+      public long getLoginTimeStamp() {
+        return loginTimeStamp_;
       }
       /**
-       * <code>required fixed32 clientId = 2;</code>
-       *
-       * <pre>
-       *服务器端内部维护的客户ID
-       * </pre>
+       * <code>required int64 LoginTimeStamp = 2;</code>
        */
-      public Builder setClientId(int value) {
+      public Builder setLoginTimeStamp(long value) {
         bitField0_ |= 0x00000002;
-        clientId_ = value;
+        loginTimeStamp_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required fixed32 clientId = 2;</code>
-       *
-       * <pre>
-       *服务器端内部维护的客户ID
-       * </pre>
+       * <code>required int64 LoginTimeStamp = 2;</code>
        */
-      public Builder clearClientId() {
+      public Builder clearLoginTimeStamp() {
         bitField0_ = (bitField0_ & ~0x00000002);
-        clientId_ = 0;
-        onChanged();
-        return this;
-      }
-
-      // required bool conSuccess = 3;
-      private boolean conSuccess_ ;
-      /**
-       * <code>required bool conSuccess = 3;</code>
-       *
-       * <pre>
-       *是否连接服务器成功
-       * </pre>
-       */
-      public boolean hasConSuccess() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
-      }
-      /**
-       * <code>required bool conSuccess = 3;</code>
-       *
-       * <pre>
-       *是否连接服务器成功
-       * </pre>
-       */
-      public boolean getConSuccess() {
-        return conSuccess_;
-      }
-      /**
-       * <code>required bool conSuccess = 3;</code>
-       *
-       * <pre>
-       *是否连接服务器成功
-       * </pre>
-       */
-      public Builder setConSuccess(boolean value) {
-        bitField0_ |= 0x00000004;
-        conSuccess_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required bool conSuccess = 3;</code>
-       *
-       * <pre>
-       *是否连接服务器成功
-       * </pre>
-       */
-      public Builder clearConSuccess() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        conSuccess_ = false;
+        loginTimeStamp_ = 0L;
         onChanged();
         return this;
       }
@@ -1929,6 +1561,411 @@ public final class Msg {
     // @@protoc_insertion_point(class_scope:Msg_Login_S2C)
   }
 
+  public interface Msg_Connect_S2COrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // optional .MsgType MsgID = 1 [default = Connect_S2C];
+    /**
+     * <code>optional .MsgType MsgID = 1 [default = Connect_S2C];</code>
+     */
+    boolean hasMsgID();
+    /**
+     * <code>optional .MsgType MsgID = 1 [default = Connect_S2C];</code>
+     */
+    Msg.MsgType getMsgID();
+  }
+  /**
+   * Protobuf type {@code Msg_Connect_S2C}
+   */
+  public static final class Msg_Connect_S2C extends
+      com.google.protobuf.GeneratedMessage
+      implements Msg_Connect_S2COrBuilder {
+    // Use Msg_Connect_S2C.newBuilder() to construct.
+    private Msg_Connect_S2C(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Msg_Connect_S2C(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Msg_Connect_S2C defaultInstance;
+    public static Msg_Connect_S2C getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Msg_Connect_S2C getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Msg_Connect_S2C(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              int rawValue = input.readEnum();
+              Msg.MsgType value = Msg.MsgType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(1, rawValue);
+              } else {
+                bitField0_ |= 0x00000001;
+                msgID_ = value;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return Msg.internal_static_Msg_Connect_S2C_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return Msg.internal_static_Msg_Connect_S2C_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              Msg.Msg_Connect_S2C.class, Msg.Msg_Connect_S2C.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Msg_Connect_S2C> PARSER =
+        new com.google.protobuf.AbstractParser<Msg_Connect_S2C>() {
+      public Msg_Connect_S2C parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Msg_Connect_S2C(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Msg_Connect_S2C> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // optional .MsgType MsgID = 1 [default = Connect_S2C];
+    public static final int MSGID_FIELD_NUMBER = 1;
+    private Msg.MsgType msgID_;
+    /**
+     * <code>optional .MsgType MsgID = 1 [default = Connect_S2C];</code>
+     */
+    public boolean hasMsgID() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional .MsgType MsgID = 1 [default = Connect_S2C];</code>
+     */
+    public Msg.MsgType getMsgID() {
+      return msgID_;
+    }
+
+    private void initFields() {
+      msgID_ = Msg.MsgType.Connect_S2C;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeEnum(1, msgID_.getNumber());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, msgID_.getNumber());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static Msg.Msg_Connect_S2C parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Msg.Msg_Connect_S2C parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Msg.Msg_Connect_S2C parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static Msg.Msg_Connect_S2C parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static Msg.Msg_Connect_S2C parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Msg.Msg_Connect_S2C parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static Msg.Msg_Connect_S2C parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static Msg.Msg_Connect_S2C parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static Msg.Msg_Connect_S2C parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static Msg.Msg_Connect_S2C parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(Msg.Msg_Connect_S2C prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Msg_Connect_S2C}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements Msg.Msg_Connect_S2COrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return Msg.internal_static_Msg_Connect_S2C_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return Msg.internal_static_Msg_Connect_S2C_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                Msg.Msg_Connect_S2C.class, Msg.Msg_Connect_S2C.Builder.class);
+      }
+
+      // Construct using Msg.Msg_Connect_S2C.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        msgID_ = Msg.MsgType.Connect_S2C;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return Msg.internal_static_Msg_Connect_S2C_descriptor;
+      }
+
+      public Msg.Msg_Connect_S2C getDefaultInstanceForType() {
+        return Msg.Msg_Connect_S2C.getDefaultInstance();
+      }
+
+      public Msg.Msg_Connect_S2C build() {
+        Msg.Msg_Connect_S2C result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public Msg.Msg_Connect_S2C buildPartial() {
+        Msg.Msg_Connect_S2C result = new Msg.Msg_Connect_S2C(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.msgID_ = msgID_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof Msg.Msg_Connect_S2C) {
+          return mergeFrom((Msg.Msg_Connect_S2C)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(Msg.Msg_Connect_S2C other) {
+        if (other == Msg.Msg_Connect_S2C.getDefaultInstance()) return this;
+        if (other.hasMsgID()) {
+          setMsgID(other.getMsgID());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        Msg.Msg_Connect_S2C parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (Msg.Msg_Connect_S2C) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // optional .MsgType MsgID = 1 [default = Connect_S2C];
+      private Msg.MsgType msgID_ = Msg.MsgType.Connect_S2C;
+      /**
+       * <code>optional .MsgType MsgID = 1 [default = Connect_S2C];</code>
+       */
+      public boolean hasMsgID() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional .MsgType MsgID = 1 [default = Connect_S2C];</code>
+       */
+      public Msg.MsgType getMsgID() {
+        return msgID_;
+      }
+      /**
+       * <code>optional .MsgType MsgID = 1 [default = Connect_S2C];</code>
+       */
+      public Builder setMsgID(Msg.MsgType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        msgID_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .MsgType MsgID = 1 [default = Connect_S2C];</code>
+       */
+      public Builder clearMsgID() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        msgID_ = Msg.MsgType.Connect_S2C;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:Msg_Connect_S2C)
+    }
+
+    static {
+      defaultInstance = new Msg_Connect_S2C(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:Msg_Connect_S2C)
+  }
+
   private static com.google.protobuf.Descriptors.Descriptor
     internal_static_Msg_Login_C2S_descriptor;
   private static
@@ -1939,6 +1976,11 @@ public final class Msg {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_Msg_Login_S2C_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_Msg_Connect_S2C_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_Msg_Connect_S2C_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1949,15 +1991,13 @@ public final class Msg {
   static {
     java.lang.String[] descriptorData = {
       "\n\tMsg.proto\"j\n\rMsg_Login_C2S\022\"\n\005MsgID\030\001 " +
-      "\002(\0162\010.MsgType:\tLOGIN_C2S\022\021\n\tconMethod\030\002 " +
-      "\002(\007\022\016\n\006szName\030\003 \002(\t\022\022\n\nszPassWord\030\004 \002(\t\"" +
-      "Y\n\rMsg_Login_S2C\022\"\n\005MsgID\030\001 \002(\0162\010.MsgTyp" +
-      "e:\tLOGIN_C2S\022\020\n\010clientId\030\002 \002(\007\022\022\n\nconSuc" +
-      "cess\030\003 \002(\010*%\n\013GamePattern\022\014\n\010Standard\020\000\022" +
-      "\010\n\004Rank\020\001*M\n\rCardAttribute\022\010\n\004none\020\000\022\010\n\004" +
-      "fire\020\001\022\t\n\005water\020\002\022\010\n\004wood\020\003\022\t\n\005light\020\004\022\010" +
-      "\n\004dark\020\005*\'\n\007MsgType\022\r\n\tLOGIN_C2S\020\000\022\r\n\tLO" +
-      "GIN_S2C\020\001"
+      "\001(\0162\010.MsgType:\tLOGIN_C2S\022\021\n\tconMethod\030\002 " +
+      "\002(\005\022\016\n\006szName\030\003 \002(\t\022\022\n\nszPassWord\030\004 \002(\t\"" +
+      "K\n\rMsg_Login_S2C\022\"\n\005MsgID\030\001 \001(\0162\010.MsgTyp" +
+      "e:\tLOGIN_S2C\022\026\n\016LoginTimeStamp\030\002 \002(\003\"7\n\017" +
+      "Msg_Connect_S2C\022$\n\005MsgID\030\001 \001(\0162\010.MsgType" +
+      ":\013Connect_S2C*8\n\007MsgType\022\r\n\tLOGIN_C2S\020\000\022" +
+      "\r\n\tLOGIN_S2C\020\001\022\017\n\013Connect_S2C\020\002"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -1975,7 +2015,13 @@ public final class Msg {
           internal_static_Msg_Login_S2C_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_Msg_Login_S2C_descriptor,
-              new java.lang.String[] { "MsgID", "ClientId", "ConSuccess", });
+              new java.lang.String[] { "MsgID", "LoginTimeStamp", });
+          internal_static_Msg_Connect_S2C_descriptor =
+            getDescriptor().getMessageTypes().get(2);
+          internal_static_Msg_Connect_S2C_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_Msg_Connect_S2C_descriptor,
+              new java.lang.String[] { "MsgID", });
           return null;
         }
       };

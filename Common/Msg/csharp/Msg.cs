@@ -15,16 +15,17 @@ namespace protocols.Msg
   {
     public Msg_Login_C2S() {}
     
-    private MsgType _MsgID;
-    [global::ProtoBuf.ProtoMember(1, IsRequired = true, Name=@"MsgID", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    private MsgType _MsgID = MsgType.LOGIN_C2S;
+    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"MsgID", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    [global::System.ComponentModel.DefaultValue(MsgType.LOGIN_C2S)]
     public MsgType MsgID
     {
       get { return _MsgID; }
       set { _MsgID = value; }
     }
-    private uint _conMethod;
-    [global::ProtoBuf.ProtoMember(2, IsRequired = true, Name=@"conMethod", DataFormat = global::ProtoBuf.DataFormat.FixedSize)]
-    public uint conMethod
+    private int _conMethod;
+    [global::ProtoBuf.ProtoMember(2, IsRequired = true, Name=@"conMethod", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    public int conMethod
     {
       get { return _conMethod; }
       set { _conMethod = value; }
@@ -53,65 +54,43 @@ namespace protocols.Msg
   {
     public Msg_Login_S2C() {}
     
-    private MsgType _MsgID;
-    [global::ProtoBuf.ProtoMember(1, IsRequired = true, Name=@"MsgID", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    private MsgType _MsgID = MsgType.LOGIN_S2C;
+    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"MsgID", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    [global::System.ComponentModel.DefaultValue(MsgType.LOGIN_S2C)]
     public MsgType MsgID
     {
       get { return _MsgID; }
       set { _MsgID = value; }
     }
-    private uint _clientId;
-    [global::ProtoBuf.ProtoMember(2, IsRequired = true, Name=@"clientId", DataFormat = global::ProtoBuf.DataFormat.FixedSize)]
-    public uint clientId
+    private long _LoginTimeStamp;
+    [global::ProtoBuf.ProtoMember(2, IsRequired = true, Name=@"LoginTimeStamp", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    public long LoginTimeStamp
     {
-      get { return _clientId; }
-      set { _clientId = value; }
-    }
-    private bool _conSuccess;
-    [global::ProtoBuf.ProtoMember(3, IsRequired = true, Name=@"conSuccess", DataFormat = global::ProtoBuf.DataFormat.Default)]
-    public bool conSuccess
-    {
-      get { return _conSuccess; }
-      set { _conSuccess = value; }
+      get { return _LoginTimeStamp; }
+      set { _LoginTimeStamp = value; }
     }
     private global::ProtoBuf.IExtension extensionObject;
     global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-    [global::ProtoBuf.ProtoContract(Name=@"GamePattern")]
-    public enum GamePattern
+  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"Msg_Connect_S2C")]
+  public partial class Msg_Connect_S2C : global::ProtoBuf.IExtensible
+  {
+    public Msg_Connect_S2C() {}
+    
+    private MsgType _MsgID = MsgType.Connect_S2C;
+    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"MsgID", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    [global::System.ComponentModel.DefaultValue(MsgType.Connect_S2C)]
+    public MsgType MsgID
     {
-            
-      [global::ProtoBuf.ProtoEnum(Name=@"Standard", Value=0)]
-      Standard = 0,
-            
-      [global::ProtoBuf.ProtoEnum(Name=@"Rank", Value=1)]
-      Rank = 1
+      get { return _MsgID; }
+      set { _MsgID = value; }
     }
-  
-    [global::ProtoBuf.ProtoContract(Name=@"CardAttribute")]
-    public enum CardAttribute
-    {
-            
-      [global::ProtoBuf.ProtoEnum(Name=@"none", Value=0)]
-      none = 0,
-            
-      [global::ProtoBuf.ProtoEnum(Name=@"fire", Value=1)]
-      fire = 1,
-            
-      [global::ProtoBuf.ProtoEnum(Name=@"water", Value=2)]
-      water = 2,
-            
-      [global::ProtoBuf.ProtoEnum(Name=@"wood", Value=3)]
-      wood = 3,
-            
-      [global::ProtoBuf.ProtoEnum(Name=@"light", Value=4)]
-      light = 4,
-            
-      [global::ProtoBuf.ProtoEnum(Name=@"dark", Value=5)]
-      dark = 5
-    }
+    private global::ProtoBuf.IExtension extensionObject;
+    global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+      { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
+  }
   
     [global::ProtoBuf.ProtoContract(Name=@"MsgType")]
     public enum MsgType
@@ -121,7 +100,10 @@ namespace protocols.Msg
       LOGIN_C2S = 0,
             
       [global::ProtoBuf.ProtoEnum(Name=@"LOGIN_S2C", Value=1)]
-      LOGIN_S2C = 1
+      LOGIN_S2C = 1,
+            
+      [global::ProtoBuf.ProtoEnum(Name=@"Connect_S2C", Value=2)]
+      Connect_S2C = 2
     }
   
 }

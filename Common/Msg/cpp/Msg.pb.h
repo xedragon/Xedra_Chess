@@ -34,56 +34,16 @@ void protobuf_ShutdownFile_Msg_2eproto();
 
 class Msg_Login_C2S;
 class Msg_Login_S2C;
+class Msg_Connect_S2C;
 
-enum GamePattern {
-  Standard = 0,
-  Rank = 1
-};
-bool GamePattern_IsValid(int value);
-const GamePattern GamePattern_MIN = Standard;
-const GamePattern GamePattern_MAX = Rank;
-const int GamePattern_ARRAYSIZE = GamePattern_MAX + 1;
-
-const ::google::protobuf::EnumDescriptor* GamePattern_descriptor();
-inline const ::std::string& GamePattern_Name(GamePattern value) {
-  return ::google::protobuf::internal::NameOfEnum(
-    GamePattern_descriptor(), value);
-}
-inline bool GamePattern_Parse(
-    const ::std::string& name, GamePattern* value) {
-  return ::google::protobuf::internal::ParseNamedEnum<GamePattern>(
-    GamePattern_descriptor(), name, value);
-}
-enum CardAttribute {
-  none = 0,
-  fire = 1,
-  water = 2,
-  wood = 3,
-  light = 4,
-  dark = 5
-};
-bool CardAttribute_IsValid(int value);
-const CardAttribute CardAttribute_MIN = none;
-const CardAttribute CardAttribute_MAX = dark;
-const int CardAttribute_ARRAYSIZE = CardAttribute_MAX + 1;
-
-const ::google::protobuf::EnumDescriptor* CardAttribute_descriptor();
-inline const ::std::string& CardAttribute_Name(CardAttribute value) {
-  return ::google::protobuf::internal::NameOfEnum(
-    CardAttribute_descriptor(), value);
-}
-inline bool CardAttribute_Parse(
-    const ::std::string& name, CardAttribute* value) {
-  return ::google::protobuf::internal::ParseNamedEnum<CardAttribute>(
-    CardAttribute_descriptor(), name, value);
-}
 enum MsgType {
   LOGIN_C2S = 0,
-  LOGIN_S2C = 1
+  LOGIN_S2C = 1,
+  Connect_S2C = 2
 };
 bool MsgType_IsValid(int value);
 const MsgType MsgType_MIN = LOGIN_C2S;
-const MsgType MsgType_MAX = LOGIN_S2C;
+const MsgType MsgType_MAX = Connect_S2C;
 const int MsgType_ARRAYSIZE = MsgType_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* MsgType_descriptor();
@@ -152,19 +112,19 @@ class Msg_Login_C2S : public ::google::protobuf::Message {
 
   // accessors -------------------------------------------------------
 
-  // required .MsgType MsgID = 1 [default = LOGIN_C2S];
+  // optional .MsgType MsgID = 1 [default = LOGIN_C2S];
   inline bool has_msgid() const;
   inline void clear_msgid();
   static const int kMsgIDFieldNumber = 1;
   inline ::MsgType msgid() const;
   inline void set_msgid(::MsgType value);
 
-  // required fixed32 conMethod = 2;
+  // required int32 conMethod = 2;
   inline bool has_conmethod() const;
   inline void clear_conmethod();
   static const int kConMethodFieldNumber = 2;
-  inline ::google::protobuf::uint32 conmethod() const;
-  inline void set_conmethod(::google::protobuf::uint32 value);
+  inline ::google::protobuf::int32 conmethod() const;
+  inline void set_conmethod(::google::protobuf::int32 value);
 
   // required string szName = 3;
   inline bool has_szname() const;
@@ -204,7 +164,7 @@ class Msg_Login_C2S : public ::google::protobuf::Message {
   ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
   int msgid_;
-  ::google::protobuf::uint32 conmethod_;
+  ::google::protobuf::int32 conmethod_;
   ::std::string* szname_;
   ::std::string* szpassword_;
 
@@ -274,44 +234,34 @@ class Msg_Login_S2C : public ::google::protobuf::Message {
 
   // accessors -------------------------------------------------------
 
-  // required .MsgType MsgID = 1 [default = LOGIN_C2S];
+  // optional .MsgType MsgID = 1 [default = LOGIN_S2C];
   inline bool has_msgid() const;
   inline void clear_msgid();
   static const int kMsgIDFieldNumber = 1;
   inline ::MsgType msgid() const;
   inline void set_msgid(::MsgType value);
 
-  // required fixed32 clientId = 2;
-  inline bool has_clientid() const;
-  inline void clear_clientid();
-  static const int kClientIdFieldNumber = 2;
-  inline ::google::protobuf::uint32 clientid() const;
-  inline void set_clientid(::google::protobuf::uint32 value);
-
-  // required bool conSuccess = 3;
-  inline bool has_consuccess() const;
-  inline void clear_consuccess();
-  static const int kConSuccessFieldNumber = 3;
-  inline bool consuccess() const;
-  inline void set_consuccess(bool value);
+  // required int64 LoginTimeStamp = 2;
+  inline bool has_logintimestamp() const;
+  inline void clear_logintimestamp();
+  static const int kLoginTimeStampFieldNumber = 2;
+  inline ::google::protobuf::int64 logintimestamp() const;
+  inline void set_logintimestamp(::google::protobuf::int64 value);
 
   // @@protoc_insertion_point(class_scope:Msg_Login_S2C)
  private:
   inline void set_has_msgid();
   inline void clear_has_msgid();
-  inline void set_has_clientid();
-  inline void clear_has_clientid();
-  inline void set_has_consuccess();
-  inline void clear_has_consuccess();
+  inline void set_has_logintimestamp();
+  inline void clear_has_logintimestamp();
 
   ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
+  ::google::protobuf::int64 logintimestamp_;
   int msgid_;
-  ::google::protobuf::uint32 clientid_;
-  bool consuccess_;
 
   mutable int _cached_size_;
-  ::google::protobuf::uint32 _has_bits_[(3 + 31) / 32];
+  ::google::protobuf::uint32 _has_bits_[(2 + 31) / 32];
 
   friend void  protobuf_AddDesc_Msg_2eproto();
   friend void protobuf_AssignDesc_Msg_2eproto();
@@ -320,6 +270,88 @@ class Msg_Login_S2C : public ::google::protobuf::Message {
   void InitAsDefaultInstance();
   static Msg_Login_S2C* default_instance_;
 };
+// -------------------------------------------------------------------
+
+class Msg_Connect_S2C : public ::google::protobuf::Message {
+ public:
+  Msg_Connect_S2C();
+  virtual ~Msg_Connect_S2C();
+
+  Msg_Connect_S2C(const Msg_Connect_S2C& from);
+
+  inline Msg_Connect_S2C& operator=(const Msg_Connect_S2C& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _unknown_fields_;
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return &_unknown_fields_;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Msg_Connect_S2C& default_instance();
+
+  void Swap(Msg_Connect_S2C* other);
+
+  // implements Message ----------------------------------------------
+
+  Msg_Connect_S2C* New() const;
+  void CopyFrom(const ::google::protobuf::Message& from);
+  void MergeFrom(const ::google::protobuf::Message& from);
+  void CopyFrom(const Msg_Connect_S2C& from);
+  void MergeFrom(const Msg_Connect_S2C& from);
+  void Clear();
+  bool IsInitialized() const;
+
+  int ByteSize() const;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input);
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
+  int GetCachedSize() const { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const;
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // optional .MsgType MsgID = 1 [default = Connect_S2C];
+  inline bool has_msgid() const;
+  inline void clear_msgid();
+  static const int kMsgIDFieldNumber = 1;
+  inline ::MsgType msgid() const;
+  inline void set_msgid(::MsgType value);
+
+  // @@protoc_insertion_point(class_scope:Msg_Connect_S2C)
+ private:
+  inline void set_has_msgid();
+  inline void clear_has_msgid();
+
+  ::google::protobuf::UnknownFieldSet _unknown_fields_;
+
+  int msgid_;
+
+  mutable int _cached_size_;
+  ::google::protobuf::uint32 _has_bits_[(1 + 31) / 32];
+
+  friend void  protobuf_AddDesc_Msg_2eproto();
+  friend void protobuf_AssignDesc_Msg_2eproto();
+  friend void protobuf_ShutdownFile_Msg_2eproto();
+
+  void InitAsDefaultInstance();
+  static Msg_Connect_S2C* default_instance_;
+};
 // ===================================================================
 
 
@@ -327,7 +359,7 @@ class Msg_Login_S2C : public ::google::protobuf::Message {
 
 // Msg_Login_C2S
 
-// required .MsgType MsgID = 1 [default = LOGIN_C2S];
+// optional .MsgType MsgID = 1 [default = LOGIN_C2S];
 inline bool Msg_Login_C2S::has_msgid() const {
   return (_has_bits_[0] & 0x00000001u) != 0;
 }
@@ -350,7 +382,7 @@ inline void Msg_Login_C2S::set_msgid(::MsgType value) {
   msgid_ = value;
 }
 
-// required fixed32 conMethod = 2;
+// required int32 conMethod = 2;
 inline bool Msg_Login_C2S::has_conmethod() const {
   return (_has_bits_[0] & 0x00000002u) != 0;
 }
@@ -361,13 +393,13 @@ inline void Msg_Login_C2S::clear_has_conmethod() {
   _has_bits_[0] &= ~0x00000002u;
 }
 inline void Msg_Login_C2S::clear_conmethod() {
-  conmethod_ = 0u;
+  conmethod_ = 0;
   clear_has_conmethod();
 }
-inline ::google::protobuf::uint32 Msg_Login_C2S::conmethod() const {
+inline ::google::protobuf::int32 Msg_Login_C2S::conmethod() const {
   return conmethod_;
 }
-inline void Msg_Login_C2S::set_conmethod(::google::protobuf::uint32 value) {
+inline void Msg_Login_C2S::set_conmethod(::google::protobuf::int32 value) {
   set_has_conmethod();
   conmethod_ = value;
 }
@@ -516,7 +548,7 @@ inline void Msg_Login_C2S::set_allocated_szpassword(::std::string* szpassword) {
 
 // Msg_Login_S2C
 
-// required .MsgType MsgID = 1 [default = LOGIN_C2S];
+// optional .MsgType MsgID = 1 [default = LOGIN_S2C];
 inline bool Msg_Login_S2C::has_msgid() const {
   return (_has_bits_[0] & 0x00000001u) != 0;
 }
@@ -527,7 +559,7 @@ inline void Msg_Login_S2C::clear_has_msgid() {
   _has_bits_[0] &= ~0x00000001u;
 }
 inline void Msg_Login_S2C::clear_msgid() {
-  msgid_ = 0;
+  msgid_ = 1;
   clear_has_msgid();
 }
 inline ::MsgType Msg_Login_S2C::msgid() const {
@@ -539,48 +571,53 @@ inline void Msg_Login_S2C::set_msgid(::MsgType value) {
   msgid_ = value;
 }
 
-// required fixed32 clientId = 2;
-inline bool Msg_Login_S2C::has_clientid() const {
+// required int64 LoginTimeStamp = 2;
+inline bool Msg_Login_S2C::has_logintimestamp() const {
   return (_has_bits_[0] & 0x00000002u) != 0;
 }
-inline void Msg_Login_S2C::set_has_clientid() {
+inline void Msg_Login_S2C::set_has_logintimestamp() {
   _has_bits_[0] |= 0x00000002u;
 }
-inline void Msg_Login_S2C::clear_has_clientid() {
+inline void Msg_Login_S2C::clear_has_logintimestamp() {
   _has_bits_[0] &= ~0x00000002u;
 }
-inline void Msg_Login_S2C::clear_clientid() {
-  clientid_ = 0u;
-  clear_has_clientid();
+inline void Msg_Login_S2C::clear_logintimestamp() {
+  logintimestamp_ = GOOGLE_LONGLONG(0);
+  clear_has_logintimestamp();
 }
-inline ::google::protobuf::uint32 Msg_Login_S2C::clientid() const {
-  return clientid_;
+inline ::google::protobuf::int64 Msg_Login_S2C::logintimestamp() const {
+  return logintimestamp_;
 }
-inline void Msg_Login_S2C::set_clientid(::google::protobuf::uint32 value) {
-  set_has_clientid();
-  clientid_ = value;
+inline void Msg_Login_S2C::set_logintimestamp(::google::protobuf::int64 value) {
+  set_has_logintimestamp();
+  logintimestamp_ = value;
 }
 
-// required bool conSuccess = 3;
-inline bool Msg_Login_S2C::has_consuccess() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
+// -------------------------------------------------------------------
+
+// Msg_Connect_S2C
+
+// optional .MsgType MsgID = 1 [default = Connect_S2C];
+inline bool Msg_Connect_S2C::has_msgid() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
 }
-inline void Msg_Login_S2C::set_has_consuccess() {
-  _has_bits_[0] |= 0x00000004u;
+inline void Msg_Connect_S2C::set_has_msgid() {
+  _has_bits_[0] |= 0x00000001u;
 }
-inline void Msg_Login_S2C::clear_has_consuccess() {
-  _has_bits_[0] &= ~0x00000004u;
+inline void Msg_Connect_S2C::clear_has_msgid() {
+  _has_bits_[0] &= ~0x00000001u;
 }
-inline void Msg_Login_S2C::clear_consuccess() {
-  consuccess_ = false;
-  clear_has_consuccess();
+inline void Msg_Connect_S2C::clear_msgid() {
+  msgid_ = 2;
+  clear_has_msgid();
 }
-inline bool Msg_Login_S2C::consuccess() const {
-  return consuccess_;
+inline ::MsgType Msg_Connect_S2C::msgid() const {
+  return static_cast< ::MsgType >(msgid_);
 }
-inline void Msg_Login_S2C::set_consuccess(bool value) {
-  set_has_consuccess();
-  consuccess_ = value;
+inline void Msg_Connect_S2C::set_msgid(::MsgType value) {
+  assert(::MsgType_IsValid(value));
+  set_has_msgid();
+  msgid_ = value;
 }
 
 
@@ -590,14 +627,6 @@ inline void Msg_Login_S2C::set_consuccess(bool value) {
 namespace google {
 namespace protobuf {
 
-template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::GamePattern>() {
-  return ::GamePattern_descriptor();
-}
-template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::CardAttribute>() {
-  return ::CardAttribute_descriptor();
-}
 template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::MsgType>() {
   return ::MsgType_descriptor();

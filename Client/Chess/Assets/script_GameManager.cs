@@ -31,13 +31,8 @@ public class script_GameManager : MonoBehaviour
         //Init scene
         g_GameManager = this;
         LoadChessPieces();
-        //Test protobuf
-        Msg_Login_C2S s=new Msg_Login_C2S();
-        s.conMethod = 1;
-        s.szName = "sds";
-        s.szPassWord = "卧槽";
-
-        print(s.szPassWord);
+        //Init Msgmgr
+        MsgMgr.getInstance().Init();
 
     }
 
@@ -65,6 +60,8 @@ public class script_GameManager : MonoBehaviour
             //new Vector3(Input.mousePosition.x, Input.mousePosition.y,0);
             choosed_piecs.transform.position = tposition;
         }
+
+        MsgMgr.getInstance().RecvMsg();
     }
 
     /// <summary>

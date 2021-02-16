@@ -19,6 +19,8 @@ public:
 	virtual void Shut() ;
 	void Accept();
 private:
+	void addClient(SOCKET socket);
+private:
 	SOCKET _socket{};
 	SOCKADDR clientAddr{};
 

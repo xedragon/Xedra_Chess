@@ -10,6 +10,7 @@ add_subdirectory("libprotobuf/source")
 add_subdirectory("libmysql/source")
 add_subdirectory("libconfig/source")
 add_subdirectory("libmsg/source")
+add_subdirectory("libbaseutil/source")
 
 
 # TODO: 如有需要，请添加测试并安装目标。
