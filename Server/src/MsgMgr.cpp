@@ -16,8 +16,8 @@ bool MsgMgr::Update()
 {
 	//Receive
 	{
-		char szBuf[2];
-		int nLen = recv(_socket, szBuf, 2, 0);
+		char szBuf[255];
+		int nLen = recv(_socket, szBuf, 255, 0);
 		if (nLen > 0)
 		{
 			Decode(szBuf, nLen);
