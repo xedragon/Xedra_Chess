@@ -1,6 +1,7 @@
 cmake_minimum_required (VERSION 3.1.0)
 
 include(${PROJECT_SOURCE_DIR}/utils.cmake)
+include_directories(${PROJECT_SOURCE_DIR}/src)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/automake)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/tabletool)
@@ -20,8 +21,8 @@ automake/tableconfig.cpp
 automake/tablestruct.h
 
 
-DataService.cpp
-DataService.h
+ConfigModule.cpp
+ConfigModule.h
 )
 
 group_sources("${ALL_FILES}")

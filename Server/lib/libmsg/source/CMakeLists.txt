@@ -10,6 +10,8 @@ include_directories(${CMAKE_SOURCE_DIR}/lib/libprotobuf/source)
 set(ALL_FILES
 	msg/Msg.pb.h
 	msg/Msg.pb.cc
+	msg/MsgChat.pb.h
+	msg/MsgChat.pb.cc
 )
 
 group_sources("${ALL_FILES}")

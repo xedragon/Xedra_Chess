@@ -1,29 +1,39 @@
 cmake_minimum_required(VERSION 3.1.0)
 
-include(../../../utils.cmake)
+include(${PROJECT_SOURCE_DIR}/utils.cmake)
 
-project (static_mysql)
 
 set(INC_DIR ${CMAKE_CURRENT_SOURCE_DIR}/include)
 set(LINK_DIR ${CMAKE_CURRENT_SOURCE_DIR}/lib)
 
 # 添加lib_mysql
 set(LIBRARY_OUTPUT_PATH ${LIBRARY_PATH})
- add_library(libmysql SHARED IMPORTED)
- set_property(TARGET libmysql PROPERTY IMPORTED_LOCATION ${LINK_DIR}/libmysql.dll)
- set_property(TARGET libmysql PROPERTY IMPORTED_IMPLIB ${LINK_DIR}/libmysql.lib) # 多了lib信息
+add_library(libmysql SHARED IMPORTED)
+set_property(TARGET libmysql PROPERTY IMPORTED_LOCATION ${LINK_DIR}/libmysql.dll)
+set_property(TARGET libmysql PROPERTY IMPORTED_IMPLIB ${LINK_DIR}/libmysql.lib)
 
 # 添加static_mysql
+include_directories(${PROJECT_SOURCE_DIR}/src)
 include_directories(${INC_DIR})
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
-link_directories(${LINK_DIR})
 
-aux_source_directory(. ALL_FILES)
+project (static_mysql)
+
+set(ALL_FILES
+	MySqlServer.h
+	MySqlServer.cpp
+	
+	IQueryResult.h
+	MySqlQueryResult.h
+)
+
+group_sources("${ALL_FILES}")
 add_library(${PROJECT_NAME} ${ALL_FILES})
 
- # 链接 libmysql
- target_include_directories(${PROJECT_NAME} PUBLIC ${INC_DIR})
- target_link_libraries(${PROJECT_NAME} PUBLIC libmysql)
+# 链接 libmysql
+link_directories(${LINK_DIR})
+target_include_directories(${PROJECT_NAME} PUBLIC ${INC_DIR})
+target_link_libraries(${PROJECT_NAME} PUBLIC libmysql)
 
 # 拷贝.dll
 add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD

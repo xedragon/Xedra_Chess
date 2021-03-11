@@ -1,8 +1,10 @@
 ﻿#include <Facade.h>
 #include <thread>
-#include <Moudle/Moudle.h>
-#include <libconfig/source/DataService.h>
+#include <Moudle.h>
+#include <libconfig/source/ConfigModule.h>
 #include <Moudle/NetMoudle.h>
+#include <libmysql/source/MySqlServer.h>
+#include <libgame/Source/Game/Gobang/GobangManager.h>
 
 using namespace std;
 
@@ -18,8 +20,15 @@ Facade& Facade::getInstance()
 
 bool Facade::Init()
 {
-	DataService::getInstance().Init();
+	ConfigModule::getInstance().Init();
+	MySqlServer::getInstance().Init();
+	GobangManager::getInstance().Init();
 	NetMoudle::getInstance().Init();
+
+	RegisterMoudle(&ConfigModule::getInstance());
+	RegisterMoudle(&MySqlServer::getInstance());
+	RegisterMoudle(&GobangManager::getInstance());
+	RegisterMoudle(&NetMoudle::getInstance());
 	return true;
 }
 

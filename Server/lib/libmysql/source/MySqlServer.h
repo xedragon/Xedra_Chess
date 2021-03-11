@@ -1,34 +1,11 @@
 #pragma once
 #include <iostream>
+#include "MySqlQueryResult.h"
+#include <Moudle.h>
+#include <memory>
 
-
-//数据库信息，仅连接时使用
-struct sqlinfo
-{
-	const char* host;
-	const char* user;
-	const char* password;
-	const char* database;
-	unsigned int port;
-	const char unix_socket;
-	unsigned long clientflag;
-	sqlinfo() :
-		host("127.0.0.1"),
-		port(3306),
-		user("root"),
-		password("456258"),
-		database("class"),
-		unix_socket(NULL),
-		clientflag(0)
-	{
-
-	}
-};
-
-class IQueryResult;
 struct MYSQL;
-
-class MySqlServer
+class MySqlServer:public Moudle
 {
 public:
 	MySqlServer();
@@ -36,15 +13,20 @@ public:
 
 	static MySqlServer& getInstance();
 	// 通过 IModule 继承
-	virtual bool Init();
-	virtual bool Update();
-	virtual bool Shut();
+	virtual void Init()override;
+	virtual void Update()override;
+	virtual void Shut()override;
+
+	void test();
+
+public:
+	bool Query(IQueryResult* result, char*);//查询
+
+	std::shared_ptr<MySqlQueryResult> Query(std::string Expression);
+
+	bool Execute(std::string expression);//执行
 
 private:
-	bool Query(IQueryResult** result, char*);//查询
-	bool Execute(char*);//执行
-
-private:
-	sqlinfo m_sqlinfo{};
 	MYSQL* myCont{};
+	char _temp[256]{};
 };

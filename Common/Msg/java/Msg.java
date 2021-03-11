@@ -17,10 +17,6 @@ public final class Msg {
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
      * <code>LOGIN_C2S = 0;</code>
-     *
-     * <pre>
-     *登录
-     * </pre>
      */
     LOGIN_C2S(0, 0),
     /**
@@ -31,14 +27,14 @@ public final class Msg {
      * <code>Connect_S2C = 2;</code>
      */
     Connect_S2C(2, 2),
+    /**
+     * <code>Chat_C2S = 3;</code>
+     */
+    Chat_C2S(3, 3),
     ;
 
     /**
      * <code>LOGIN_C2S = 0;</code>
-     *
-     * <pre>
-     *登录
-     * </pre>
      */
     public static final int LOGIN_C2S_VALUE = 0;
     /**
@@ -49,6 +45,10 @@ public final class Msg {
      * <code>Connect_S2C = 2;</code>
      */
     public static final int Connect_S2C_VALUE = 2;
+    /**
+     * <code>Chat_C2S = 3;</code>
+     */
+    public static final int Chat_C2S_VALUE = 3;
 
 
     public final int getNumber() { return value; }
@@ -58,6 +58,7 @@ public final class Msg {
         case 0: return LOGIN_C2S;
         case 1: return LOGIN_S2C;
         case 2: return Connect_S2C;
+        case 3: return Chat_C2S;
         default: return null;
       }
     }
@@ -1996,8 +1997,9 @@ public final class Msg {
       "K\n\rMsg_Login_S2C\022\"\n\005MsgID\030\001 \001(\0162\010.MsgTyp" +
       "e:\tLOGIN_S2C\022\026\n\016LoginTimeStamp\030\002 \002(\003\"7\n\017" +
       "Msg_Connect_S2C\022$\n\005MsgID\030\001 \001(\0162\010.MsgType" +
-      ":\013Connect_S2C*8\n\007MsgType\022\r\n\tLOGIN_C2S\020\000\022" +
-      "\r\n\tLOGIN_S2C\020\001\022\017\n\013Connect_S2C\020\002"
+      ":\013Connect_S2C*F\n\007MsgType\022\r\n\tLOGIN_C2S\020\000\022" +
+      "\r\n\tLOGIN_S2C\020\001\022\017\n\013Connect_S2C\020\002\022\014\n\010Chat_" +
+      "C2S\020\003"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {

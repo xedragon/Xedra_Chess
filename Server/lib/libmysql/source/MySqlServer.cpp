@@ -1,13 +1,9 @@
 #include <MySqlServer.h>
-#include <include\mysql.h>
-#include <MySqlQueryResult.h>
+#include <include/mysql.h>
+#include "../../libconfig/source/ConfigModule.h"
+#include "../../libbaseutil/source/format.h"
 
 using namespace std;
-
-//void main()
-//{
-//	std::cout << "..";
-//}
 
 static MySqlServer* g_MySqlServer=nullptr;
 MySqlServer::MySqlServer()
@@ -17,7 +13,6 @@ MySqlServer::MySqlServer()
 MySqlServer::~MySqlServer()
 {
 	g_MySqlServer = nullptr;
-
 }
 
 MySqlServer& MySqlServer::getInstance()
@@ -30,10 +25,17 @@ MySqlServer& MySqlServer::getInstance()
 	return *g_MySqlServer;
 }
 
-bool MySqlServer::Init()
+void MySqlServer::Init()
 {
+	auto cfgItem = ConfigModule::getInstance().tbsDatabaseCfgItem(1);
+	if (!cfgItem)
+	{
+		printf("Load DatabaseCfg Error\n");
+		return;
+	}
+
 	myCont = mysql_init(myCont);
-	if (mysql_real_connect(myCont, m_sqlinfo.host, m_sqlinfo.user, m_sqlinfo.password, m_sqlinfo.database, m_sqlinfo.port, (char *)m_sqlinfo.unix_socket, m_sqlinfo.clientflag))
+	if (mysql_real_connect(myCont, cfgItem->host.c_str(), cfgItem->user.c_str(), cfgItem->password.c_str(), cfgItem->database.c_str(), cfgItem->port, (char *)cfgItem->unix_socket, cfgItem->clientflag))
 	{
 		printf("connect success!\n");
 	}
@@ -42,24 +44,40 @@ bool MySqlServer::Init()
 		printf("connect failed!\n");
 	}
 	mysql_query(myCont, "SET NAMES GBK"); //设置编码格式
-
-	return true;
 }
 
-bool MySqlServer::Update()
+void MySqlServer::Update()
 {
-	return true;
+	
 }
 
-bool MySqlServer::Shut()
+void MySqlServer::Shut()
 {
 	mysql_close(myCont);//断开连接
-	return true;
 }
 
-bool MySqlServer::Execute(char *QueryCode)
+void MySqlServer::test()
 {
-	if (mysql_query(myCont, QueryCode))
+	auto tester = Query("select * from user");
+	if (tester)
+	{
+		while (tester->Read())
+		{
+			auto name = tester->get_string(1);
+			auto password = tester->get_string(2);
+			cout << __FILE__ << __LINE__ << __FUNCTION__;
+			cout<<"name:"<<name<<" passworld:"<<password<<endl;
+		}
+	}
+	else
+	{
+		cout << "test failed" << endl;
+	}
+}
+
+bool MySqlServer::Execute(std::string QueryCode)
+{
+	if (mysql_query(myCont, QueryCode.c_str()))
 	{
 		printf("执行sql语句失败，错误信息为:%s\n", mysql_error(myCont));
 		return false;
@@ -67,16 +85,38 @@ bool MySqlServer::Execute(char *QueryCode)
 	return true;
 }
 
-bool MySqlServer::Query(IQueryResult **result,char *QueryCode)
+bool MySqlServer::Query(IQueryResult *result,char *QueryCode)
 {
-	*result = 0;
 	if (mysql_query(myCont, QueryCode))
 	{
 		printf("执行sql查询语句失败，错误信息为:%s\n", mysql_error(myCont));
 		return false;
 	}
+
 	MYSQL_RES *res = mysql_store_result(myCont);
 	if (res)
-		*result=new MySqlQueryResult(res, res->row_count, res->field_count);
+		result=new MySqlQueryResult(res, res->row_count, res->field_count);
 	return true;
+}
+
+//std::shared_ptr<MySqlQueryResult> MySqlServer::Query(char* Expression, ...)
+//{
+//	va_list ArgList;
+//	va_start(ArgList,Expression);
+//	vsprintf_s(_temp,Expression, ArgList);
+//	va_end(ArgList);
+//
+//	return Query(_temp);
+//}
+
+std::shared_ptr<MySqlQueryResult> MySqlServer::Query(std::string Expression)
+{
+	if (mysql_query(myCont, Expression.c_str()))
+	{
+		printf("执行sql查询语句失败，错误信息为:%s\n", mysql_error(myCont));
+		return nullptr;
+	}
+	MYSQL_RES* res = mysql_store_result(myCont);
+
+	return std::make_shared<MySqlQueryResult>(res, res->row_count, res->field_count);
 }

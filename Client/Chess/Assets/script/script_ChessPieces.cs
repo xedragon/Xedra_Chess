@@ -2,23 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum PIECES_TYPE
-{
-    BING,
-    CHE,
-    MA,
-    PAO,
-    JIANG,
-    SHI,
-    XIANG,
-};
-
-
 public class script_ChessPieces : MonoBehaviour
 {
     public int coord_x;
     public int coord_y;
-    public PIECES_TYPE type;
+    public MsgPB.COLOR m_Color;
 
     /// <summary>
     /// Unity Methods Below
@@ -38,12 +26,16 @@ public class script_ChessPieces : MonoBehaviour
 
     void OnMouseDown()
     {
-        script_GameManager.getInstance().ChoosePiece(this);
+        gobang_GameManager.getInstance().LayDownPiece(this);
+    }
+
+    public int CoorId()
+    {
+        return 19 * coord_x + coord_y;
     }
 
     /// <summary>
     /// Self Defined Methods Below
     /// </summary>
-
 
 }

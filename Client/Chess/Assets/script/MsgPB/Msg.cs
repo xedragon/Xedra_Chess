@@ -8,42 +8,73 @@
 //------------------------------------------------------------------------------
 
 // Generated from: protocols/Msg.proto
-namespace protocols.Msg
+namespace MsgPB
 {
+  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"Msg_Connect_S2C")]
+  public partial class Msg_Connect_S2C : global::ProtoBuf.IExtensible
+  {
+    public Msg_Connect_S2C() {}
+    
+    private MsgPB.MsgType _MsgID = MsgPB.MsgType.Connect_S2C;
+    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"MsgID", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    [global::System.ComponentModel.DefaultValue(MsgPB.MsgType.Connect_S2C)]
+    public MsgPB.MsgType MsgID
+    {
+      get { return _MsgID; }
+      set { _MsgID = value; }
+    }
+    private global::ProtoBuf.IExtension extensionObject;
+    global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+      { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
+  }
+  
   [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"Msg_Login_C2S")]
   public partial class Msg_Login_C2S : global::ProtoBuf.IExtensible
   {
     public Msg_Login_C2S() {}
     
-    private MsgType _MsgID = MsgType.LOGIN_C2S;
+    private MsgPB.MsgType _MsgID = MsgPB.MsgType.LOGIN_C2S;
     [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"MsgID", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(MsgType.LOGIN_C2S)]
-    public MsgType MsgID
+    [global::System.ComponentModel.DefaultValue(MsgPB.MsgType.LOGIN_C2S)]
+    public MsgPB.MsgType MsgID
     {
       get { return _MsgID; }
       set { _MsgID = value; }
     }
-    private int _conMethod;
+    private MsgPB.Msg_Login_C2S.CONMETHOD _conMethod;
     [global::ProtoBuf.ProtoMember(2, IsRequired = true, Name=@"conMethod", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    public int conMethod
+    public MsgPB.Msg_Login_C2S.CONMETHOD conMethod
     {
       get { return _conMethod; }
       set { _conMethod = value; }
     }
-    private string _szName;
-    [global::ProtoBuf.ProtoMember(3, IsRequired = true, Name=@"szName", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    private string _szName = "";
+    [global::ProtoBuf.ProtoMember(3, IsRequired = false, Name=@"szName", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    [global::System.ComponentModel.DefaultValue("")]
     public string szName
     {
       get { return _szName; }
       set { _szName = value; }
     }
-    private string _szPassWord;
-    [global::ProtoBuf.ProtoMember(4, IsRequired = true, Name=@"szPassWord", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    private string _szPassWord = "";
+    [global::ProtoBuf.ProtoMember(4, IsRequired = false, Name=@"szPassWord", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    [global::System.ComponentModel.DefaultValue("")]
     public string szPassWord
     {
       get { return _szPassWord; }
       set { _szPassWord = value; }
     }
+    [global::ProtoBuf.ProtoContract(Name=@"CONMETHOD")]
+    public enum CONMETHOD
+    {
+            
+      [global::ProtoBuf.ProtoEnum(Name=@"Login", Value=0)]
+      Login = 0,
+            
+      [global::ProtoBuf.ProtoEnum(Name=@"Regist", Value=1)]
+      Regist = 1
+    }
+  
     private global::ProtoBuf.IExtension extensionObject;
     global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
@@ -54,38 +85,312 @@ namespace protocols.Msg
   {
     public Msg_Login_S2C() {}
     
-    private MsgType _MsgID = MsgType.LOGIN_S2C;
+    private MsgPB.MsgType _MsgID = MsgPB.MsgType.LOGIN_S2C;
     [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"MsgID", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(MsgType.LOGIN_S2C)]
-    public MsgType MsgID
+    [global::System.ComponentModel.DefaultValue(MsgPB.MsgType.LOGIN_S2C)]
+    public MsgPB.MsgType MsgID
     {
       get { return _MsgID; }
       set { _MsgID = value; }
     }
-    private long _LoginTimeStamp;
-    [global::ProtoBuf.ProtoMember(2, IsRequired = true, Name=@"LoginTimeStamp", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    private int _Id = default(int);
+    [global::ProtoBuf.ProtoMember(2, IsRequired = false, Name=@"Id", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    [global::System.ComponentModel.DefaultValue(default(int))]
+    public int Id
+    {
+      get { return _Id; }
+      set { _Id = value; }
+    }
+    private long _LoginTimeStamp = default(long);
+    [global::ProtoBuf.ProtoMember(3, IsRequired = false, Name=@"LoginTimeStamp", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    [global::System.ComponentModel.DefaultValue(default(long))]
     public long LoginTimeStamp
     {
       get { return _LoginTimeStamp; }
       set { _LoginTimeStamp = value; }
+    }
+    private MsgPB.Msg_Login_S2C.ERRORCODE __ErrorCode = MsgPB.Msg_Login_S2C.ERRORCODE.NULL;
+    [global::ProtoBuf.ProtoMember(4, IsRequired = false, Name=@"_ErrorCode", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    [global::System.ComponentModel.DefaultValue(MsgPB.Msg_Login_S2C.ERRORCODE.NULL)]
+    public MsgPB.Msg_Login_S2C.ERRORCODE _ErrorCode
+    {
+      get { return __ErrorCode; }
+      set { __ErrorCode = value; }
+    }
+    [global::ProtoBuf.ProtoContract(Name=@"ERRORCODE")]
+    public enum ERRORCODE
+    {
+            
+      [global::ProtoBuf.ProtoEnum(Name=@"NULL", Value=0)]
+      NULL = 0,
+            
+      [global::ProtoBuf.ProtoEnum(Name=@"LoginSuccess", Value=1)]
+      LoginSuccess = 1,
+            
+      [global::ProtoBuf.ProtoEnum(Name=@"ErrorPassword", Value=2)]
+      ErrorPassword = 2,
+            
+      [global::ProtoBuf.ProtoEnum(Name=@"EmptyAccount", Value=3)]
+      EmptyAccount = 3,
+            
+      [global::ProtoBuf.ProtoEnum(Name=@"RegistSuccess", Value=11)]
+      RegistSuccess = 11,
+            
+      [global::ProtoBuf.ProtoEnum(Name=@"ExistedName", Value=12)]
+      ExistedName = 12
+    }
+  
+    private global::ProtoBuf.IExtension extensionObject;
+    global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+      { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
+  }
+  
+  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"Msg_Gobang_Match_C2S")]
+  public partial class Msg_Gobang_Match_C2S : global::ProtoBuf.IExtensible
+  {
+    public Msg_Gobang_Match_C2S() {}
+    
+    private MsgPB.MsgType _MsgId = MsgPB.MsgType.Gobang_Match_C2S;
+    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"MsgId", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    [global::System.ComponentModel.DefaultValue(MsgPB.MsgType.Gobang_Match_C2S)]
+    public MsgPB.MsgType MsgId
+    {
+      get { return _MsgId; }
+      set { _MsgId = value; }
     }
     private global::ProtoBuf.IExtension extensionObject;
     global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
-  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"Msg_Connect_S2C")]
-  public partial class Msg_Connect_S2C : global::ProtoBuf.IExtensible
+  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"Msg_Gobang_Start_S2C")]
+  public partial class Msg_Gobang_Start_S2C : global::ProtoBuf.IExtensible
   {
-    public Msg_Connect_S2C() {}
+    public Msg_Gobang_Start_S2C() {}
     
-    private MsgType _MsgID = MsgType.Connect_S2C;
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"MsgID", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
-    [global::System.ComponentModel.DefaultValue(MsgType.Connect_S2C)]
-    public MsgType MsgID
+    private MsgPB.MsgType _MsgId = MsgPB.MsgType.Gobang_Start_S2C;
+    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"MsgId", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    [global::System.ComponentModel.DefaultValue(MsgPB.MsgType.Gobang_Start_S2C)]
+    public MsgPB.MsgType MsgId
     {
-      get { return _MsgID; }
-      set { _MsgID = value; }
+      get { return _MsgId; }
+      set { _MsgId = value; }
+    }
+    private long _GameID = default(long);
+    [global::ProtoBuf.ProtoMember(2, IsRequired = false, Name=@"GameID", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    [global::System.ComponentModel.DefaultValue(default(long))]
+    public long GameID
+    {
+      get { return _GameID; }
+      set { _GameID = value; }
+    }
+    private MsgPB.COLOR _Role = MsgPB.COLOR.Null;
+    [global::ProtoBuf.ProtoMember(3, IsRequired = false, Name=@"Role", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    [global::System.ComponentModel.DefaultValue(MsgPB.COLOR.Null)]
+    public MsgPB.COLOR Role
+    {
+      get { return _Role; }
+      set { _Role = value; }
+    }
+    private global::ProtoBuf.IExtension extensionObject;
+    global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+      { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
+  }
+  
+  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"Msg_Gobang_Action_C2S")]
+  public partial class Msg_Gobang_Action_C2S : global::ProtoBuf.IExtensible
+  {
+    public Msg_Gobang_Action_C2S() {}
+    
+    private MsgPB.MsgType _MsgId = MsgPB.MsgType.Gobang_Action_C2S;
+    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"MsgId", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    [global::System.ComponentModel.DefaultValue(MsgPB.MsgType.Gobang_Action_C2S)]
+    public MsgPB.MsgType MsgId
+    {
+      get { return _MsgId; }
+      set { _MsgId = value; }
+    }
+    private MsgPB.COLOR _Role = MsgPB.COLOR.Null;
+    [global::ProtoBuf.ProtoMember(2, IsRequired = false, Name=@"Role", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    [global::System.ComponentModel.DefaultValue(MsgPB.COLOR.Null)]
+    public MsgPB.COLOR Role
+    {
+      get { return _Role; }
+      set { _Role = value; }
+    }
+    private int _x = default(int);
+    [global::ProtoBuf.ProtoMember(3, IsRequired = false, Name=@"x", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    [global::System.ComponentModel.DefaultValue(default(int))]
+    public int x
+    {
+      get { return _x; }
+      set { _x = value; }
+    }
+    private int _y = default(int);
+    [global::ProtoBuf.ProtoMember(4, IsRequired = false, Name=@"y", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    [global::System.ComponentModel.DefaultValue(default(int))]
+    public int y
+    {
+      get { return _y; }
+      set { _y = value; }
+    }
+    private int _turnId = default(int);
+    [global::ProtoBuf.ProtoMember(5, IsRequired = false, Name=@"turnId", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    [global::System.ComponentModel.DefaultValue(default(int))]
+    public int turnId
+    {
+      get { return _turnId; }
+      set { _turnId = value; }
+    }
+    private global::ProtoBuf.IExtension extensionObject;
+    global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+      { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
+  }
+  
+  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"Msg_Gobang_Action_S2C")]
+  public partial class Msg_Gobang_Action_S2C : global::ProtoBuf.IExtensible
+  {
+    public Msg_Gobang_Action_S2C() {}
+    
+    private MsgPB.MsgType _MsgId = MsgPB.MsgType.Gobang_Action_S2C;
+    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"MsgId", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    [global::System.ComponentModel.DefaultValue(MsgPB.MsgType.Gobang_Action_S2C)]
+    public MsgPB.MsgType MsgId
+    {
+      get { return _MsgId; }
+      set { _MsgId = value; }
+    }
+    private MsgPB.COLOR _Turner = MsgPB.COLOR.Null;
+    [global::ProtoBuf.ProtoMember(2, IsRequired = false, Name=@"Turner", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    [global::System.ComponentModel.DefaultValue(MsgPB.COLOR.Null)]
+    public MsgPB.COLOR Turner
+    {
+      get { return _Turner; }
+      set { _Turner = value; }
+    }
+    private global::ProtoBuf.IExtension extensionObject;
+    global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+      { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
+  }
+  
+  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"Msg_Gobang_Over_S2C")]
+  public partial class Msg_Gobang_Over_S2C : global::ProtoBuf.IExtensible
+  {
+    public Msg_Gobang_Over_S2C() {}
+    
+    private MsgPB.MsgType _MsgId = MsgPB.MsgType.Gobang_Over_S2C;
+    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"MsgId", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    [global::System.ComponentModel.DefaultValue(MsgPB.MsgType.Gobang_Over_S2C)]
+    public MsgPB.MsgType MsgId
+    {
+      get { return _MsgId; }
+      set { _MsgId = value; }
+    }
+    private MsgPB.COLOR _Winner = MsgPB.COLOR.Null;
+    [global::ProtoBuf.ProtoMember(2, IsRequired = false, Name=@"Winner", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    [global::System.ComponentModel.DefaultValue(MsgPB.COLOR.Null)]
+    public MsgPB.COLOR Winner
+    {
+      get { return _Winner; }
+      set { _Winner = value; }
+    }
+    private global::ProtoBuf.IExtension extensionObject;
+    global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+      { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
+  }
+  
+  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"Msg_Chess_Match_C2S")]
+  public partial class Msg_Chess_Match_C2S : global::ProtoBuf.IExtensible
+  {
+    public Msg_Chess_Match_C2S() {}
+    
+    private MsgPB.MsgType _MsgId = MsgPB.MsgType.Chess_Match_C2S;
+    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"MsgId", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    [global::System.ComponentModel.DefaultValue(MsgPB.MsgType.Chess_Match_C2S)]
+    public MsgPB.MsgType MsgId
+    {
+      get { return _MsgId; }
+      set { _MsgId = value; }
+    }
+    private global::ProtoBuf.IExtension extensionObject;
+    global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+      { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
+  }
+  
+  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"Msg_Chess_Start_S2C")]
+  public partial class Msg_Chess_Start_S2C : global::ProtoBuf.IExtensible
+  {
+    public Msg_Chess_Start_S2C() {}
+    
+    private MsgPB.MsgType _MsgId = MsgPB.MsgType.Chess_Start_S2C;
+    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"MsgId", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    [global::System.ComponentModel.DefaultValue(MsgPB.MsgType.Chess_Start_S2C)]
+    public MsgPB.MsgType MsgId
+    {
+      get { return _MsgId; }
+      set { _MsgId = value; }
+    }
+    private long _GameID = default(long);
+    [global::ProtoBuf.ProtoMember(2, IsRequired = false, Name=@"GameID", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    [global::System.ComponentModel.DefaultValue(default(long))]
+    public long GameID
+    {
+      get { return _GameID; }
+      set { _GameID = value; }
+    }
+    private global::ProtoBuf.IExtension extensionObject;
+    global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+      { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
+  }
+  
+  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"Msg_Chess_Action_C2S")]
+  public partial class Msg_Chess_Action_C2S : global::ProtoBuf.IExtensible
+  {
+    public Msg_Chess_Action_C2S() {}
+    
+    private MsgPB.MsgType _MsgId = MsgPB.MsgType.Chess_Action_C2S;
+    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"MsgId", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    [global::System.ComponentModel.DefaultValue(MsgPB.MsgType.Chess_Action_C2S)]
+    public MsgPB.MsgType MsgId
+    {
+      get { return _MsgId; }
+      set { _MsgId = value; }
+    }
+    private global::ProtoBuf.IExtension extensionObject;
+    global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+      { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
+  }
+  
+  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"Msg_Chess_Action_S2C")]
+  public partial class Msg_Chess_Action_S2C : global::ProtoBuf.IExtensible
+  {
+    public Msg_Chess_Action_S2C() {}
+    
+    private MsgPB.MsgType _MsgId = MsgPB.MsgType.Chess_Action_S2C;
+    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"MsgId", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    [global::System.ComponentModel.DefaultValue(MsgPB.MsgType.Chess_Action_S2C)]
+    public MsgPB.MsgType MsgId
+    {
+      get { return _MsgId; }
+      set { _MsgId = value; }
+    }
+    private global::ProtoBuf.IExtension extensionObject;
+    global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+      { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
+  }
+  
+  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"Msg_Chess_Over_S2C")]
+  public partial class Msg_Chess_Over_S2C : global::ProtoBuf.IExtensible
+  {
+    public Msg_Chess_Over_S2C() {}
+    
+    private MsgPB.MsgType _MsgId = MsgPB.MsgType.Chess_Over_S2C;
+    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"MsgId", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    [global::System.ComponentModel.DefaultValue(MsgPB.MsgType.Chess_Over_S2C)]
+    public MsgPB.MsgType MsgId
+    {
+      get { return _MsgId; }
+      set { _MsgId = value; }
     }
     private global::ProtoBuf.IExtension extensionObject;
     global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
@@ -103,7 +408,80 @@ namespace protocols.Msg
       LOGIN_S2C = 1,
             
       [global::ProtoBuf.ProtoEnum(Name=@"Connect_S2C", Value=2)]
-      Connect_S2C = 2
+      Connect_S2C = 2,
+            
+      [global::ProtoBuf.ProtoEnum(Name=@"Chat_C2S", Value=3)]
+      Chat_C2S = 3,
+            
+      [global::ProtoBuf.ProtoEnum(Name=@"Gobang_Match_C2S", Value=101)]
+      Gobang_Match_C2S = 101,
+            
+      [global::ProtoBuf.ProtoEnum(Name=@"Gobang_Start_S2C", Value=102)]
+      Gobang_Start_S2C = 102,
+            
+      [global::ProtoBuf.ProtoEnum(Name=@"Gobang_Action_C2S", Value=103)]
+      Gobang_Action_C2S = 103,
+            
+      [global::ProtoBuf.ProtoEnum(Name=@"Gobang_Action_S2C", Value=104)]
+      Gobang_Action_S2C = 104,
+            
+      [global::ProtoBuf.ProtoEnum(Name=@"Gobang_Over_S2C", Value=105)]
+      Gobang_Over_S2C = 105,
+            
+      [global::ProtoBuf.ProtoEnum(Name=@"Chess_Match_C2S", Value=201)]
+      Chess_Match_C2S = 201,
+            
+      [global::ProtoBuf.ProtoEnum(Name=@"Chess_Start_S2C", Value=202)]
+      Chess_Start_S2C = 202,
+            
+      [global::ProtoBuf.ProtoEnum(Name=@"Chess_Action_C2S", Value=203)]
+      Chess_Action_C2S = 203,
+            
+      [global::ProtoBuf.ProtoEnum(Name=@"Chess_Action_S2C", Value=204)]
+      Chess_Action_S2C = 204,
+            
+      [global::ProtoBuf.ProtoEnum(Name=@"Chess_Over_S2C", Value=205)]
+      Chess_Over_S2C = 205
+    }
+  
+    [global::ProtoBuf.ProtoContract(Name=@"COLOR")]
+    public enum COLOR
+    {
+            
+      [global::ProtoBuf.ProtoEnum(Name=@"Null", Value=0)]
+      Null = 0,
+            
+      [global::ProtoBuf.ProtoEnum(Name=@"White", Value=1)]
+      White = 1,
+            
+      [global::ProtoBuf.ProtoEnum(Name=@"Black", Value=2)]
+      Black = 2
+    }
+  
+    [global::ProtoBuf.ProtoContract(Name=@"CHESSTYPE")]
+    public enum CHESSTYPE
+    {
+            
+      [global::ProtoBuf.ProtoEnum(Name=@"General", Value=1)]
+      General = 1,
+            
+      [global::ProtoBuf.ProtoEnum(Name=@"Bechalor", Value=2)]
+      Bechalor = 2,
+            
+      [global::ProtoBuf.ProtoEnum(Name=@"Minister", Value=3)]
+      Minister = 3,
+            
+      [global::ProtoBuf.ProtoEnum(Name=@"Horse", Value=4)]
+      Horse = 4,
+            
+      [global::ProtoBuf.ProtoEnum(Name=@"Charoit", Value=5)]
+      Charoit = 5,
+            
+      [global::ProtoBuf.ProtoEnum(Name=@"Cannon", Value=6)]
+      Cannon = 6,
+            
+      [global::ProtoBuf.ProtoEnum(Name=@"Solider", Value=7)]
+      Solider = 7
     }
   
 }

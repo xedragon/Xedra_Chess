@@ -20,9 +20,9 @@ set(EXECUTABLE_OUTPUT_PATH ${EXECUTUBLE_PATH})
 # 包含源码路径
 include_directories(${PROJECT_SOURCE_DIR}/lib)
 include_directories(${PROJECT_SOURCE_DIR}/src)
-include_directories(${PROJECT_SOURCE_DIR}/lib/libmsg/source)
 include_directories(${PROJECT_SOURCE_DIR}/lib/libprotobuf/source)
 include_directories(${PROJECT_SOURCE_DIR}/lib/libbaseutil/source)
+include_directories(${PROJECT_SOURCE_DIR}/lib/libgame/source)
 
 link_directories(${LIBRARY_PATH})
 link_directories(${LIBRARY_PATH}/libmysql/source/lib)
@@ -37,18 +37,10 @@ main.cpp
 Facade.h
 Facade.cpp
 
-MsgMgr.h
-MsgMgr.cpp
+Moudle.h
+Moudle.cpp
 
-ClientUser.h
-ClientUser.cpp
-
-Moudle/Moudle.h
-Moudle/Moudle.cpp
-
-Moudle/NetMoudle.h
-Moudle/NetMoudle.cpp
-
+BaseUtil.h
 )
 # 源码分组
 group_sources("${ALL_FILES}")
@@ -61,6 +53,7 @@ target_link_libraries(${PROJECT_NAME} static_mysql)
 target_link_libraries(${PROJECT_NAME} static_config)
 target_link_libraries(${PROJECT_NAME} static_msg)
 target_link_libraries(${PROJECT_NAME} static_baseutil)
+target_link_libraries(${PROJECT_NAME} static_game)
 target_link_libraries(${PROJECT_NAME} ws2_32)
 
 # TODO: 如有需要，请添加测试并安装目标。

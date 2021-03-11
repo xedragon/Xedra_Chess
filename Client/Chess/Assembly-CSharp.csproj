@@ -47,6 +47,7 @@
   <PropertyGroup>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UnityProjectGenerator>Unity/VSTU</UnityProjectGenerator>
+    <UnityProjectGeneratorVersion>4.8.2.0</UnityProjectGeneratorVersion>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2019.4.17f1c1</UnityVersion>
@@ -63,10 +64,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\script\Lobby_GameManager.cs" />
     <Compile Include="Assets\script\MsgMgr.cs" />
     <Compile Include="Assets\script\MsgPB\Msg.cs" />
+    <Compile Include="Assets\script\MsgPB\MsgChat.cs" />
     <Compile Include="Assets\script\TableConfig.cs" />
     <Compile Include="Assets\script\TableStruct.cs" />
+    <Compile Include="Assets\script\gobang_GameManager.cs" />
     <Compile Include="Assets\script\protobuf-net\BclHelpers.cs" />
     <Compile Include="Assets\script\protobuf-net\BufferExtension.cs" />
     <Compile Include="Assets\script\protobuf-net\BufferPool.cs" />
@@ -157,12 +161,15 @@
     <Compile Include="Assets\script\protobuf-net\WireType.cs" />
     <Compile Include="Assets\script\script_ChessBoard.cs" />
     <Compile Include="Assets\script\script_ChessPieces.cs" />
+    <Compile Include="Assets\script\script_GameManager.cs" />
+    <Compile Include="Assets\script\script_LoginManager.cs" />
     <Compile Include="Assets\script\tabtool\MyConfig.cs" />
     <Compile Include="Assets\script\tabtool\ReadTable.cs" />
     <Compile Include="Assets\script\tabtool\SingletonTable.cs" />
     <Compile Include="Assets\script\tabtool\TableManager.cs" />
-    <Compile Include="Assets\script_GameManager.cs" />
     <None Include="Assets\script\config\GlobalCfg.txt" />
+    <None Include="Assets\script\config\DatabaseCfg .txt" />
+    <None Include="Assets\script\config\DatabaseCfg.txt" />
     <None Include="Assets\script\config\ChessType.txt" />
     <None Include="Assets\script\protobuf-net\Web\TODO.txt" />
     <Reference Include="UnityEngine">

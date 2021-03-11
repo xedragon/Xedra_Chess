@@ -1,7 +1,7 @@
 #pragma once
-#include<mysql.h>
+#include"include/mysql.h"
 #include<string>
-#include<IQueryResult.h>
+#include"IQueryResult.h"
 
 class MySqlQueryResult:public IQueryResult
 {
@@ -17,6 +17,7 @@ public:
 	{
 
 	}
+
 	int Get_row_count()override
 	{
 		return row_count;
