@@ -54,25 +54,73 @@ public final class Msg {
      */
     Gobang_Over_S2C(8, 105),
     /**
+     * <code>Gobang_Giveup_C2S = 106;</code>
+     */
+    Gobang_Giveup_C2S(9, 106),
+    /**
+     * <code>Gobang_Giveup_S2C = 107;</code>
+     */
+    Gobang_Giveup_S2C(10, 107),
+    /**
+     * <code>Gobang_Regret_C2S = 108;</code>
+     */
+    Gobang_Regret_C2S(11, 108),
+    /**
+     * <code>Gobang_Regret_S2C = 109;</code>
+     */
+    Gobang_Regret_S2C(12, 109),
+    /**
+     * <code>Gobang_Pause_C2S = 110;</code>
+     */
+    Gobang_Pause_C2S(13, 110),
+    /**
+     * <code>Gobang_Pause_S2C = 111;</code>
+     */
+    Gobang_Pause_S2C(14, 111),
+    /**
      * <code>Chess_Match_C2S = 201;</code>
      */
-    Chess_Match_C2S(9, 201),
+    Chess_Match_C2S(15, 201),
     /**
      * <code>Chess_Start_S2C = 202;</code>
      */
-    Chess_Start_S2C(10, 202),
+    Chess_Start_S2C(16, 202),
     /**
      * <code>Chess_Action_C2S = 203;</code>
      */
-    Chess_Action_C2S(11, 203),
+    Chess_Action_C2S(17, 203),
     /**
      * <code>Chess_Action_S2C = 204;</code>
      */
-    Chess_Action_S2C(12, 204),
+    Chess_Action_S2C(18, 204),
     /**
      * <code>Chess_Over_S2C = 205;</code>
      */
-    Chess_Over_S2C(13, 205),
+    Chess_Over_S2C(19, 205),
+    /**
+     * <code>Chess_Giveup_C2S = 206;</code>
+     */
+    Chess_Giveup_C2S(20, 206),
+    /**
+     * <code>Chess_Giveup_S2C = 207;</code>
+     */
+    Chess_Giveup_S2C(21, 207),
+    /**
+     * <code>Chess_Regret_C2S = 208;</code>
+     */
+    Chess_Regret_C2S(22, 208),
+    /**
+     * <code>Chess_Regret_S2C = 209;</code>
+     */
+    Chess_Regret_S2C(23, 209),
+    /**
+     * <code>Chess_Pause_C2S = 210;</code>
+     */
+    Chess_Pause_C2S(24, 210),
+    /**
+     * <code>Chess_Pause_S2C = 211;</code>
+     */
+    Chess_Pause_S2C(25, 211),
     ;
 
     /**
@@ -112,6 +160,30 @@ public final class Msg {
      */
     public static final int Gobang_Over_S2C_VALUE = 105;
     /**
+     * <code>Gobang_Giveup_C2S = 106;</code>
+     */
+    public static final int Gobang_Giveup_C2S_VALUE = 106;
+    /**
+     * <code>Gobang_Giveup_S2C = 107;</code>
+     */
+    public static final int Gobang_Giveup_S2C_VALUE = 107;
+    /**
+     * <code>Gobang_Regret_C2S = 108;</code>
+     */
+    public static final int Gobang_Regret_C2S_VALUE = 108;
+    /**
+     * <code>Gobang_Regret_S2C = 109;</code>
+     */
+    public static final int Gobang_Regret_S2C_VALUE = 109;
+    /**
+     * <code>Gobang_Pause_C2S = 110;</code>
+     */
+    public static final int Gobang_Pause_C2S_VALUE = 110;
+    /**
+     * <code>Gobang_Pause_S2C = 111;</code>
+     */
+    public static final int Gobang_Pause_S2C_VALUE = 111;
+    /**
      * <code>Chess_Match_C2S = 201;</code>
      */
     public static final int Chess_Match_C2S_VALUE = 201;
@@ -131,6 +203,30 @@ public final class Msg {
      * <code>Chess_Over_S2C = 205;</code>
      */
     public static final int Chess_Over_S2C_VALUE = 205;
+    /**
+     * <code>Chess_Giveup_C2S = 206;</code>
+     */
+    public static final int Chess_Giveup_C2S_VALUE = 206;
+    /**
+     * <code>Chess_Giveup_S2C = 207;</code>
+     */
+    public static final int Chess_Giveup_S2C_VALUE = 207;
+    /**
+     * <code>Chess_Regret_C2S = 208;</code>
+     */
+    public static final int Chess_Regret_C2S_VALUE = 208;
+    /**
+     * <code>Chess_Regret_S2C = 209;</code>
+     */
+    public static final int Chess_Regret_S2C_VALUE = 209;
+    /**
+     * <code>Chess_Pause_C2S = 210;</code>
+     */
+    public static final int Chess_Pause_C2S_VALUE = 210;
+    /**
+     * <code>Chess_Pause_S2C = 211;</code>
+     */
+    public static final int Chess_Pause_S2C_VALUE = 211;
 
 
     public final int getNumber() { return value; }
@@ -146,11 +242,23 @@ public final class Msg {
         case 103: return Gobang_Action_C2S;
         case 104: return Gobang_Action_S2C;
         case 105: return Gobang_Over_S2C;
+        case 106: return Gobang_Giveup_C2S;
+        case 107: return Gobang_Giveup_S2C;
+        case 108: return Gobang_Regret_C2S;
+        case 109: return Gobang_Regret_S2C;
+        case 110: return Gobang_Pause_C2S;
+        case 111: return Gobang_Pause_S2C;
         case 201: return Chess_Match_C2S;
         case 202: return Chess_Start_S2C;
         case 203: return Chess_Action_C2S;
         case 204: return Chess_Action_S2C;
         case 205: return Chess_Over_S2C;
+        case 206: return Chess_Giveup_C2S;
+        case 207: return Chess_Giveup_S2C;
+        case 208: return Chess_Regret_C2S;
+        case 209: return Chess_Regret_S2C;
+        case 210: return Chess_Pause_C2S;
+        case 211: return Chess_Pause_S2C;
         default: return null;
       }
     }
@@ -299,76 +407,67 @@ public final class Msg {
   public enum CHESSTYPE
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
-     * <code>General = 1;</code>
+     * <code>King = 1;</code>
      */
-    General(0, 1),
+    King(0, 1),
     /**
-     * <code>Bechalor = 2;</code>
+     * <code>Queen = 2;</code>
      */
-    Bechalor(1, 2),
+    Queen(1, 2),
     /**
-     * <code>Minister = 3;</code>
+     * <code>Car = 3;</code>
      */
-    Minister(2, 3),
+    Car(2, 3),
     /**
-     * <code>Horse = 4;</code>
+     * <code>Elephant = 4;</code>
      */
-    Horse(3, 4),
+    Elephant(3, 4),
     /**
-     * <code>Charoit = 5;</code>
+     * <code>Horse = 5;</code>
      */
-    Charoit(4, 5),
+    Horse(4, 5),
     /**
-     * <code>Cannon = 6;</code>
+     * <code>Solider = 6;</code>
      */
-    Cannon(5, 6),
-    /**
-     * <code>Solider = 7;</code>
-     */
-    Solider(6, 7),
+    Solider(5, 6),
     ;
 
     /**
-     * <code>General = 1;</code>
+     * <code>King = 1;</code>
      */
-    public static final int General_VALUE = 1;
+    public static final int King_VALUE = 1;
     /**
-     * <code>Bechalor = 2;</code>
+     * <code>Queen = 2;</code>
      */
-    public static final int Bechalor_VALUE = 2;
+    public static final int Queen_VALUE = 2;
     /**
-     * <code>Minister = 3;</code>
+     * <code>Car = 3;</code>
      */
-    public static final int Minister_VALUE = 3;
+    public static final int Car_VALUE = 3;
     /**
-     * <code>Horse = 4;</code>
+     * <code>Elephant = 4;</code>
      */
-    public static final int Horse_VALUE = 4;
+    public static final int Elephant_VALUE = 4;
     /**
-     * <code>Charoit = 5;</code>
+     * <code>Horse = 5;</code>
      */
-    public static final int Charoit_VALUE = 5;
+    public static final int Horse_VALUE = 5;
     /**
-     * <code>Cannon = 6;</code>
+     * <code>Solider = 6;</code>
      */
-    public static final int Cannon_VALUE = 6;
-    /**
-     * <code>Solider = 7;</code>
-     */
-    public static final int Solider_VALUE = 7;
+    public static final int Solider_VALUE = 6;
 
 
     public final int getNumber() { return value; }
 
     public static CHESSTYPE valueOf(int value) {
       switch (value) {
-        case 1: return General;
-        case 2: return Bechalor;
-        case 3: return Minister;
-        case 4: return Horse;
-        case 5: return Charoit;
-        case 6: return Cannon;
-        case 7: return Solider;
+        case 1: return King;
+        case 2: return Queen;
+        case 3: return Car;
+        case 4: return Elephant;
+        case 5: return Horse;
+        case 6: return Solider;
         default: return null;
       }
     }
@@ -1899,13 +1998,13 @@ public final class Msg {
      */
     long getLoginTimeStamp();
 
-    // optional .MsgPB.Msg_Login_S2C.ERRORCODE _ErrorCode = 4 [default = NULL];
+    // optional .MsgPB.Msg_Login_S2C.ERRORCODE _ErrorCode = 4 [default = Null];
     /**
-     * <code>optional .MsgPB.Msg_Login_S2C.ERRORCODE _ErrorCode = 4 [default = NULL];</code>
+     * <code>optional .MsgPB.Msg_Login_S2C.ERRORCODE _ErrorCode = 4 [default = Null];</code>
      */
     boolean hasErrorCode();
     /**
-     * <code>optional .MsgPB.Msg_Login_S2C.ERRORCODE _ErrorCode = 4 [default = NULL];</code>
+     * <code>optional .MsgPB.Msg_Login_S2C.ERRORCODE _ErrorCode = 4 [default = Null];</code>
      */
     MsgPB.Msg.Msg_Login_S2C.ERRORCODE getErrorCode();
   }
@@ -2037,9 +2136,9 @@ public final class Msg {
     public enum ERRORCODE
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
-       * <code>NULL = 0;</code>
+       * <code>Null = 0;</code>
        */
-      NULL(0, 0),
+      Null(0, 0),
       /**
        * <code>LoginSuccess = 1;</code>
        */
@@ -2063,9 +2162,9 @@ public final class Msg {
       ;
 
       /**
-       * <code>NULL = 0;</code>
+       * <code>Null = 0;</code>
        */
-      public static final int NULL_VALUE = 0;
+      public static final int Null_VALUE = 0;
       /**
        * <code>LoginSuccess = 1;</code>
        */
@@ -2092,7 +2191,7 @@ public final class Msg {
 
       public static ERRORCODE valueOf(int value) {
         switch (value) {
-          case 0: return NULL;
+          case 0: return Null;
           case 1: return LoginSuccess;
           case 2: return ErrorPassword;
           case 3: return EmptyAccount;
@@ -2198,17 +2297,17 @@ public final class Msg {
       return loginTimeStamp_;
     }
 
-    // optional .MsgPB.Msg_Login_S2C.ERRORCODE _ErrorCode = 4 [default = NULL];
+    // optional .MsgPB.Msg_Login_S2C.ERRORCODE _ErrorCode = 4 [default = Null];
     public static final int _ERRORCODE_FIELD_NUMBER = 4;
     private MsgPB.Msg.Msg_Login_S2C.ERRORCODE ErrorCode_;
     /**
-     * <code>optional .MsgPB.Msg_Login_S2C.ERRORCODE _ErrorCode = 4 [default = NULL];</code>
+     * <code>optional .MsgPB.Msg_Login_S2C.ERRORCODE _ErrorCode = 4 [default = Null];</code>
      */
     public boolean hasErrorCode() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
     /**
-     * <code>optional .MsgPB.Msg_Login_S2C.ERRORCODE _ErrorCode = 4 [default = NULL];</code>
+     * <code>optional .MsgPB.Msg_Login_S2C.ERRORCODE _ErrorCode = 4 [default = Null];</code>
      */
     public MsgPB.Msg.Msg_Login_S2C.ERRORCODE getErrorCode() {
       return ErrorCode_;
@@ -2218,7 +2317,7 @@ public final class Msg {
       msgID_ = MsgPB.Msg.MsgType.LOGIN_S2C;
       id_ = 0;
       loginTimeStamp_ = 0L;
-      ErrorCode_ = MsgPB.Msg.Msg_Login_S2C.ERRORCODE.NULL;
+      ErrorCode_ = MsgPB.Msg.Msg_Login_S2C.ERRORCODE.Null;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -2391,7 +2490,7 @@ public final class Msg {
         bitField0_ = (bitField0_ & ~0x00000002);
         loginTimeStamp_ = 0L;
         bitField0_ = (bitField0_ & ~0x00000004);
-        ErrorCode_ = MsgPB.Msg.Msg_Login_S2C.ERRORCODE.NULL;
+        ErrorCode_ = MsgPB.Msg.Msg_Login_S2C.ERRORCODE.Null;
         bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
@@ -2594,22 +2693,22 @@ public final class Msg {
         return this;
       }
 
-      // optional .MsgPB.Msg_Login_S2C.ERRORCODE _ErrorCode = 4 [default = NULL];
-      private MsgPB.Msg.Msg_Login_S2C.ERRORCODE ErrorCode_ = MsgPB.Msg.Msg_Login_S2C.ERRORCODE.NULL;
+      // optional .MsgPB.Msg_Login_S2C.ERRORCODE _ErrorCode = 4 [default = Null];
+      private MsgPB.Msg.Msg_Login_S2C.ERRORCODE ErrorCode_ = MsgPB.Msg.Msg_Login_S2C.ERRORCODE.Null;
       /**
-       * <code>optional .MsgPB.Msg_Login_S2C.ERRORCODE _ErrorCode = 4 [default = NULL];</code>
+       * <code>optional .MsgPB.Msg_Login_S2C.ERRORCODE _ErrorCode = 4 [default = Null];</code>
        */
       public boolean hasErrorCode() {
         return ((bitField0_ & 0x00000008) == 0x00000008);
       }
       /**
-       * <code>optional .MsgPB.Msg_Login_S2C.ERRORCODE _ErrorCode = 4 [default = NULL];</code>
+       * <code>optional .MsgPB.Msg_Login_S2C.ERRORCODE _ErrorCode = 4 [default = Null];</code>
        */
       public MsgPB.Msg.Msg_Login_S2C.ERRORCODE getErrorCode() {
         return ErrorCode_;
       }
       /**
-       * <code>optional .MsgPB.Msg_Login_S2C.ERRORCODE _ErrorCode = 4 [default = NULL];</code>
+       * <code>optional .MsgPB.Msg_Login_S2C.ERRORCODE _ErrorCode = 4 [default = Null];</code>
        */
       public Builder setErrorCode(MsgPB.Msg.Msg_Login_S2C.ERRORCODE value) {
         if (value == null) {
@@ -2621,11 +2720,11 @@ public final class Msg {
         return this;
       }
       /**
-       * <code>optional .MsgPB.Msg_Login_S2C.ERRORCODE _ErrorCode = 4 [default = NULL];</code>
+       * <code>optional .MsgPB.Msg_Login_S2C.ERRORCODE _ErrorCode = 4 [default = Null];</code>
        */
       public Builder clearErrorCode() {
         bitField0_ = (bitField0_ & ~0x00000008);
-        ErrorCode_ = MsgPB.Msg.Msg_Login_S2C.ERRORCODE.NULL;
+        ErrorCode_ = MsgPB.Msg.Msg_Login_S2C.ERRORCODE.Null;
         onChanged();
         return this;
       }
@@ -5350,6 +5449,2436 @@ public final class Msg {
     // @@protoc_insertion_point(class_scope:MsgPB.Msg_Gobang_Over_S2C)
   }
 
+  public interface Msg_Gobang_Giveup_C2SOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Giveup_C2S];
+    /**
+     * <code>optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Giveup_C2S];</code>
+     */
+    boolean hasMsgId();
+    /**
+     * <code>optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Giveup_C2S];</code>
+     */
+    MsgPB.Msg.MsgType getMsgId();
+  }
+  /**
+   * Protobuf type {@code MsgPB.Msg_Gobang_Giveup_C2S}
+   */
+  public static final class Msg_Gobang_Giveup_C2S extends
+      com.google.protobuf.GeneratedMessage
+      implements Msg_Gobang_Giveup_C2SOrBuilder {
+    // Use Msg_Gobang_Giveup_C2S.newBuilder() to construct.
+    private Msg_Gobang_Giveup_C2S(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Msg_Gobang_Giveup_C2S(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Msg_Gobang_Giveup_C2S defaultInstance;
+    public static Msg_Gobang_Giveup_C2S getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Msg_Gobang_Giveup_C2S getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Msg_Gobang_Giveup_C2S(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              int rawValue = input.readEnum();
+              MsgPB.Msg.MsgType value = MsgPB.Msg.MsgType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(1, rawValue);
+              } else {
+                bitField0_ |= 0x00000001;
+                msgId_ = value;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return MsgPB.Msg.internal_static_MsgPB_Msg_Gobang_Giveup_C2S_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return MsgPB.Msg.internal_static_MsgPB_Msg_Gobang_Giveup_C2S_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              MsgPB.Msg.Msg_Gobang_Giveup_C2S.class, MsgPB.Msg.Msg_Gobang_Giveup_C2S.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Msg_Gobang_Giveup_C2S> PARSER =
+        new com.google.protobuf.AbstractParser<Msg_Gobang_Giveup_C2S>() {
+      public Msg_Gobang_Giveup_C2S parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Msg_Gobang_Giveup_C2S(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Msg_Gobang_Giveup_C2S> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Giveup_C2S];
+    public static final int MSGID_FIELD_NUMBER = 1;
+    private MsgPB.Msg.MsgType msgId_;
+    /**
+     * <code>optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Giveup_C2S];</code>
+     */
+    public boolean hasMsgId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Giveup_C2S];</code>
+     */
+    public MsgPB.Msg.MsgType getMsgId() {
+      return msgId_;
+    }
+
+    private void initFields() {
+      msgId_ = MsgPB.Msg.MsgType.Gobang_Giveup_C2S;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeEnum(1, msgId_.getNumber());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, msgId_.getNumber());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static MsgPB.Msg.Msg_Gobang_Giveup_C2S parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Giveup_C2S parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Giveup_C2S parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Giveup_C2S parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Giveup_C2S parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Giveup_C2S parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Giveup_C2S parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Giveup_C2S parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Giveup_C2S parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Giveup_C2S parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(MsgPB.Msg.Msg_Gobang_Giveup_C2S prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code MsgPB.Msg_Gobang_Giveup_C2S}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements MsgPB.Msg.Msg_Gobang_Giveup_C2SOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return MsgPB.Msg.internal_static_MsgPB_Msg_Gobang_Giveup_C2S_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return MsgPB.Msg.internal_static_MsgPB_Msg_Gobang_Giveup_C2S_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                MsgPB.Msg.Msg_Gobang_Giveup_C2S.class, MsgPB.Msg.Msg_Gobang_Giveup_C2S.Builder.class);
+      }
+
+      // Construct using MsgPB.Msg.Msg_Gobang_Giveup_C2S.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        msgId_ = MsgPB.Msg.MsgType.Gobang_Giveup_C2S;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return MsgPB.Msg.internal_static_MsgPB_Msg_Gobang_Giveup_C2S_descriptor;
+      }
+
+      public MsgPB.Msg.Msg_Gobang_Giveup_C2S getDefaultInstanceForType() {
+        return MsgPB.Msg.Msg_Gobang_Giveup_C2S.getDefaultInstance();
+      }
+
+      public MsgPB.Msg.Msg_Gobang_Giveup_C2S build() {
+        MsgPB.Msg.Msg_Gobang_Giveup_C2S result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public MsgPB.Msg.Msg_Gobang_Giveup_C2S buildPartial() {
+        MsgPB.Msg.Msg_Gobang_Giveup_C2S result = new MsgPB.Msg.Msg_Gobang_Giveup_C2S(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.msgId_ = msgId_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof MsgPB.Msg.Msg_Gobang_Giveup_C2S) {
+          return mergeFrom((MsgPB.Msg.Msg_Gobang_Giveup_C2S)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(MsgPB.Msg.Msg_Gobang_Giveup_C2S other) {
+        if (other == MsgPB.Msg.Msg_Gobang_Giveup_C2S.getDefaultInstance()) return this;
+        if (other.hasMsgId()) {
+          setMsgId(other.getMsgId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        MsgPB.Msg.Msg_Gobang_Giveup_C2S parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (MsgPB.Msg.Msg_Gobang_Giveup_C2S) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Giveup_C2S];
+      private MsgPB.Msg.MsgType msgId_ = MsgPB.Msg.MsgType.Gobang_Giveup_C2S;
+      /**
+       * <code>optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Giveup_C2S];</code>
+       */
+      public boolean hasMsgId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Giveup_C2S];</code>
+       */
+      public MsgPB.Msg.MsgType getMsgId() {
+        return msgId_;
+      }
+      /**
+       * <code>optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Giveup_C2S];</code>
+       */
+      public Builder setMsgId(MsgPB.Msg.MsgType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        msgId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Giveup_C2S];</code>
+       */
+      public Builder clearMsgId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        msgId_ = MsgPB.Msg.MsgType.Gobang_Giveup_C2S;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:MsgPB.Msg_Gobang_Giveup_C2S)
+    }
+
+    static {
+      defaultInstance = new Msg_Gobang_Giveup_C2S(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:MsgPB.Msg_Gobang_Giveup_C2S)
+  }
+
+  public interface Msg_Gobang_Giveup_S2COrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Giveup_S2C];
+    /**
+     * <code>optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Giveup_S2C];</code>
+     */
+    boolean hasMsgId();
+    /**
+     * <code>optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Giveup_S2C];</code>
+     */
+    MsgPB.Msg.MsgType getMsgId();
+  }
+  /**
+   * Protobuf type {@code MsgPB.Msg_Gobang_Giveup_S2C}
+   */
+  public static final class Msg_Gobang_Giveup_S2C extends
+      com.google.protobuf.GeneratedMessage
+      implements Msg_Gobang_Giveup_S2COrBuilder {
+    // Use Msg_Gobang_Giveup_S2C.newBuilder() to construct.
+    private Msg_Gobang_Giveup_S2C(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Msg_Gobang_Giveup_S2C(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Msg_Gobang_Giveup_S2C defaultInstance;
+    public static Msg_Gobang_Giveup_S2C getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Msg_Gobang_Giveup_S2C getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Msg_Gobang_Giveup_S2C(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              int rawValue = input.readEnum();
+              MsgPB.Msg.MsgType value = MsgPB.Msg.MsgType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(1, rawValue);
+              } else {
+                bitField0_ |= 0x00000001;
+                msgId_ = value;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return MsgPB.Msg.internal_static_MsgPB_Msg_Gobang_Giveup_S2C_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return MsgPB.Msg.internal_static_MsgPB_Msg_Gobang_Giveup_S2C_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              MsgPB.Msg.Msg_Gobang_Giveup_S2C.class, MsgPB.Msg.Msg_Gobang_Giveup_S2C.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Msg_Gobang_Giveup_S2C> PARSER =
+        new com.google.protobuf.AbstractParser<Msg_Gobang_Giveup_S2C>() {
+      public Msg_Gobang_Giveup_S2C parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Msg_Gobang_Giveup_S2C(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Msg_Gobang_Giveup_S2C> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Giveup_S2C];
+    public static final int MSGID_FIELD_NUMBER = 1;
+    private MsgPB.Msg.MsgType msgId_;
+    /**
+     * <code>optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Giveup_S2C];</code>
+     */
+    public boolean hasMsgId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Giveup_S2C];</code>
+     */
+    public MsgPB.Msg.MsgType getMsgId() {
+      return msgId_;
+    }
+
+    private void initFields() {
+      msgId_ = MsgPB.Msg.MsgType.Gobang_Giveup_S2C;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeEnum(1, msgId_.getNumber());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, msgId_.getNumber());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static MsgPB.Msg.Msg_Gobang_Giveup_S2C parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Giveup_S2C parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Giveup_S2C parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Giveup_S2C parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Giveup_S2C parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Giveup_S2C parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Giveup_S2C parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Giveup_S2C parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Giveup_S2C parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Giveup_S2C parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(MsgPB.Msg.Msg_Gobang_Giveup_S2C prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code MsgPB.Msg_Gobang_Giveup_S2C}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements MsgPB.Msg.Msg_Gobang_Giveup_S2COrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return MsgPB.Msg.internal_static_MsgPB_Msg_Gobang_Giveup_S2C_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return MsgPB.Msg.internal_static_MsgPB_Msg_Gobang_Giveup_S2C_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                MsgPB.Msg.Msg_Gobang_Giveup_S2C.class, MsgPB.Msg.Msg_Gobang_Giveup_S2C.Builder.class);
+      }
+
+      // Construct using MsgPB.Msg.Msg_Gobang_Giveup_S2C.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        msgId_ = MsgPB.Msg.MsgType.Gobang_Giveup_S2C;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return MsgPB.Msg.internal_static_MsgPB_Msg_Gobang_Giveup_S2C_descriptor;
+      }
+
+      public MsgPB.Msg.Msg_Gobang_Giveup_S2C getDefaultInstanceForType() {
+        return MsgPB.Msg.Msg_Gobang_Giveup_S2C.getDefaultInstance();
+      }
+
+      public MsgPB.Msg.Msg_Gobang_Giveup_S2C build() {
+        MsgPB.Msg.Msg_Gobang_Giveup_S2C result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public MsgPB.Msg.Msg_Gobang_Giveup_S2C buildPartial() {
+        MsgPB.Msg.Msg_Gobang_Giveup_S2C result = new MsgPB.Msg.Msg_Gobang_Giveup_S2C(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.msgId_ = msgId_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof MsgPB.Msg.Msg_Gobang_Giveup_S2C) {
+          return mergeFrom((MsgPB.Msg.Msg_Gobang_Giveup_S2C)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(MsgPB.Msg.Msg_Gobang_Giveup_S2C other) {
+        if (other == MsgPB.Msg.Msg_Gobang_Giveup_S2C.getDefaultInstance()) return this;
+        if (other.hasMsgId()) {
+          setMsgId(other.getMsgId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        MsgPB.Msg.Msg_Gobang_Giveup_S2C parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (MsgPB.Msg.Msg_Gobang_Giveup_S2C) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Giveup_S2C];
+      private MsgPB.Msg.MsgType msgId_ = MsgPB.Msg.MsgType.Gobang_Giveup_S2C;
+      /**
+       * <code>optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Giveup_S2C];</code>
+       */
+      public boolean hasMsgId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Giveup_S2C];</code>
+       */
+      public MsgPB.Msg.MsgType getMsgId() {
+        return msgId_;
+      }
+      /**
+       * <code>optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Giveup_S2C];</code>
+       */
+      public Builder setMsgId(MsgPB.Msg.MsgType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        msgId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Giveup_S2C];</code>
+       */
+      public Builder clearMsgId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        msgId_ = MsgPB.Msg.MsgType.Gobang_Giveup_S2C;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:MsgPB.Msg_Gobang_Giveup_S2C)
+    }
+
+    static {
+      defaultInstance = new Msg_Gobang_Giveup_S2C(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:MsgPB.Msg_Gobang_Giveup_S2C)
+  }
+
+  public interface Msg_Gobang_Regret_C2SOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Regret_C2S];
+    /**
+     * <code>optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Regret_C2S];</code>
+     */
+    boolean hasMsgId();
+    /**
+     * <code>optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Regret_C2S];</code>
+     */
+    MsgPB.Msg.MsgType getMsgId();
+  }
+  /**
+   * Protobuf type {@code MsgPB.Msg_Gobang_Regret_C2S}
+   */
+  public static final class Msg_Gobang_Regret_C2S extends
+      com.google.protobuf.GeneratedMessage
+      implements Msg_Gobang_Regret_C2SOrBuilder {
+    // Use Msg_Gobang_Regret_C2S.newBuilder() to construct.
+    private Msg_Gobang_Regret_C2S(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Msg_Gobang_Regret_C2S(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Msg_Gobang_Regret_C2S defaultInstance;
+    public static Msg_Gobang_Regret_C2S getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Msg_Gobang_Regret_C2S getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Msg_Gobang_Regret_C2S(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              int rawValue = input.readEnum();
+              MsgPB.Msg.MsgType value = MsgPB.Msg.MsgType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(1, rawValue);
+              } else {
+                bitField0_ |= 0x00000001;
+                msgId_ = value;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return MsgPB.Msg.internal_static_MsgPB_Msg_Gobang_Regret_C2S_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return MsgPB.Msg.internal_static_MsgPB_Msg_Gobang_Regret_C2S_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              MsgPB.Msg.Msg_Gobang_Regret_C2S.class, MsgPB.Msg.Msg_Gobang_Regret_C2S.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Msg_Gobang_Regret_C2S> PARSER =
+        new com.google.protobuf.AbstractParser<Msg_Gobang_Regret_C2S>() {
+      public Msg_Gobang_Regret_C2S parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Msg_Gobang_Regret_C2S(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Msg_Gobang_Regret_C2S> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Regret_C2S];
+    public static final int MSGID_FIELD_NUMBER = 1;
+    private MsgPB.Msg.MsgType msgId_;
+    /**
+     * <code>optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Regret_C2S];</code>
+     */
+    public boolean hasMsgId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Regret_C2S];</code>
+     */
+    public MsgPB.Msg.MsgType getMsgId() {
+      return msgId_;
+    }
+
+    private void initFields() {
+      msgId_ = MsgPB.Msg.MsgType.Gobang_Regret_C2S;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeEnum(1, msgId_.getNumber());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, msgId_.getNumber());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static MsgPB.Msg.Msg_Gobang_Regret_C2S parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Regret_C2S parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Regret_C2S parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Regret_C2S parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Regret_C2S parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Regret_C2S parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Regret_C2S parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Regret_C2S parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Regret_C2S parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Regret_C2S parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(MsgPB.Msg.Msg_Gobang_Regret_C2S prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code MsgPB.Msg_Gobang_Regret_C2S}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements MsgPB.Msg.Msg_Gobang_Regret_C2SOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return MsgPB.Msg.internal_static_MsgPB_Msg_Gobang_Regret_C2S_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return MsgPB.Msg.internal_static_MsgPB_Msg_Gobang_Regret_C2S_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                MsgPB.Msg.Msg_Gobang_Regret_C2S.class, MsgPB.Msg.Msg_Gobang_Regret_C2S.Builder.class);
+      }
+
+      // Construct using MsgPB.Msg.Msg_Gobang_Regret_C2S.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        msgId_ = MsgPB.Msg.MsgType.Gobang_Regret_C2S;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return MsgPB.Msg.internal_static_MsgPB_Msg_Gobang_Regret_C2S_descriptor;
+      }
+
+      public MsgPB.Msg.Msg_Gobang_Regret_C2S getDefaultInstanceForType() {
+        return MsgPB.Msg.Msg_Gobang_Regret_C2S.getDefaultInstance();
+      }
+
+      public MsgPB.Msg.Msg_Gobang_Regret_C2S build() {
+        MsgPB.Msg.Msg_Gobang_Regret_C2S result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public MsgPB.Msg.Msg_Gobang_Regret_C2S buildPartial() {
+        MsgPB.Msg.Msg_Gobang_Regret_C2S result = new MsgPB.Msg.Msg_Gobang_Regret_C2S(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.msgId_ = msgId_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof MsgPB.Msg.Msg_Gobang_Regret_C2S) {
+          return mergeFrom((MsgPB.Msg.Msg_Gobang_Regret_C2S)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(MsgPB.Msg.Msg_Gobang_Regret_C2S other) {
+        if (other == MsgPB.Msg.Msg_Gobang_Regret_C2S.getDefaultInstance()) return this;
+        if (other.hasMsgId()) {
+          setMsgId(other.getMsgId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        MsgPB.Msg.Msg_Gobang_Regret_C2S parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (MsgPB.Msg.Msg_Gobang_Regret_C2S) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Regret_C2S];
+      private MsgPB.Msg.MsgType msgId_ = MsgPB.Msg.MsgType.Gobang_Regret_C2S;
+      /**
+       * <code>optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Regret_C2S];</code>
+       */
+      public boolean hasMsgId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Regret_C2S];</code>
+       */
+      public MsgPB.Msg.MsgType getMsgId() {
+        return msgId_;
+      }
+      /**
+       * <code>optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Regret_C2S];</code>
+       */
+      public Builder setMsgId(MsgPB.Msg.MsgType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        msgId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Regret_C2S];</code>
+       */
+      public Builder clearMsgId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        msgId_ = MsgPB.Msg.MsgType.Gobang_Regret_C2S;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:MsgPB.Msg_Gobang_Regret_C2S)
+    }
+
+    static {
+      defaultInstance = new Msg_Gobang_Regret_C2S(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:MsgPB.Msg_Gobang_Regret_C2S)
+  }
+
+  public interface Msg_Gobang_Regret_S2COrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Regret_S2C];
+    /**
+     * <code>optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Regret_S2C];</code>
+     */
+    boolean hasMsgId();
+    /**
+     * <code>optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Regret_S2C];</code>
+     */
+    MsgPB.Msg.MsgType getMsgId();
+  }
+  /**
+   * Protobuf type {@code MsgPB.Msg_Gobang_Regret_S2C}
+   */
+  public static final class Msg_Gobang_Regret_S2C extends
+      com.google.protobuf.GeneratedMessage
+      implements Msg_Gobang_Regret_S2COrBuilder {
+    // Use Msg_Gobang_Regret_S2C.newBuilder() to construct.
+    private Msg_Gobang_Regret_S2C(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Msg_Gobang_Regret_S2C(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Msg_Gobang_Regret_S2C defaultInstance;
+    public static Msg_Gobang_Regret_S2C getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Msg_Gobang_Regret_S2C getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Msg_Gobang_Regret_S2C(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              int rawValue = input.readEnum();
+              MsgPB.Msg.MsgType value = MsgPB.Msg.MsgType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(1, rawValue);
+              } else {
+                bitField0_ |= 0x00000001;
+                msgId_ = value;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return MsgPB.Msg.internal_static_MsgPB_Msg_Gobang_Regret_S2C_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return MsgPB.Msg.internal_static_MsgPB_Msg_Gobang_Regret_S2C_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              MsgPB.Msg.Msg_Gobang_Regret_S2C.class, MsgPB.Msg.Msg_Gobang_Regret_S2C.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Msg_Gobang_Regret_S2C> PARSER =
+        new com.google.protobuf.AbstractParser<Msg_Gobang_Regret_S2C>() {
+      public Msg_Gobang_Regret_S2C parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Msg_Gobang_Regret_S2C(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Msg_Gobang_Regret_S2C> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Regret_S2C];
+    public static final int MSGID_FIELD_NUMBER = 1;
+    private MsgPB.Msg.MsgType msgId_;
+    /**
+     * <code>optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Regret_S2C];</code>
+     */
+    public boolean hasMsgId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Regret_S2C];</code>
+     */
+    public MsgPB.Msg.MsgType getMsgId() {
+      return msgId_;
+    }
+
+    private void initFields() {
+      msgId_ = MsgPB.Msg.MsgType.Gobang_Regret_S2C;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeEnum(1, msgId_.getNumber());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, msgId_.getNumber());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static MsgPB.Msg.Msg_Gobang_Regret_S2C parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Regret_S2C parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Regret_S2C parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Regret_S2C parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Regret_S2C parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Regret_S2C parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Regret_S2C parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Regret_S2C parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Regret_S2C parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Regret_S2C parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(MsgPB.Msg.Msg_Gobang_Regret_S2C prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code MsgPB.Msg_Gobang_Regret_S2C}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements MsgPB.Msg.Msg_Gobang_Regret_S2COrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return MsgPB.Msg.internal_static_MsgPB_Msg_Gobang_Regret_S2C_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return MsgPB.Msg.internal_static_MsgPB_Msg_Gobang_Regret_S2C_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                MsgPB.Msg.Msg_Gobang_Regret_S2C.class, MsgPB.Msg.Msg_Gobang_Regret_S2C.Builder.class);
+      }
+
+      // Construct using MsgPB.Msg.Msg_Gobang_Regret_S2C.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        msgId_ = MsgPB.Msg.MsgType.Gobang_Regret_S2C;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return MsgPB.Msg.internal_static_MsgPB_Msg_Gobang_Regret_S2C_descriptor;
+      }
+
+      public MsgPB.Msg.Msg_Gobang_Regret_S2C getDefaultInstanceForType() {
+        return MsgPB.Msg.Msg_Gobang_Regret_S2C.getDefaultInstance();
+      }
+
+      public MsgPB.Msg.Msg_Gobang_Regret_S2C build() {
+        MsgPB.Msg.Msg_Gobang_Regret_S2C result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public MsgPB.Msg.Msg_Gobang_Regret_S2C buildPartial() {
+        MsgPB.Msg.Msg_Gobang_Regret_S2C result = new MsgPB.Msg.Msg_Gobang_Regret_S2C(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.msgId_ = msgId_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof MsgPB.Msg.Msg_Gobang_Regret_S2C) {
+          return mergeFrom((MsgPB.Msg.Msg_Gobang_Regret_S2C)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(MsgPB.Msg.Msg_Gobang_Regret_S2C other) {
+        if (other == MsgPB.Msg.Msg_Gobang_Regret_S2C.getDefaultInstance()) return this;
+        if (other.hasMsgId()) {
+          setMsgId(other.getMsgId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        MsgPB.Msg.Msg_Gobang_Regret_S2C parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (MsgPB.Msg.Msg_Gobang_Regret_S2C) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Regret_S2C];
+      private MsgPB.Msg.MsgType msgId_ = MsgPB.Msg.MsgType.Gobang_Regret_S2C;
+      /**
+       * <code>optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Regret_S2C];</code>
+       */
+      public boolean hasMsgId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Regret_S2C];</code>
+       */
+      public MsgPB.Msg.MsgType getMsgId() {
+        return msgId_;
+      }
+      /**
+       * <code>optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Regret_S2C];</code>
+       */
+      public Builder setMsgId(MsgPB.Msg.MsgType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        msgId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Regret_S2C];</code>
+       */
+      public Builder clearMsgId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        msgId_ = MsgPB.Msg.MsgType.Gobang_Regret_S2C;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:MsgPB.Msg_Gobang_Regret_S2C)
+    }
+
+    static {
+      defaultInstance = new Msg_Gobang_Regret_S2C(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:MsgPB.Msg_Gobang_Regret_S2C)
+  }
+
+  public interface Msg_Gobang_Pause_C2SOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Pause_C2S];
+    /**
+     * <code>optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Pause_C2S];</code>
+     */
+    boolean hasMsgId();
+    /**
+     * <code>optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Pause_C2S];</code>
+     */
+    MsgPB.Msg.MsgType getMsgId();
+  }
+  /**
+   * Protobuf type {@code MsgPB.Msg_Gobang_Pause_C2S}
+   */
+  public static final class Msg_Gobang_Pause_C2S extends
+      com.google.protobuf.GeneratedMessage
+      implements Msg_Gobang_Pause_C2SOrBuilder {
+    // Use Msg_Gobang_Pause_C2S.newBuilder() to construct.
+    private Msg_Gobang_Pause_C2S(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Msg_Gobang_Pause_C2S(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Msg_Gobang_Pause_C2S defaultInstance;
+    public static Msg_Gobang_Pause_C2S getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Msg_Gobang_Pause_C2S getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Msg_Gobang_Pause_C2S(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              int rawValue = input.readEnum();
+              MsgPB.Msg.MsgType value = MsgPB.Msg.MsgType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(1, rawValue);
+              } else {
+                bitField0_ |= 0x00000001;
+                msgId_ = value;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return MsgPB.Msg.internal_static_MsgPB_Msg_Gobang_Pause_C2S_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return MsgPB.Msg.internal_static_MsgPB_Msg_Gobang_Pause_C2S_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              MsgPB.Msg.Msg_Gobang_Pause_C2S.class, MsgPB.Msg.Msg_Gobang_Pause_C2S.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Msg_Gobang_Pause_C2S> PARSER =
+        new com.google.protobuf.AbstractParser<Msg_Gobang_Pause_C2S>() {
+      public Msg_Gobang_Pause_C2S parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Msg_Gobang_Pause_C2S(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Msg_Gobang_Pause_C2S> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Pause_C2S];
+    public static final int MSGID_FIELD_NUMBER = 1;
+    private MsgPB.Msg.MsgType msgId_;
+    /**
+     * <code>optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Pause_C2S];</code>
+     */
+    public boolean hasMsgId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Pause_C2S];</code>
+     */
+    public MsgPB.Msg.MsgType getMsgId() {
+      return msgId_;
+    }
+
+    private void initFields() {
+      msgId_ = MsgPB.Msg.MsgType.Gobang_Pause_C2S;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeEnum(1, msgId_.getNumber());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, msgId_.getNumber());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static MsgPB.Msg.Msg_Gobang_Pause_C2S parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Pause_C2S parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Pause_C2S parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Pause_C2S parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Pause_C2S parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Pause_C2S parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Pause_C2S parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Pause_C2S parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Pause_C2S parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Pause_C2S parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(MsgPB.Msg.Msg_Gobang_Pause_C2S prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code MsgPB.Msg_Gobang_Pause_C2S}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements MsgPB.Msg.Msg_Gobang_Pause_C2SOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return MsgPB.Msg.internal_static_MsgPB_Msg_Gobang_Pause_C2S_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return MsgPB.Msg.internal_static_MsgPB_Msg_Gobang_Pause_C2S_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                MsgPB.Msg.Msg_Gobang_Pause_C2S.class, MsgPB.Msg.Msg_Gobang_Pause_C2S.Builder.class);
+      }
+
+      // Construct using MsgPB.Msg.Msg_Gobang_Pause_C2S.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        msgId_ = MsgPB.Msg.MsgType.Gobang_Pause_C2S;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return MsgPB.Msg.internal_static_MsgPB_Msg_Gobang_Pause_C2S_descriptor;
+      }
+
+      public MsgPB.Msg.Msg_Gobang_Pause_C2S getDefaultInstanceForType() {
+        return MsgPB.Msg.Msg_Gobang_Pause_C2S.getDefaultInstance();
+      }
+
+      public MsgPB.Msg.Msg_Gobang_Pause_C2S build() {
+        MsgPB.Msg.Msg_Gobang_Pause_C2S result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public MsgPB.Msg.Msg_Gobang_Pause_C2S buildPartial() {
+        MsgPB.Msg.Msg_Gobang_Pause_C2S result = new MsgPB.Msg.Msg_Gobang_Pause_C2S(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.msgId_ = msgId_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof MsgPB.Msg.Msg_Gobang_Pause_C2S) {
+          return mergeFrom((MsgPB.Msg.Msg_Gobang_Pause_C2S)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(MsgPB.Msg.Msg_Gobang_Pause_C2S other) {
+        if (other == MsgPB.Msg.Msg_Gobang_Pause_C2S.getDefaultInstance()) return this;
+        if (other.hasMsgId()) {
+          setMsgId(other.getMsgId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        MsgPB.Msg.Msg_Gobang_Pause_C2S parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (MsgPB.Msg.Msg_Gobang_Pause_C2S) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Pause_C2S];
+      private MsgPB.Msg.MsgType msgId_ = MsgPB.Msg.MsgType.Gobang_Pause_C2S;
+      /**
+       * <code>optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Pause_C2S];</code>
+       */
+      public boolean hasMsgId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Pause_C2S];</code>
+       */
+      public MsgPB.Msg.MsgType getMsgId() {
+        return msgId_;
+      }
+      /**
+       * <code>optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Pause_C2S];</code>
+       */
+      public Builder setMsgId(MsgPB.Msg.MsgType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        msgId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Pause_C2S];</code>
+       */
+      public Builder clearMsgId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        msgId_ = MsgPB.Msg.MsgType.Gobang_Pause_C2S;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:MsgPB.Msg_Gobang_Pause_C2S)
+    }
+
+    static {
+      defaultInstance = new Msg_Gobang_Pause_C2S(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:MsgPB.Msg_Gobang_Pause_C2S)
+  }
+
+  public interface Msg_Gobang_Pause_S2COrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Pause_S2C];
+    /**
+     * <code>optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Pause_S2C];</code>
+     */
+    boolean hasMsgId();
+    /**
+     * <code>optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Pause_S2C];</code>
+     */
+    MsgPB.Msg.MsgType getMsgId();
+  }
+  /**
+   * Protobuf type {@code MsgPB.Msg_Gobang_Pause_S2C}
+   */
+  public static final class Msg_Gobang_Pause_S2C extends
+      com.google.protobuf.GeneratedMessage
+      implements Msg_Gobang_Pause_S2COrBuilder {
+    // Use Msg_Gobang_Pause_S2C.newBuilder() to construct.
+    private Msg_Gobang_Pause_S2C(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Msg_Gobang_Pause_S2C(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Msg_Gobang_Pause_S2C defaultInstance;
+    public static Msg_Gobang_Pause_S2C getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Msg_Gobang_Pause_S2C getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Msg_Gobang_Pause_S2C(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              int rawValue = input.readEnum();
+              MsgPB.Msg.MsgType value = MsgPB.Msg.MsgType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(1, rawValue);
+              } else {
+                bitField0_ |= 0x00000001;
+                msgId_ = value;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return MsgPB.Msg.internal_static_MsgPB_Msg_Gobang_Pause_S2C_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return MsgPB.Msg.internal_static_MsgPB_Msg_Gobang_Pause_S2C_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              MsgPB.Msg.Msg_Gobang_Pause_S2C.class, MsgPB.Msg.Msg_Gobang_Pause_S2C.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Msg_Gobang_Pause_S2C> PARSER =
+        new com.google.protobuf.AbstractParser<Msg_Gobang_Pause_S2C>() {
+      public Msg_Gobang_Pause_S2C parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Msg_Gobang_Pause_S2C(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Msg_Gobang_Pause_S2C> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Pause_S2C];
+    public static final int MSGID_FIELD_NUMBER = 1;
+    private MsgPB.Msg.MsgType msgId_;
+    /**
+     * <code>optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Pause_S2C];</code>
+     */
+    public boolean hasMsgId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Pause_S2C];</code>
+     */
+    public MsgPB.Msg.MsgType getMsgId() {
+      return msgId_;
+    }
+
+    private void initFields() {
+      msgId_ = MsgPB.Msg.MsgType.Gobang_Pause_S2C;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeEnum(1, msgId_.getNumber());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, msgId_.getNumber());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static MsgPB.Msg.Msg_Gobang_Pause_S2C parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Pause_S2C parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Pause_S2C parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Pause_S2C parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Pause_S2C parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Pause_S2C parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Pause_S2C parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Pause_S2C parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Pause_S2C parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static MsgPB.Msg.Msg_Gobang_Pause_S2C parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(MsgPB.Msg.Msg_Gobang_Pause_S2C prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code MsgPB.Msg_Gobang_Pause_S2C}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements MsgPB.Msg.Msg_Gobang_Pause_S2COrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return MsgPB.Msg.internal_static_MsgPB_Msg_Gobang_Pause_S2C_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return MsgPB.Msg.internal_static_MsgPB_Msg_Gobang_Pause_S2C_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                MsgPB.Msg.Msg_Gobang_Pause_S2C.class, MsgPB.Msg.Msg_Gobang_Pause_S2C.Builder.class);
+      }
+
+      // Construct using MsgPB.Msg.Msg_Gobang_Pause_S2C.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        msgId_ = MsgPB.Msg.MsgType.Gobang_Pause_S2C;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return MsgPB.Msg.internal_static_MsgPB_Msg_Gobang_Pause_S2C_descriptor;
+      }
+
+      public MsgPB.Msg.Msg_Gobang_Pause_S2C getDefaultInstanceForType() {
+        return MsgPB.Msg.Msg_Gobang_Pause_S2C.getDefaultInstance();
+      }
+
+      public MsgPB.Msg.Msg_Gobang_Pause_S2C build() {
+        MsgPB.Msg.Msg_Gobang_Pause_S2C result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public MsgPB.Msg.Msg_Gobang_Pause_S2C buildPartial() {
+        MsgPB.Msg.Msg_Gobang_Pause_S2C result = new MsgPB.Msg.Msg_Gobang_Pause_S2C(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.msgId_ = msgId_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof MsgPB.Msg.Msg_Gobang_Pause_S2C) {
+          return mergeFrom((MsgPB.Msg.Msg_Gobang_Pause_S2C)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(MsgPB.Msg.Msg_Gobang_Pause_S2C other) {
+        if (other == MsgPB.Msg.Msg_Gobang_Pause_S2C.getDefaultInstance()) return this;
+        if (other.hasMsgId()) {
+          setMsgId(other.getMsgId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        MsgPB.Msg.Msg_Gobang_Pause_S2C parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (MsgPB.Msg.Msg_Gobang_Pause_S2C) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Pause_S2C];
+      private MsgPB.Msg.MsgType msgId_ = MsgPB.Msg.MsgType.Gobang_Pause_S2C;
+      /**
+       * <code>optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Pause_S2C];</code>
+       */
+      public boolean hasMsgId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Pause_S2C];</code>
+       */
+      public MsgPB.Msg.MsgType getMsgId() {
+        return msgId_;
+      }
+      /**
+       * <code>optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Pause_S2C];</code>
+       */
+      public Builder setMsgId(MsgPB.Msg.MsgType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        msgId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .MsgPB.MsgType MsgId = 1 [default = Gobang_Pause_S2C];</code>
+       */
+      public Builder clearMsgId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        msgId_ = MsgPB.Msg.MsgType.Gobang_Pause_S2C;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:MsgPB.Msg_Gobang_Pause_S2C)
+    }
+
+    static {
+      defaultInstance = new Msg_Gobang_Pause_S2C(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:MsgPB.Msg_Gobang_Pause_S2C)
+  }
+
   public interface Msg_Chess_Match_C2SOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
 
@@ -5777,6 +8306,16 @@ public final class Msg {
      * <code>optional int64 GameID = 2;</code>
      */
     long getGameID();
+
+    // optional .MsgPB.COLOR Role = 3;
+    /**
+     * <code>optional .MsgPB.COLOR Role = 3;</code>
+     */
+    boolean hasRole();
+    /**
+     * <code>optional .MsgPB.COLOR Role = 3;</code>
+     */
+    MsgPB.Msg.COLOR getRole();
   }
   /**
    * Protobuf type {@code MsgPB.Msg_Chess_Start_S2C}
@@ -5843,6 +8382,17 @@ public final class Msg {
             case 16: {
               bitField0_ |= 0x00000002;
               gameID_ = input.readInt64();
+              break;
+            }
+            case 24: {
+              int rawValue = input.readEnum();
+              MsgPB.Msg.COLOR value = MsgPB.Msg.COLOR.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(3, rawValue);
+              } else {
+                bitField0_ |= 0x00000004;
+                role_ = value;
+              }
               break;
             }
           }
@@ -5917,9 +8467,26 @@ public final class Msg {
       return gameID_;
     }
 
+    // optional .MsgPB.COLOR Role = 3;
+    public static final int ROLE_FIELD_NUMBER = 3;
+    private MsgPB.Msg.COLOR role_;
+    /**
+     * <code>optional .MsgPB.COLOR Role = 3;</code>
+     */
+    public boolean hasRole() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional .MsgPB.COLOR Role = 3;</code>
+     */
+    public MsgPB.Msg.COLOR getRole() {
+      return role_;
+    }
+
     private void initFields() {
       msgId_ = MsgPB.Msg.MsgType.Chess_Start_S2C;
       gameID_ = 0L;
+      role_ = MsgPB.Msg.COLOR.Null;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -5939,6 +8506,9 @@ public final class Msg {
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         output.writeInt64(2, gameID_);
       }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeEnum(3, role_.getNumber());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -5955,6 +8525,10 @@ public final class Msg {
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, gameID_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, role_.getNumber());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -6076,6 +8650,8 @@ public final class Msg {
         bitField0_ = (bitField0_ & ~0x00000001);
         gameID_ = 0L;
         bitField0_ = (bitField0_ & ~0x00000002);
+        role_ = MsgPB.Msg.COLOR.Null;
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -6112,6 +8688,10 @@ public final class Msg {
           to_bitField0_ |= 0x00000002;
         }
         result.gameID_ = gameID_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.role_ = role_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -6133,6 +8713,9 @@ public final class Msg {
         }
         if (other.hasGameID()) {
           setGameID(other.getGameID());
+        }
+        if (other.hasRole()) {
+          setRole(other.getRole());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -6230,6 +8813,42 @@ public final class Msg {
         return this;
       }
 
+      // optional .MsgPB.COLOR Role = 3;
+      private MsgPB.Msg.COLOR role_ = MsgPB.Msg.COLOR.Null;
+      /**
+       * <code>optional .MsgPB.COLOR Role = 3;</code>
+       */
+      public boolean hasRole() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional .MsgPB.COLOR Role = 3;</code>
+       */
+      public MsgPB.Msg.COLOR getRole() {
+        return role_;
+      }
+      /**
+       * <code>optional .MsgPB.COLOR Role = 3;</code>
+       */
+      public Builder setRole(MsgPB.Msg.COLOR value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000004;
+        role_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .MsgPB.COLOR Role = 3;</code>
+       */
+      public Builder clearRole() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        role_ = MsgPB.Msg.COLOR.Null;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:MsgPB.Msg_Chess_Start_S2C)
     }
 
@@ -6239,6 +8858,726 @@ public final class Msg {
     }
 
     // @@protoc_insertion_point(class_scope:MsgPB.Msg_Chess_Start_S2C)
+  }
+
+  public interface Msg_Chess_PieceOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // optional int32 id = 1;
+    /**
+     * <code>optional int32 id = 1;</code>
+     */
+    boolean hasId();
+    /**
+     * <code>optional int32 id = 1;</code>
+     */
+    int getId();
+
+    // optional int32 ori_posx = 2;
+    /**
+     * <code>optional int32 ori_posx = 2;</code>
+     */
+    boolean hasOriPosx();
+    /**
+     * <code>optional int32 ori_posx = 2;</code>
+     */
+    int getOriPosx();
+
+    // optional int32 ori_posy = 3;
+    /**
+     * <code>optional int32 ori_posy = 3;</code>
+     */
+    boolean hasOriPosy();
+    /**
+     * <code>optional int32 ori_posy = 3;</code>
+     */
+    int getOriPosy();
+
+    // optional int32 des_posx = 4;
+    /**
+     * <code>optional int32 des_posx = 4;</code>
+     */
+    boolean hasDesPosx();
+    /**
+     * <code>optional int32 des_posx = 4;</code>
+     */
+    int getDesPosx();
+
+    // optional int32 des_posy = 5;
+    /**
+     * <code>optional int32 des_posy = 5;</code>
+     */
+    boolean hasDesPosy();
+    /**
+     * <code>optional int32 des_posy = 5;</code>
+     */
+    int getDesPosy();
+  }
+  /**
+   * Protobuf type {@code MsgPB.Msg_Chess_Piece}
+   */
+  public static final class Msg_Chess_Piece extends
+      com.google.protobuf.GeneratedMessage
+      implements Msg_Chess_PieceOrBuilder {
+    // Use Msg_Chess_Piece.newBuilder() to construct.
+    private Msg_Chess_Piece(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Msg_Chess_Piece(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Msg_Chess_Piece defaultInstance;
+    public static Msg_Chess_Piece getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Msg_Chess_Piece getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Msg_Chess_Piece(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              id_ = input.readInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              oriPosx_ = input.readInt32();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              oriPosy_ = input.readInt32();
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              desPosx_ = input.readInt32();
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000010;
+              desPosy_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return MsgPB.Msg.internal_static_MsgPB_Msg_Chess_Piece_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return MsgPB.Msg.internal_static_MsgPB_Msg_Chess_Piece_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              MsgPB.Msg.Msg_Chess_Piece.class, MsgPB.Msg.Msg_Chess_Piece.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Msg_Chess_Piece> PARSER =
+        new com.google.protobuf.AbstractParser<Msg_Chess_Piece>() {
+      public Msg_Chess_Piece parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Msg_Chess_Piece(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Msg_Chess_Piece> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // optional int32 id = 1;
+    public static final int ID_FIELD_NUMBER = 1;
+    private int id_;
+    /**
+     * <code>optional int32 id = 1;</code>
+     */
+    public boolean hasId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional int32 id = 1;</code>
+     */
+    public int getId() {
+      return id_;
+    }
+
+    // optional int32 ori_posx = 2;
+    public static final int ORI_POSX_FIELD_NUMBER = 2;
+    private int oriPosx_;
+    /**
+     * <code>optional int32 ori_posx = 2;</code>
+     */
+    public boolean hasOriPosx() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional int32 ori_posx = 2;</code>
+     */
+    public int getOriPosx() {
+      return oriPosx_;
+    }
+
+    // optional int32 ori_posy = 3;
+    public static final int ORI_POSY_FIELD_NUMBER = 3;
+    private int oriPosy_;
+    /**
+     * <code>optional int32 ori_posy = 3;</code>
+     */
+    public boolean hasOriPosy() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional int32 ori_posy = 3;</code>
+     */
+    public int getOriPosy() {
+      return oriPosy_;
+    }
+
+    // optional int32 des_posx = 4;
+    public static final int DES_POSX_FIELD_NUMBER = 4;
+    private int desPosx_;
+    /**
+     * <code>optional int32 des_posx = 4;</code>
+     */
+    public boolean hasDesPosx() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional int32 des_posx = 4;</code>
+     */
+    public int getDesPosx() {
+      return desPosx_;
+    }
+
+    // optional int32 des_posy = 5;
+    public static final int DES_POSY_FIELD_NUMBER = 5;
+    private int desPosy_;
+    /**
+     * <code>optional int32 des_posy = 5;</code>
+     */
+    public boolean hasDesPosy() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional int32 des_posy = 5;</code>
+     */
+    public int getDesPosy() {
+      return desPosy_;
+    }
+
+    private void initFields() {
+      id_ = 0;
+      oriPosx_ = 0;
+      oriPosy_ = 0;
+      desPosx_ = 0;
+      desPosy_ = 0;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, id_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt32(2, oriPosx_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeInt32(3, oriPosy_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeInt32(4, desPosx_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeInt32(5, desPosy_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, id_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, oriPosx_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, oriPosy_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, desPosx_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(5, desPosy_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static MsgPB.Msg.Msg_Chess_Piece parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static MsgPB.Msg.Msg_Chess_Piece parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static MsgPB.Msg.Msg_Chess_Piece parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static MsgPB.Msg.Msg_Chess_Piece parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static MsgPB.Msg.Msg_Chess_Piece parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static MsgPB.Msg.Msg_Chess_Piece parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static MsgPB.Msg.Msg_Chess_Piece parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static MsgPB.Msg.Msg_Chess_Piece parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static MsgPB.Msg.Msg_Chess_Piece parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static MsgPB.Msg.Msg_Chess_Piece parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(MsgPB.Msg.Msg_Chess_Piece prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code MsgPB.Msg_Chess_Piece}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements MsgPB.Msg.Msg_Chess_PieceOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return MsgPB.Msg.internal_static_MsgPB_Msg_Chess_Piece_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return MsgPB.Msg.internal_static_MsgPB_Msg_Chess_Piece_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                MsgPB.Msg.Msg_Chess_Piece.class, MsgPB.Msg.Msg_Chess_Piece.Builder.class);
+      }
+
+      // Construct using MsgPB.Msg.Msg_Chess_Piece.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        id_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        oriPosx_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        oriPosy_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        desPosx_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        desPosy_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return MsgPB.Msg.internal_static_MsgPB_Msg_Chess_Piece_descriptor;
+      }
+
+      public MsgPB.Msg.Msg_Chess_Piece getDefaultInstanceForType() {
+        return MsgPB.Msg.Msg_Chess_Piece.getDefaultInstance();
+      }
+
+      public MsgPB.Msg.Msg_Chess_Piece build() {
+        MsgPB.Msg.Msg_Chess_Piece result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public MsgPB.Msg.Msg_Chess_Piece buildPartial() {
+        MsgPB.Msg.Msg_Chess_Piece result = new MsgPB.Msg.Msg_Chess_Piece(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.id_ = id_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.oriPosx_ = oriPosx_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.oriPosy_ = oriPosy_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.desPosx_ = desPosx_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.desPosy_ = desPosy_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof MsgPB.Msg.Msg_Chess_Piece) {
+          return mergeFrom((MsgPB.Msg.Msg_Chess_Piece)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(MsgPB.Msg.Msg_Chess_Piece other) {
+        if (other == MsgPB.Msg.Msg_Chess_Piece.getDefaultInstance()) return this;
+        if (other.hasId()) {
+          setId(other.getId());
+        }
+        if (other.hasOriPosx()) {
+          setOriPosx(other.getOriPosx());
+        }
+        if (other.hasOriPosy()) {
+          setOriPosy(other.getOriPosy());
+        }
+        if (other.hasDesPosx()) {
+          setDesPosx(other.getDesPosx());
+        }
+        if (other.hasDesPosy()) {
+          setDesPosy(other.getDesPosy());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        MsgPB.Msg.Msg_Chess_Piece parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (MsgPB.Msg.Msg_Chess_Piece) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // optional int32 id = 1;
+      private int id_ ;
+      /**
+       * <code>optional int32 id = 1;</code>
+       */
+      public boolean hasId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional int32 id = 1;</code>
+       */
+      public int getId() {
+        return id_;
+      }
+      /**
+       * <code>optional int32 id = 1;</code>
+       */
+      public Builder setId(int value) {
+        bitField0_ |= 0x00000001;
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 id = 1;</code>
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // optional int32 ori_posx = 2;
+      private int oriPosx_ ;
+      /**
+       * <code>optional int32 ori_posx = 2;</code>
+       */
+      public boolean hasOriPosx() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional int32 ori_posx = 2;</code>
+       */
+      public int getOriPosx() {
+        return oriPosx_;
+      }
+      /**
+       * <code>optional int32 ori_posx = 2;</code>
+       */
+      public Builder setOriPosx(int value) {
+        bitField0_ |= 0x00000002;
+        oriPosx_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 ori_posx = 2;</code>
+       */
+      public Builder clearOriPosx() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        oriPosx_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // optional int32 ori_posy = 3;
+      private int oriPosy_ ;
+      /**
+       * <code>optional int32 ori_posy = 3;</code>
+       */
+      public boolean hasOriPosy() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional int32 ori_posy = 3;</code>
+       */
+      public int getOriPosy() {
+        return oriPosy_;
+      }
+      /**
+       * <code>optional int32 ori_posy = 3;</code>
+       */
+      public Builder setOriPosy(int value) {
+        bitField0_ |= 0x00000004;
+        oriPosy_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 ori_posy = 3;</code>
+       */
+      public Builder clearOriPosy() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        oriPosy_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // optional int32 des_posx = 4;
+      private int desPosx_ ;
+      /**
+       * <code>optional int32 des_posx = 4;</code>
+       */
+      public boolean hasDesPosx() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional int32 des_posx = 4;</code>
+       */
+      public int getDesPosx() {
+        return desPosx_;
+      }
+      /**
+       * <code>optional int32 des_posx = 4;</code>
+       */
+      public Builder setDesPosx(int value) {
+        bitField0_ |= 0x00000008;
+        desPosx_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 des_posx = 4;</code>
+       */
+      public Builder clearDesPosx() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        desPosx_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // optional int32 des_posy = 5;
+      private int desPosy_ ;
+      /**
+       * <code>optional int32 des_posy = 5;</code>
+       */
+      public boolean hasDesPosy() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional int32 des_posy = 5;</code>
+       */
+      public int getDesPosy() {
+        return desPosy_;
+      }
+      /**
+       * <code>optional int32 des_posy = 5;</code>
+       */
+      public Builder setDesPosy(int value) {
+        bitField0_ |= 0x00000010;
+        desPosy_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 des_posy = 5;</code>
+       */
+      public Builder clearDesPosy() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        desPosy_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:MsgPB.Msg_Chess_Piece)
+    }
+
+    static {
+      defaultInstance = new Msg_Chess_Piece(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:MsgPB.Msg_Chess_Piece)
   }
 
   public interface Msg_Chess_Action_C2SOrBuilder
@@ -6253,6 +9592,31 @@ public final class Msg {
      * <code>optional .MsgPB.MsgType MsgId = 1 [default = Chess_Action_C2S];</code>
      */
     MsgPB.Msg.MsgType getMsgId();
+
+    // repeated .MsgPB.Msg_Chess_Piece Pieces = 2;
+    /**
+     * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+     */
+    java.util.List<MsgPB.Msg.Msg_Chess_Piece> 
+        getPiecesList();
+    /**
+     * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+     */
+    MsgPB.Msg.Msg_Chess_Piece getPieces(int index);
+    /**
+     * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+     */
+    int getPiecesCount();
+    /**
+     * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+     */
+    java.util.List<? extends MsgPB.Msg.Msg_Chess_PieceOrBuilder> 
+        getPiecesOrBuilderList();
+    /**
+     * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+     */
+    MsgPB.Msg.Msg_Chess_PieceOrBuilder getPiecesOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code MsgPB.Msg_Chess_Action_C2S}
@@ -6316,6 +9680,14 @@ public final class Msg {
               }
               break;
             }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                pieces_ = new java.util.ArrayList<MsgPB.Msg.Msg_Chess_Piece>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              pieces_.add(input.readMessage(MsgPB.Msg.Msg_Chess_Piece.PARSER, extensionRegistry));
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -6324,6 +9696,9 @@ public final class Msg {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          pieces_ = java.util.Collections.unmodifiableList(pieces_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -6372,8 +9747,45 @@ public final class Msg {
       return msgId_;
     }
 
+    // repeated .MsgPB.Msg_Chess_Piece Pieces = 2;
+    public static final int PIECES_FIELD_NUMBER = 2;
+    private java.util.List<MsgPB.Msg.Msg_Chess_Piece> pieces_;
+    /**
+     * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+     */
+    public java.util.List<MsgPB.Msg.Msg_Chess_Piece> getPiecesList() {
+      return pieces_;
+    }
+    /**
+     * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+     */
+    public java.util.List<? extends MsgPB.Msg.Msg_Chess_PieceOrBuilder> 
+        getPiecesOrBuilderList() {
+      return pieces_;
+    }
+    /**
+     * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+     */
+    public int getPiecesCount() {
+      return pieces_.size();
+    }
+    /**
+     * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+     */
+    public MsgPB.Msg.Msg_Chess_Piece getPieces(int index) {
+      return pieces_.get(index);
+    }
+    /**
+     * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+     */
+    public MsgPB.Msg.Msg_Chess_PieceOrBuilder getPiecesOrBuilder(
+        int index) {
+      return pieces_.get(index);
+    }
+
     private void initFields() {
       msgId_ = MsgPB.Msg.MsgType.Chess_Action_C2S;
+      pieces_ = java.util.Collections.emptyList();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -6390,6 +9802,9 @@ public final class Msg {
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         output.writeEnum(1, msgId_.getNumber());
       }
+      for (int i = 0; i < pieces_.size(); i++) {
+        output.writeMessage(2, pieces_.get(i));
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -6402,6 +9817,10 @@ public final class Msg {
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, msgId_.getNumber());
+      }
+      for (int i = 0; i < pieces_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, pieces_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -6511,6 +9930,7 @@ public final class Msg {
       }
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getPiecesFieldBuilder();
         }
       }
       private static Builder create() {
@@ -6521,6 +9941,12 @@ public final class Msg {
         super.clear();
         msgId_ = MsgPB.Msg.MsgType.Chess_Action_C2S;
         bitField0_ = (bitField0_ & ~0x00000001);
+        if (piecesBuilder_ == null) {
+          pieces_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          piecesBuilder_.clear();
+        }
         return this;
       }
 
@@ -6553,6 +9979,15 @@ public final class Msg {
           to_bitField0_ |= 0x00000001;
         }
         result.msgId_ = msgId_;
+        if (piecesBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+            pieces_ = java.util.Collections.unmodifiableList(pieces_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.pieces_ = pieces_;
+        } else {
+          result.pieces_ = piecesBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -6571,6 +10006,32 @@ public final class Msg {
         if (other == MsgPB.Msg.Msg_Chess_Action_C2S.getDefaultInstance()) return this;
         if (other.hasMsgId()) {
           setMsgId(other.getMsgId());
+        }
+        if (piecesBuilder_ == null) {
+          if (!other.pieces_.isEmpty()) {
+            if (pieces_.isEmpty()) {
+              pieces_ = other.pieces_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensurePiecesIsMutable();
+              pieces_.addAll(other.pieces_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.pieces_.isEmpty()) {
+            if (piecesBuilder_.isEmpty()) {
+              piecesBuilder_.dispose();
+              piecesBuilder_ = null;
+              pieces_ = other.pieces_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              piecesBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getPiecesFieldBuilder() : null;
+            } else {
+              piecesBuilder_.addAllMessages(other.pieces_);
+            }
+          }
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -6635,6 +10096,246 @@ public final class Msg {
         return this;
       }
 
+      // repeated .MsgPB.Msg_Chess_Piece Pieces = 2;
+      private java.util.List<MsgPB.Msg.Msg_Chess_Piece> pieces_ =
+        java.util.Collections.emptyList();
+      private void ensurePiecesIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          pieces_ = new java.util.ArrayList<MsgPB.Msg.Msg_Chess_Piece>(pieces_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          MsgPB.Msg.Msg_Chess_Piece, MsgPB.Msg.Msg_Chess_Piece.Builder, MsgPB.Msg.Msg_Chess_PieceOrBuilder> piecesBuilder_;
+
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public java.util.List<MsgPB.Msg.Msg_Chess_Piece> getPiecesList() {
+        if (piecesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(pieces_);
+        } else {
+          return piecesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public int getPiecesCount() {
+        if (piecesBuilder_ == null) {
+          return pieces_.size();
+        } else {
+          return piecesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public MsgPB.Msg.Msg_Chess_Piece getPieces(int index) {
+        if (piecesBuilder_ == null) {
+          return pieces_.get(index);
+        } else {
+          return piecesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public Builder setPieces(
+          int index, MsgPB.Msg.Msg_Chess_Piece value) {
+        if (piecesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePiecesIsMutable();
+          pieces_.set(index, value);
+          onChanged();
+        } else {
+          piecesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public Builder setPieces(
+          int index, MsgPB.Msg.Msg_Chess_Piece.Builder builderForValue) {
+        if (piecesBuilder_ == null) {
+          ensurePiecesIsMutable();
+          pieces_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          piecesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public Builder addPieces(MsgPB.Msg.Msg_Chess_Piece value) {
+        if (piecesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePiecesIsMutable();
+          pieces_.add(value);
+          onChanged();
+        } else {
+          piecesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public Builder addPieces(
+          int index, MsgPB.Msg.Msg_Chess_Piece value) {
+        if (piecesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePiecesIsMutable();
+          pieces_.add(index, value);
+          onChanged();
+        } else {
+          piecesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public Builder addPieces(
+          MsgPB.Msg.Msg_Chess_Piece.Builder builderForValue) {
+        if (piecesBuilder_ == null) {
+          ensurePiecesIsMutable();
+          pieces_.add(builderForValue.build());
+          onChanged();
+        } else {
+          piecesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public Builder addPieces(
+          int index, MsgPB.Msg.Msg_Chess_Piece.Builder builderForValue) {
+        if (piecesBuilder_ == null) {
+          ensurePiecesIsMutable();
+          pieces_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          piecesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public Builder addAllPieces(
+          java.lang.Iterable<? extends MsgPB.Msg.Msg_Chess_Piece> values) {
+        if (piecesBuilder_ == null) {
+          ensurePiecesIsMutable();
+          super.addAll(values, pieces_);
+          onChanged();
+        } else {
+          piecesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public Builder clearPieces() {
+        if (piecesBuilder_ == null) {
+          pieces_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          piecesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public Builder removePieces(int index) {
+        if (piecesBuilder_ == null) {
+          ensurePiecesIsMutable();
+          pieces_.remove(index);
+          onChanged();
+        } else {
+          piecesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public MsgPB.Msg.Msg_Chess_Piece.Builder getPiecesBuilder(
+          int index) {
+        return getPiecesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public MsgPB.Msg.Msg_Chess_PieceOrBuilder getPiecesOrBuilder(
+          int index) {
+        if (piecesBuilder_ == null) {
+          return pieces_.get(index);  } else {
+          return piecesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public java.util.List<? extends MsgPB.Msg.Msg_Chess_PieceOrBuilder> 
+           getPiecesOrBuilderList() {
+        if (piecesBuilder_ != null) {
+          return piecesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(pieces_);
+        }
+      }
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public MsgPB.Msg.Msg_Chess_Piece.Builder addPiecesBuilder() {
+        return getPiecesFieldBuilder().addBuilder(
+            MsgPB.Msg.Msg_Chess_Piece.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public MsgPB.Msg.Msg_Chess_Piece.Builder addPiecesBuilder(
+          int index) {
+        return getPiecesFieldBuilder().addBuilder(
+            index, MsgPB.Msg.Msg_Chess_Piece.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public java.util.List<MsgPB.Msg.Msg_Chess_Piece.Builder> 
+           getPiecesBuilderList() {
+        return getPiecesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          MsgPB.Msg.Msg_Chess_Piece, MsgPB.Msg.Msg_Chess_Piece.Builder, MsgPB.Msg.Msg_Chess_PieceOrBuilder> 
+          getPiecesFieldBuilder() {
+        if (piecesBuilder_ == null) {
+          piecesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              MsgPB.Msg.Msg_Chess_Piece, MsgPB.Msg.Msg_Chess_Piece.Builder, MsgPB.Msg.Msg_Chess_PieceOrBuilder>(
+                  pieces_,
+                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  getParentForChildren(),
+                  isClean());
+          pieces_ = null;
+        }
+        return piecesBuilder_;
+      }
+
       // @@protoc_insertion_point(builder_scope:MsgPB.Msg_Chess_Action_C2S)
     }
 
@@ -6658,6 +10359,41 @@ public final class Msg {
      * <code>optional .MsgPB.MsgType MsgId = 1 [default = Chess_Action_S2C];</code>
      */
     MsgPB.Msg.MsgType getMsgId();
+
+    // repeated .MsgPB.Msg_Chess_Piece Pieces = 2;
+    /**
+     * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+     */
+    java.util.List<MsgPB.Msg.Msg_Chess_Piece> 
+        getPiecesList();
+    /**
+     * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+     */
+    MsgPB.Msg.Msg_Chess_Piece getPieces(int index);
+    /**
+     * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+     */
+    int getPiecesCount();
+    /**
+     * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+     */
+    java.util.List<? extends MsgPB.Msg.Msg_Chess_PieceOrBuilder> 
+        getPiecesOrBuilderList();
+    /**
+     * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+     */
+    MsgPB.Msg.Msg_Chess_PieceOrBuilder getPiecesOrBuilder(
+        int index);
+
+    // optional int32 turnId = 3;
+    /**
+     * <code>optional int32 turnId = 3;</code>
+     */
+    boolean hasTurnId();
+    /**
+     * <code>optional int32 turnId = 3;</code>
+     */
+    int getTurnId();
   }
   /**
    * Protobuf type {@code MsgPB.Msg_Chess_Action_S2C}
@@ -6721,6 +10457,19 @@ public final class Msg {
               }
               break;
             }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                pieces_ = new java.util.ArrayList<MsgPB.Msg.Msg_Chess_Piece>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              pieces_.add(input.readMessage(MsgPB.Msg.Msg_Chess_Piece.PARSER, extensionRegistry));
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000002;
+              turnId_ = input.readInt32();
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -6729,6 +10478,9 @@ public final class Msg {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          pieces_ = java.util.Collections.unmodifiableList(pieces_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -6777,8 +10529,62 @@ public final class Msg {
       return msgId_;
     }
 
+    // repeated .MsgPB.Msg_Chess_Piece Pieces = 2;
+    public static final int PIECES_FIELD_NUMBER = 2;
+    private java.util.List<MsgPB.Msg.Msg_Chess_Piece> pieces_;
+    /**
+     * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+     */
+    public java.util.List<MsgPB.Msg.Msg_Chess_Piece> getPiecesList() {
+      return pieces_;
+    }
+    /**
+     * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+     */
+    public java.util.List<? extends MsgPB.Msg.Msg_Chess_PieceOrBuilder> 
+        getPiecesOrBuilderList() {
+      return pieces_;
+    }
+    /**
+     * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+     */
+    public int getPiecesCount() {
+      return pieces_.size();
+    }
+    /**
+     * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+     */
+    public MsgPB.Msg.Msg_Chess_Piece getPieces(int index) {
+      return pieces_.get(index);
+    }
+    /**
+     * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+     */
+    public MsgPB.Msg.Msg_Chess_PieceOrBuilder getPiecesOrBuilder(
+        int index) {
+      return pieces_.get(index);
+    }
+
+    // optional int32 turnId = 3;
+    public static final int TURNID_FIELD_NUMBER = 3;
+    private int turnId_;
+    /**
+     * <code>optional int32 turnId = 3;</code>
+     */
+    public boolean hasTurnId() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional int32 turnId = 3;</code>
+     */
+    public int getTurnId() {
+      return turnId_;
+    }
+
     private void initFields() {
       msgId_ = MsgPB.Msg.MsgType.Chess_Action_S2C;
+      pieces_ = java.util.Collections.emptyList();
+      turnId_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -6795,6 +10601,12 @@ public final class Msg {
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         output.writeEnum(1, msgId_.getNumber());
       }
+      for (int i = 0; i < pieces_.size(); i++) {
+        output.writeMessage(2, pieces_.get(i));
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt32(3, turnId_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -6807,6 +10619,14 @@ public final class Msg {
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, msgId_.getNumber());
+      }
+      for (int i = 0; i < pieces_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, pieces_.get(i));
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, turnId_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -6916,6 +10736,7 @@ public final class Msg {
       }
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getPiecesFieldBuilder();
         }
       }
       private static Builder create() {
@@ -6926,6 +10747,14 @@ public final class Msg {
         super.clear();
         msgId_ = MsgPB.Msg.MsgType.Chess_Action_S2C;
         bitField0_ = (bitField0_ & ~0x00000001);
+        if (piecesBuilder_ == null) {
+          pieces_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          piecesBuilder_.clear();
+        }
+        turnId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -6958,6 +10787,19 @@ public final class Msg {
           to_bitField0_ |= 0x00000001;
         }
         result.msgId_ = msgId_;
+        if (piecesBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+            pieces_ = java.util.Collections.unmodifiableList(pieces_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.pieces_ = pieces_;
+        } else {
+          result.pieces_ = piecesBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.turnId_ = turnId_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -6976,6 +10818,35 @@ public final class Msg {
         if (other == MsgPB.Msg.Msg_Chess_Action_S2C.getDefaultInstance()) return this;
         if (other.hasMsgId()) {
           setMsgId(other.getMsgId());
+        }
+        if (piecesBuilder_ == null) {
+          if (!other.pieces_.isEmpty()) {
+            if (pieces_.isEmpty()) {
+              pieces_ = other.pieces_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensurePiecesIsMutable();
+              pieces_.addAll(other.pieces_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.pieces_.isEmpty()) {
+            if (piecesBuilder_.isEmpty()) {
+              piecesBuilder_.dispose();
+              piecesBuilder_ = null;
+              pieces_ = other.pieces_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              piecesBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getPiecesFieldBuilder() : null;
+            } else {
+              piecesBuilder_.addAllMessages(other.pieces_);
+            }
+          }
+        }
+        if (other.hasTurnId()) {
+          setTurnId(other.getTurnId());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -7040,6 +10911,279 @@ public final class Msg {
         return this;
       }
 
+      // repeated .MsgPB.Msg_Chess_Piece Pieces = 2;
+      private java.util.List<MsgPB.Msg.Msg_Chess_Piece> pieces_ =
+        java.util.Collections.emptyList();
+      private void ensurePiecesIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          pieces_ = new java.util.ArrayList<MsgPB.Msg.Msg_Chess_Piece>(pieces_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          MsgPB.Msg.Msg_Chess_Piece, MsgPB.Msg.Msg_Chess_Piece.Builder, MsgPB.Msg.Msg_Chess_PieceOrBuilder> piecesBuilder_;
+
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public java.util.List<MsgPB.Msg.Msg_Chess_Piece> getPiecesList() {
+        if (piecesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(pieces_);
+        } else {
+          return piecesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public int getPiecesCount() {
+        if (piecesBuilder_ == null) {
+          return pieces_.size();
+        } else {
+          return piecesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public MsgPB.Msg.Msg_Chess_Piece getPieces(int index) {
+        if (piecesBuilder_ == null) {
+          return pieces_.get(index);
+        } else {
+          return piecesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public Builder setPieces(
+          int index, MsgPB.Msg.Msg_Chess_Piece value) {
+        if (piecesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePiecesIsMutable();
+          pieces_.set(index, value);
+          onChanged();
+        } else {
+          piecesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public Builder setPieces(
+          int index, MsgPB.Msg.Msg_Chess_Piece.Builder builderForValue) {
+        if (piecesBuilder_ == null) {
+          ensurePiecesIsMutable();
+          pieces_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          piecesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public Builder addPieces(MsgPB.Msg.Msg_Chess_Piece value) {
+        if (piecesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePiecesIsMutable();
+          pieces_.add(value);
+          onChanged();
+        } else {
+          piecesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public Builder addPieces(
+          int index, MsgPB.Msg.Msg_Chess_Piece value) {
+        if (piecesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePiecesIsMutable();
+          pieces_.add(index, value);
+          onChanged();
+        } else {
+          piecesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public Builder addPieces(
+          MsgPB.Msg.Msg_Chess_Piece.Builder builderForValue) {
+        if (piecesBuilder_ == null) {
+          ensurePiecesIsMutable();
+          pieces_.add(builderForValue.build());
+          onChanged();
+        } else {
+          piecesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public Builder addPieces(
+          int index, MsgPB.Msg.Msg_Chess_Piece.Builder builderForValue) {
+        if (piecesBuilder_ == null) {
+          ensurePiecesIsMutable();
+          pieces_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          piecesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public Builder addAllPieces(
+          java.lang.Iterable<? extends MsgPB.Msg.Msg_Chess_Piece> values) {
+        if (piecesBuilder_ == null) {
+          ensurePiecesIsMutable();
+          super.addAll(values, pieces_);
+          onChanged();
+        } else {
+          piecesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public Builder clearPieces() {
+        if (piecesBuilder_ == null) {
+          pieces_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          piecesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public Builder removePieces(int index) {
+        if (piecesBuilder_ == null) {
+          ensurePiecesIsMutable();
+          pieces_.remove(index);
+          onChanged();
+        } else {
+          piecesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public MsgPB.Msg.Msg_Chess_Piece.Builder getPiecesBuilder(
+          int index) {
+        return getPiecesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public MsgPB.Msg.Msg_Chess_PieceOrBuilder getPiecesOrBuilder(
+          int index) {
+        if (piecesBuilder_ == null) {
+          return pieces_.get(index);  } else {
+          return piecesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public java.util.List<? extends MsgPB.Msg.Msg_Chess_PieceOrBuilder> 
+           getPiecesOrBuilderList() {
+        if (piecesBuilder_ != null) {
+          return piecesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(pieces_);
+        }
+      }
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public MsgPB.Msg.Msg_Chess_Piece.Builder addPiecesBuilder() {
+        return getPiecesFieldBuilder().addBuilder(
+            MsgPB.Msg.Msg_Chess_Piece.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public MsgPB.Msg.Msg_Chess_Piece.Builder addPiecesBuilder(
+          int index) {
+        return getPiecesFieldBuilder().addBuilder(
+            index, MsgPB.Msg.Msg_Chess_Piece.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public java.util.List<MsgPB.Msg.Msg_Chess_Piece.Builder> 
+           getPiecesBuilderList() {
+        return getPiecesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          MsgPB.Msg.Msg_Chess_Piece, MsgPB.Msg.Msg_Chess_Piece.Builder, MsgPB.Msg.Msg_Chess_PieceOrBuilder> 
+          getPiecesFieldBuilder() {
+        if (piecesBuilder_ == null) {
+          piecesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              MsgPB.Msg.Msg_Chess_Piece, MsgPB.Msg.Msg_Chess_Piece.Builder, MsgPB.Msg.Msg_Chess_PieceOrBuilder>(
+                  pieces_,
+                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  getParentForChildren(),
+                  isClean());
+          pieces_ = null;
+        }
+        return piecesBuilder_;
+      }
+
+      // optional int32 turnId = 3;
+      private int turnId_ ;
+      /**
+       * <code>optional int32 turnId = 3;</code>
+       */
+      public boolean hasTurnId() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional int32 turnId = 3;</code>
+       */
+      public int getTurnId() {
+        return turnId_;
+      }
+      /**
+       * <code>optional int32 turnId = 3;</code>
+       */
+      public Builder setTurnId(int value) {
+        bitField0_ |= 0x00000004;
+        turnId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 turnId = 3;</code>
+       */
+      public Builder clearTurnId() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        turnId_ = 0;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:MsgPB.Msg_Chess_Action_S2C)
     }
 
@@ -7063,6 +11207,16 @@ public final class Msg {
      * <code>optional .MsgPB.MsgType MsgId = 1 [default = Chess_Over_S2C];</code>
      */
     MsgPB.Msg.MsgType getMsgId();
+
+    // optional .MsgPB.COLOR Winner = 2;
+    /**
+     * <code>optional .MsgPB.COLOR Winner = 2;</code>
+     */
+    boolean hasWinner();
+    /**
+     * <code>optional .MsgPB.COLOR Winner = 2;</code>
+     */
+    MsgPB.Msg.COLOR getWinner();
   }
   /**
    * Protobuf type {@code MsgPB.Msg_Chess_Over_S2C}
@@ -7126,6 +11280,17 @@ public final class Msg {
               }
               break;
             }
+            case 16: {
+              int rawValue = input.readEnum();
+              MsgPB.Msg.COLOR value = MsgPB.Msg.COLOR.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(2, rawValue);
+              } else {
+                bitField0_ |= 0x00000002;
+                winner_ = value;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -7182,8 +11347,25 @@ public final class Msg {
       return msgId_;
     }
 
+    // optional .MsgPB.COLOR Winner = 2;
+    public static final int WINNER_FIELD_NUMBER = 2;
+    private MsgPB.Msg.COLOR winner_;
+    /**
+     * <code>optional .MsgPB.COLOR Winner = 2;</code>
+     */
+    public boolean hasWinner() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional .MsgPB.COLOR Winner = 2;</code>
+     */
+    public MsgPB.Msg.COLOR getWinner() {
+      return winner_;
+    }
+
     private void initFields() {
       msgId_ = MsgPB.Msg.MsgType.Chess_Over_S2C;
+      winner_ = MsgPB.Msg.COLOR.Null;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -7200,6 +11382,9 @@ public final class Msg {
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         output.writeEnum(1, msgId_.getNumber());
       }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeEnum(2, winner_.getNumber());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -7212,6 +11397,10 @@ public final class Msg {
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, msgId_.getNumber());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, winner_.getNumber());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -7331,6 +11520,8 @@ public final class Msg {
         super.clear();
         msgId_ = MsgPB.Msg.MsgType.Chess_Over_S2C;
         bitField0_ = (bitField0_ & ~0x00000001);
+        winner_ = MsgPB.Msg.COLOR.Null;
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -7363,6 +11554,10 @@ public final class Msg {
           to_bitField0_ |= 0x00000001;
         }
         result.msgId_ = msgId_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.winner_ = winner_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -7381,6 +11576,9 @@ public final class Msg {
         if (other == MsgPB.Msg.Msg_Chess_Over_S2C.getDefaultInstance()) return this;
         if (other.hasMsgId()) {
           setMsgId(other.getMsgId());
+        }
+        if (other.hasWinner()) {
+          setWinner(other.getWinner());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -7445,6 +11643,42 @@ public final class Msg {
         return this;
       }
 
+      // optional .MsgPB.COLOR Winner = 2;
+      private MsgPB.Msg.COLOR winner_ = MsgPB.Msg.COLOR.Null;
+      /**
+       * <code>optional .MsgPB.COLOR Winner = 2;</code>
+       */
+      public boolean hasWinner() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional .MsgPB.COLOR Winner = 2;</code>
+       */
+      public MsgPB.Msg.COLOR getWinner() {
+        return winner_;
+      }
+      /**
+       * <code>optional .MsgPB.COLOR Winner = 2;</code>
+       */
+      public Builder setWinner(MsgPB.Msg.COLOR value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        winner_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .MsgPB.COLOR Winner = 2;</code>
+       */
+      public Builder clearWinner() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        winner_ = MsgPB.Msg.COLOR.Null;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:MsgPB.Msg_Chess_Over_S2C)
     }
 
@@ -7454,6 +11688,3059 @@ public final class Msg {
     }
 
     // @@protoc_insertion_point(class_scope:MsgPB.Msg_Chess_Over_S2C)
+  }
+
+  public interface Msg_Chess_Giveup_C2SOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // optional .MsgPB.MsgType MsgId = 1 [default = Chess_Giveup_C2S];
+    /**
+     * <code>optional .MsgPB.MsgType MsgId = 1 [default = Chess_Giveup_C2S];</code>
+     */
+    boolean hasMsgId();
+    /**
+     * <code>optional .MsgPB.MsgType MsgId = 1 [default = Chess_Giveup_C2S];</code>
+     */
+    MsgPB.Msg.MsgType getMsgId();
+
+    // optional .MsgPB.COLOR Loser = 2;
+    /**
+     * <code>optional .MsgPB.COLOR Loser = 2;</code>
+     */
+    boolean hasLoser();
+    /**
+     * <code>optional .MsgPB.COLOR Loser = 2;</code>
+     */
+    MsgPB.Msg.COLOR getLoser();
+  }
+  /**
+   * Protobuf type {@code MsgPB.Msg_Chess_Giveup_C2S}
+   */
+  public static final class Msg_Chess_Giveup_C2S extends
+      com.google.protobuf.GeneratedMessage
+      implements Msg_Chess_Giveup_C2SOrBuilder {
+    // Use Msg_Chess_Giveup_C2S.newBuilder() to construct.
+    private Msg_Chess_Giveup_C2S(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Msg_Chess_Giveup_C2S(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Msg_Chess_Giveup_C2S defaultInstance;
+    public static Msg_Chess_Giveup_C2S getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Msg_Chess_Giveup_C2S getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Msg_Chess_Giveup_C2S(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              int rawValue = input.readEnum();
+              MsgPB.Msg.MsgType value = MsgPB.Msg.MsgType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(1, rawValue);
+              } else {
+                bitField0_ |= 0x00000001;
+                msgId_ = value;
+              }
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+              MsgPB.Msg.COLOR value = MsgPB.Msg.COLOR.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(2, rawValue);
+              } else {
+                bitField0_ |= 0x00000002;
+                loser_ = value;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return MsgPB.Msg.internal_static_MsgPB_Msg_Chess_Giveup_C2S_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return MsgPB.Msg.internal_static_MsgPB_Msg_Chess_Giveup_C2S_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              MsgPB.Msg.Msg_Chess_Giveup_C2S.class, MsgPB.Msg.Msg_Chess_Giveup_C2S.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Msg_Chess_Giveup_C2S> PARSER =
+        new com.google.protobuf.AbstractParser<Msg_Chess_Giveup_C2S>() {
+      public Msg_Chess_Giveup_C2S parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Msg_Chess_Giveup_C2S(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Msg_Chess_Giveup_C2S> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // optional .MsgPB.MsgType MsgId = 1 [default = Chess_Giveup_C2S];
+    public static final int MSGID_FIELD_NUMBER = 1;
+    private MsgPB.Msg.MsgType msgId_;
+    /**
+     * <code>optional .MsgPB.MsgType MsgId = 1 [default = Chess_Giveup_C2S];</code>
+     */
+    public boolean hasMsgId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional .MsgPB.MsgType MsgId = 1 [default = Chess_Giveup_C2S];</code>
+     */
+    public MsgPB.Msg.MsgType getMsgId() {
+      return msgId_;
+    }
+
+    // optional .MsgPB.COLOR Loser = 2;
+    public static final int LOSER_FIELD_NUMBER = 2;
+    private MsgPB.Msg.COLOR loser_;
+    /**
+     * <code>optional .MsgPB.COLOR Loser = 2;</code>
+     */
+    public boolean hasLoser() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional .MsgPB.COLOR Loser = 2;</code>
+     */
+    public MsgPB.Msg.COLOR getLoser() {
+      return loser_;
+    }
+
+    private void initFields() {
+      msgId_ = MsgPB.Msg.MsgType.Chess_Giveup_C2S;
+      loser_ = MsgPB.Msg.COLOR.Null;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeEnum(1, msgId_.getNumber());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeEnum(2, loser_.getNumber());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, msgId_.getNumber());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, loser_.getNumber());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static MsgPB.Msg.Msg_Chess_Giveup_C2S parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static MsgPB.Msg.Msg_Chess_Giveup_C2S parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static MsgPB.Msg.Msg_Chess_Giveup_C2S parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static MsgPB.Msg.Msg_Chess_Giveup_C2S parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static MsgPB.Msg.Msg_Chess_Giveup_C2S parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static MsgPB.Msg.Msg_Chess_Giveup_C2S parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static MsgPB.Msg.Msg_Chess_Giveup_C2S parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static MsgPB.Msg.Msg_Chess_Giveup_C2S parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static MsgPB.Msg.Msg_Chess_Giveup_C2S parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static MsgPB.Msg.Msg_Chess_Giveup_C2S parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(MsgPB.Msg.Msg_Chess_Giveup_C2S prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code MsgPB.Msg_Chess_Giveup_C2S}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements MsgPB.Msg.Msg_Chess_Giveup_C2SOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return MsgPB.Msg.internal_static_MsgPB_Msg_Chess_Giveup_C2S_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return MsgPB.Msg.internal_static_MsgPB_Msg_Chess_Giveup_C2S_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                MsgPB.Msg.Msg_Chess_Giveup_C2S.class, MsgPB.Msg.Msg_Chess_Giveup_C2S.Builder.class);
+      }
+
+      // Construct using MsgPB.Msg.Msg_Chess_Giveup_C2S.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        msgId_ = MsgPB.Msg.MsgType.Chess_Giveup_C2S;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        loser_ = MsgPB.Msg.COLOR.Null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return MsgPB.Msg.internal_static_MsgPB_Msg_Chess_Giveup_C2S_descriptor;
+      }
+
+      public MsgPB.Msg.Msg_Chess_Giveup_C2S getDefaultInstanceForType() {
+        return MsgPB.Msg.Msg_Chess_Giveup_C2S.getDefaultInstance();
+      }
+
+      public MsgPB.Msg.Msg_Chess_Giveup_C2S build() {
+        MsgPB.Msg.Msg_Chess_Giveup_C2S result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public MsgPB.Msg.Msg_Chess_Giveup_C2S buildPartial() {
+        MsgPB.Msg.Msg_Chess_Giveup_C2S result = new MsgPB.Msg.Msg_Chess_Giveup_C2S(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.msgId_ = msgId_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.loser_ = loser_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof MsgPB.Msg.Msg_Chess_Giveup_C2S) {
+          return mergeFrom((MsgPB.Msg.Msg_Chess_Giveup_C2S)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(MsgPB.Msg.Msg_Chess_Giveup_C2S other) {
+        if (other == MsgPB.Msg.Msg_Chess_Giveup_C2S.getDefaultInstance()) return this;
+        if (other.hasMsgId()) {
+          setMsgId(other.getMsgId());
+        }
+        if (other.hasLoser()) {
+          setLoser(other.getLoser());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        MsgPB.Msg.Msg_Chess_Giveup_C2S parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (MsgPB.Msg.Msg_Chess_Giveup_C2S) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // optional .MsgPB.MsgType MsgId = 1 [default = Chess_Giveup_C2S];
+      private MsgPB.Msg.MsgType msgId_ = MsgPB.Msg.MsgType.Chess_Giveup_C2S;
+      /**
+       * <code>optional .MsgPB.MsgType MsgId = 1 [default = Chess_Giveup_C2S];</code>
+       */
+      public boolean hasMsgId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional .MsgPB.MsgType MsgId = 1 [default = Chess_Giveup_C2S];</code>
+       */
+      public MsgPB.Msg.MsgType getMsgId() {
+        return msgId_;
+      }
+      /**
+       * <code>optional .MsgPB.MsgType MsgId = 1 [default = Chess_Giveup_C2S];</code>
+       */
+      public Builder setMsgId(MsgPB.Msg.MsgType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        msgId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .MsgPB.MsgType MsgId = 1 [default = Chess_Giveup_C2S];</code>
+       */
+      public Builder clearMsgId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        msgId_ = MsgPB.Msg.MsgType.Chess_Giveup_C2S;
+        onChanged();
+        return this;
+      }
+
+      // optional .MsgPB.COLOR Loser = 2;
+      private MsgPB.Msg.COLOR loser_ = MsgPB.Msg.COLOR.Null;
+      /**
+       * <code>optional .MsgPB.COLOR Loser = 2;</code>
+       */
+      public boolean hasLoser() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional .MsgPB.COLOR Loser = 2;</code>
+       */
+      public MsgPB.Msg.COLOR getLoser() {
+        return loser_;
+      }
+      /**
+       * <code>optional .MsgPB.COLOR Loser = 2;</code>
+       */
+      public Builder setLoser(MsgPB.Msg.COLOR value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        loser_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .MsgPB.COLOR Loser = 2;</code>
+       */
+      public Builder clearLoser() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        loser_ = MsgPB.Msg.COLOR.Null;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:MsgPB.Msg_Chess_Giveup_C2S)
+    }
+
+    static {
+      defaultInstance = new Msg_Chess_Giveup_C2S(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:MsgPB.Msg_Chess_Giveup_C2S)
+  }
+
+  public interface Msg_Chess_Giveup_S2COrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // optional .MsgPB.MsgType MsgId = 1 [default = Chess_Giveup_S2C];
+    /**
+     * <code>optional .MsgPB.MsgType MsgId = 1 [default = Chess_Giveup_S2C];</code>
+     */
+    boolean hasMsgId();
+    /**
+     * <code>optional .MsgPB.MsgType MsgId = 1 [default = Chess_Giveup_S2C];</code>
+     */
+    MsgPB.Msg.MsgType getMsgId();
+
+    // optional .MsgPB.COLOR Loser = 2;
+    /**
+     * <code>optional .MsgPB.COLOR Loser = 2;</code>
+     */
+    boolean hasLoser();
+    /**
+     * <code>optional .MsgPB.COLOR Loser = 2;</code>
+     */
+    MsgPB.Msg.COLOR getLoser();
+  }
+  /**
+   * Protobuf type {@code MsgPB.Msg_Chess_Giveup_S2C}
+   */
+  public static final class Msg_Chess_Giveup_S2C extends
+      com.google.protobuf.GeneratedMessage
+      implements Msg_Chess_Giveup_S2COrBuilder {
+    // Use Msg_Chess_Giveup_S2C.newBuilder() to construct.
+    private Msg_Chess_Giveup_S2C(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Msg_Chess_Giveup_S2C(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Msg_Chess_Giveup_S2C defaultInstance;
+    public static Msg_Chess_Giveup_S2C getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Msg_Chess_Giveup_S2C getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Msg_Chess_Giveup_S2C(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              int rawValue = input.readEnum();
+              MsgPB.Msg.MsgType value = MsgPB.Msg.MsgType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(1, rawValue);
+              } else {
+                bitField0_ |= 0x00000001;
+                msgId_ = value;
+              }
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+              MsgPB.Msg.COLOR value = MsgPB.Msg.COLOR.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(2, rawValue);
+              } else {
+                bitField0_ |= 0x00000002;
+                loser_ = value;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return MsgPB.Msg.internal_static_MsgPB_Msg_Chess_Giveup_S2C_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return MsgPB.Msg.internal_static_MsgPB_Msg_Chess_Giveup_S2C_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              MsgPB.Msg.Msg_Chess_Giveup_S2C.class, MsgPB.Msg.Msg_Chess_Giveup_S2C.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Msg_Chess_Giveup_S2C> PARSER =
+        new com.google.protobuf.AbstractParser<Msg_Chess_Giveup_S2C>() {
+      public Msg_Chess_Giveup_S2C parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Msg_Chess_Giveup_S2C(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Msg_Chess_Giveup_S2C> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // optional .MsgPB.MsgType MsgId = 1 [default = Chess_Giveup_S2C];
+    public static final int MSGID_FIELD_NUMBER = 1;
+    private MsgPB.Msg.MsgType msgId_;
+    /**
+     * <code>optional .MsgPB.MsgType MsgId = 1 [default = Chess_Giveup_S2C];</code>
+     */
+    public boolean hasMsgId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional .MsgPB.MsgType MsgId = 1 [default = Chess_Giveup_S2C];</code>
+     */
+    public MsgPB.Msg.MsgType getMsgId() {
+      return msgId_;
+    }
+
+    // optional .MsgPB.COLOR Loser = 2;
+    public static final int LOSER_FIELD_NUMBER = 2;
+    private MsgPB.Msg.COLOR loser_;
+    /**
+     * <code>optional .MsgPB.COLOR Loser = 2;</code>
+     */
+    public boolean hasLoser() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional .MsgPB.COLOR Loser = 2;</code>
+     */
+    public MsgPB.Msg.COLOR getLoser() {
+      return loser_;
+    }
+
+    private void initFields() {
+      msgId_ = MsgPB.Msg.MsgType.Chess_Giveup_S2C;
+      loser_ = MsgPB.Msg.COLOR.Null;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeEnum(1, msgId_.getNumber());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeEnum(2, loser_.getNumber());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, msgId_.getNumber());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, loser_.getNumber());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static MsgPB.Msg.Msg_Chess_Giveup_S2C parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static MsgPB.Msg.Msg_Chess_Giveup_S2C parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static MsgPB.Msg.Msg_Chess_Giveup_S2C parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static MsgPB.Msg.Msg_Chess_Giveup_S2C parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static MsgPB.Msg.Msg_Chess_Giveup_S2C parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static MsgPB.Msg.Msg_Chess_Giveup_S2C parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static MsgPB.Msg.Msg_Chess_Giveup_S2C parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static MsgPB.Msg.Msg_Chess_Giveup_S2C parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static MsgPB.Msg.Msg_Chess_Giveup_S2C parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static MsgPB.Msg.Msg_Chess_Giveup_S2C parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(MsgPB.Msg.Msg_Chess_Giveup_S2C prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code MsgPB.Msg_Chess_Giveup_S2C}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements MsgPB.Msg.Msg_Chess_Giveup_S2COrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return MsgPB.Msg.internal_static_MsgPB_Msg_Chess_Giveup_S2C_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return MsgPB.Msg.internal_static_MsgPB_Msg_Chess_Giveup_S2C_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                MsgPB.Msg.Msg_Chess_Giveup_S2C.class, MsgPB.Msg.Msg_Chess_Giveup_S2C.Builder.class);
+      }
+
+      // Construct using MsgPB.Msg.Msg_Chess_Giveup_S2C.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        msgId_ = MsgPB.Msg.MsgType.Chess_Giveup_S2C;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        loser_ = MsgPB.Msg.COLOR.Null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return MsgPB.Msg.internal_static_MsgPB_Msg_Chess_Giveup_S2C_descriptor;
+      }
+
+      public MsgPB.Msg.Msg_Chess_Giveup_S2C getDefaultInstanceForType() {
+        return MsgPB.Msg.Msg_Chess_Giveup_S2C.getDefaultInstance();
+      }
+
+      public MsgPB.Msg.Msg_Chess_Giveup_S2C build() {
+        MsgPB.Msg.Msg_Chess_Giveup_S2C result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public MsgPB.Msg.Msg_Chess_Giveup_S2C buildPartial() {
+        MsgPB.Msg.Msg_Chess_Giveup_S2C result = new MsgPB.Msg.Msg_Chess_Giveup_S2C(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.msgId_ = msgId_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.loser_ = loser_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof MsgPB.Msg.Msg_Chess_Giveup_S2C) {
+          return mergeFrom((MsgPB.Msg.Msg_Chess_Giveup_S2C)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(MsgPB.Msg.Msg_Chess_Giveup_S2C other) {
+        if (other == MsgPB.Msg.Msg_Chess_Giveup_S2C.getDefaultInstance()) return this;
+        if (other.hasMsgId()) {
+          setMsgId(other.getMsgId());
+        }
+        if (other.hasLoser()) {
+          setLoser(other.getLoser());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        MsgPB.Msg.Msg_Chess_Giveup_S2C parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (MsgPB.Msg.Msg_Chess_Giveup_S2C) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // optional .MsgPB.MsgType MsgId = 1 [default = Chess_Giveup_S2C];
+      private MsgPB.Msg.MsgType msgId_ = MsgPB.Msg.MsgType.Chess_Giveup_S2C;
+      /**
+       * <code>optional .MsgPB.MsgType MsgId = 1 [default = Chess_Giveup_S2C];</code>
+       */
+      public boolean hasMsgId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional .MsgPB.MsgType MsgId = 1 [default = Chess_Giveup_S2C];</code>
+       */
+      public MsgPB.Msg.MsgType getMsgId() {
+        return msgId_;
+      }
+      /**
+       * <code>optional .MsgPB.MsgType MsgId = 1 [default = Chess_Giveup_S2C];</code>
+       */
+      public Builder setMsgId(MsgPB.Msg.MsgType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        msgId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .MsgPB.MsgType MsgId = 1 [default = Chess_Giveup_S2C];</code>
+       */
+      public Builder clearMsgId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        msgId_ = MsgPB.Msg.MsgType.Chess_Giveup_S2C;
+        onChanged();
+        return this;
+      }
+
+      // optional .MsgPB.COLOR Loser = 2;
+      private MsgPB.Msg.COLOR loser_ = MsgPB.Msg.COLOR.Null;
+      /**
+       * <code>optional .MsgPB.COLOR Loser = 2;</code>
+       */
+      public boolean hasLoser() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional .MsgPB.COLOR Loser = 2;</code>
+       */
+      public MsgPB.Msg.COLOR getLoser() {
+        return loser_;
+      }
+      /**
+       * <code>optional .MsgPB.COLOR Loser = 2;</code>
+       */
+      public Builder setLoser(MsgPB.Msg.COLOR value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        loser_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .MsgPB.COLOR Loser = 2;</code>
+       */
+      public Builder clearLoser() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        loser_ = MsgPB.Msg.COLOR.Null;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:MsgPB.Msg_Chess_Giveup_S2C)
+    }
+
+    static {
+      defaultInstance = new Msg_Chess_Giveup_S2C(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:MsgPB.Msg_Chess_Giveup_S2C)
+  }
+
+  public interface Msg_Chess_Regret_C2SOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // optional .MsgPB.MsgType MsgId = 1 [default = Chess_Regret_C2S];
+    /**
+     * <code>optional .MsgPB.MsgType MsgId = 1 [default = Chess_Regret_C2S];</code>
+     */
+    boolean hasMsgId();
+    /**
+     * <code>optional .MsgPB.MsgType MsgId = 1 [default = Chess_Regret_C2S];</code>
+     */
+    MsgPB.Msg.MsgType getMsgId();
+  }
+  /**
+   * Protobuf type {@code MsgPB.Msg_Chess_Regret_C2S}
+   */
+  public static final class Msg_Chess_Regret_C2S extends
+      com.google.protobuf.GeneratedMessage
+      implements Msg_Chess_Regret_C2SOrBuilder {
+    // Use Msg_Chess_Regret_C2S.newBuilder() to construct.
+    private Msg_Chess_Regret_C2S(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Msg_Chess_Regret_C2S(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Msg_Chess_Regret_C2S defaultInstance;
+    public static Msg_Chess_Regret_C2S getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Msg_Chess_Regret_C2S getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Msg_Chess_Regret_C2S(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              int rawValue = input.readEnum();
+              MsgPB.Msg.MsgType value = MsgPB.Msg.MsgType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(1, rawValue);
+              } else {
+                bitField0_ |= 0x00000001;
+                msgId_ = value;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return MsgPB.Msg.internal_static_MsgPB_Msg_Chess_Regret_C2S_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return MsgPB.Msg.internal_static_MsgPB_Msg_Chess_Regret_C2S_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              MsgPB.Msg.Msg_Chess_Regret_C2S.class, MsgPB.Msg.Msg_Chess_Regret_C2S.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Msg_Chess_Regret_C2S> PARSER =
+        new com.google.protobuf.AbstractParser<Msg_Chess_Regret_C2S>() {
+      public Msg_Chess_Regret_C2S parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Msg_Chess_Regret_C2S(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Msg_Chess_Regret_C2S> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // optional .MsgPB.MsgType MsgId = 1 [default = Chess_Regret_C2S];
+    public static final int MSGID_FIELD_NUMBER = 1;
+    private MsgPB.Msg.MsgType msgId_;
+    /**
+     * <code>optional .MsgPB.MsgType MsgId = 1 [default = Chess_Regret_C2S];</code>
+     */
+    public boolean hasMsgId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional .MsgPB.MsgType MsgId = 1 [default = Chess_Regret_C2S];</code>
+     */
+    public MsgPB.Msg.MsgType getMsgId() {
+      return msgId_;
+    }
+
+    private void initFields() {
+      msgId_ = MsgPB.Msg.MsgType.Chess_Regret_C2S;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeEnum(1, msgId_.getNumber());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, msgId_.getNumber());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static MsgPB.Msg.Msg_Chess_Regret_C2S parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static MsgPB.Msg.Msg_Chess_Regret_C2S parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static MsgPB.Msg.Msg_Chess_Regret_C2S parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static MsgPB.Msg.Msg_Chess_Regret_C2S parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static MsgPB.Msg.Msg_Chess_Regret_C2S parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static MsgPB.Msg.Msg_Chess_Regret_C2S parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static MsgPB.Msg.Msg_Chess_Regret_C2S parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static MsgPB.Msg.Msg_Chess_Regret_C2S parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static MsgPB.Msg.Msg_Chess_Regret_C2S parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static MsgPB.Msg.Msg_Chess_Regret_C2S parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(MsgPB.Msg.Msg_Chess_Regret_C2S prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code MsgPB.Msg_Chess_Regret_C2S}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements MsgPB.Msg.Msg_Chess_Regret_C2SOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return MsgPB.Msg.internal_static_MsgPB_Msg_Chess_Regret_C2S_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return MsgPB.Msg.internal_static_MsgPB_Msg_Chess_Regret_C2S_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                MsgPB.Msg.Msg_Chess_Regret_C2S.class, MsgPB.Msg.Msg_Chess_Regret_C2S.Builder.class);
+      }
+
+      // Construct using MsgPB.Msg.Msg_Chess_Regret_C2S.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        msgId_ = MsgPB.Msg.MsgType.Chess_Regret_C2S;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return MsgPB.Msg.internal_static_MsgPB_Msg_Chess_Regret_C2S_descriptor;
+      }
+
+      public MsgPB.Msg.Msg_Chess_Regret_C2S getDefaultInstanceForType() {
+        return MsgPB.Msg.Msg_Chess_Regret_C2S.getDefaultInstance();
+      }
+
+      public MsgPB.Msg.Msg_Chess_Regret_C2S build() {
+        MsgPB.Msg.Msg_Chess_Regret_C2S result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public MsgPB.Msg.Msg_Chess_Regret_C2S buildPartial() {
+        MsgPB.Msg.Msg_Chess_Regret_C2S result = new MsgPB.Msg.Msg_Chess_Regret_C2S(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.msgId_ = msgId_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof MsgPB.Msg.Msg_Chess_Regret_C2S) {
+          return mergeFrom((MsgPB.Msg.Msg_Chess_Regret_C2S)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(MsgPB.Msg.Msg_Chess_Regret_C2S other) {
+        if (other == MsgPB.Msg.Msg_Chess_Regret_C2S.getDefaultInstance()) return this;
+        if (other.hasMsgId()) {
+          setMsgId(other.getMsgId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        MsgPB.Msg.Msg_Chess_Regret_C2S parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (MsgPB.Msg.Msg_Chess_Regret_C2S) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // optional .MsgPB.MsgType MsgId = 1 [default = Chess_Regret_C2S];
+      private MsgPB.Msg.MsgType msgId_ = MsgPB.Msg.MsgType.Chess_Regret_C2S;
+      /**
+       * <code>optional .MsgPB.MsgType MsgId = 1 [default = Chess_Regret_C2S];</code>
+       */
+      public boolean hasMsgId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional .MsgPB.MsgType MsgId = 1 [default = Chess_Regret_C2S];</code>
+       */
+      public MsgPB.Msg.MsgType getMsgId() {
+        return msgId_;
+      }
+      /**
+       * <code>optional .MsgPB.MsgType MsgId = 1 [default = Chess_Regret_C2S];</code>
+       */
+      public Builder setMsgId(MsgPB.Msg.MsgType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        msgId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .MsgPB.MsgType MsgId = 1 [default = Chess_Regret_C2S];</code>
+       */
+      public Builder clearMsgId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        msgId_ = MsgPB.Msg.MsgType.Chess_Regret_C2S;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:MsgPB.Msg_Chess_Regret_C2S)
+    }
+
+    static {
+      defaultInstance = new Msg_Chess_Regret_C2S(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:MsgPB.Msg_Chess_Regret_C2S)
+  }
+
+  public interface Msg_Chess_Regret_S2COrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // optional .MsgPB.MsgType MsgId = 1 [default = Chess_Regret_S2C];
+    /**
+     * <code>optional .MsgPB.MsgType MsgId = 1 [default = Chess_Regret_S2C];</code>
+     */
+    boolean hasMsgId();
+    /**
+     * <code>optional .MsgPB.MsgType MsgId = 1 [default = Chess_Regret_S2C];</code>
+     */
+    MsgPB.Msg.MsgType getMsgId();
+
+    // repeated .MsgPB.Msg_Chess_Piece Pieces = 2;
+    /**
+     * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+     */
+    java.util.List<MsgPB.Msg.Msg_Chess_Piece> 
+        getPiecesList();
+    /**
+     * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+     */
+    MsgPB.Msg.Msg_Chess_Piece getPieces(int index);
+    /**
+     * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+     */
+    int getPiecesCount();
+    /**
+     * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+     */
+    java.util.List<? extends MsgPB.Msg.Msg_Chess_PieceOrBuilder> 
+        getPiecesOrBuilderList();
+    /**
+     * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+     */
+    MsgPB.Msg.Msg_Chess_PieceOrBuilder getPiecesOrBuilder(
+        int index);
+
+    // optional int32 turnId = 3;
+    /**
+     * <code>optional int32 turnId = 3;</code>
+     */
+    boolean hasTurnId();
+    /**
+     * <code>optional int32 turnId = 3;</code>
+     */
+    int getTurnId();
+  }
+  /**
+   * Protobuf type {@code MsgPB.Msg_Chess_Regret_S2C}
+   */
+  public static final class Msg_Chess_Regret_S2C extends
+      com.google.protobuf.GeneratedMessage
+      implements Msg_Chess_Regret_S2COrBuilder {
+    // Use Msg_Chess_Regret_S2C.newBuilder() to construct.
+    private Msg_Chess_Regret_S2C(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Msg_Chess_Regret_S2C(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Msg_Chess_Regret_S2C defaultInstance;
+    public static Msg_Chess_Regret_S2C getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Msg_Chess_Regret_S2C getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Msg_Chess_Regret_S2C(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              int rawValue = input.readEnum();
+              MsgPB.Msg.MsgType value = MsgPB.Msg.MsgType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(1, rawValue);
+              } else {
+                bitField0_ |= 0x00000001;
+                msgId_ = value;
+              }
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                pieces_ = new java.util.ArrayList<MsgPB.Msg.Msg_Chess_Piece>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              pieces_.add(input.readMessage(MsgPB.Msg.Msg_Chess_Piece.PARSER, extensionRegistry));
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000002;
+              turnId_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          pieces_ = java.util.Collections.unmodifiableList(pieces_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return MsgPB.Msg.internal_static_MsgPB_Msg_Chess_Regret_S2C_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return MsgPB.Msg.internal_static_MsgPB_Msg_Chess_Regret_S2C_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              MsgPB.Msg.Msg_Chess_Regret_S2C.class, MsgPB.Msg.Msg_Chess_Regret_S2C.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Msg_Chess_Regret_S2C> PARSER =
+        new com.google.protobuf.AbstractParser<Msg_Chess_Regret_S2C>() {
+      public Msg_Chess_Regret_S2C parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Msg_Chess_Regret_S2C(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Msg_Chess_Regret_S2C> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // optional .MsgPB.MsgType MsgId = 1 [default = Chess_Regret_S2C];
+    public static final int MSGID_FIELD_NUMBER = 1;
+    private MsgPB.Msg.MsgType msgId_;
+    /**
+     * <code>optional .MsgPB.MsgType MsgId = 1 [default = Chess_Regret_S2C];</code>
+     */
+    public boolean hasMsgId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional .MsgPB.MsgType MsgId = 1 [default = Chess_Regret_S2C];</code>
+     */
+    public MsgPB.Msg.MsgType getMsgId() {
+      return msgId_;
+    }
+
+    // repeated .MsgPB.Msg_Chess_Piece Pieces = 2;
+    public static final int PIECES_FIELD_NUMBER = 2;
+    private java.util.List<MsgPB.Msg.Msg_Chess_Piece> pieces_;
+    /**
+     * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+     */
+    public java.util.List<MsgPB.Msg.Msg_Chess_Piece> getPiecesList() {
+      return pieces_;
+    }
+    /**
+     * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+     */
+    public java.util.List<? extends MsgPB.Msg.Msg_Chess_PieceOrBuilder> 
+        getPiecesOrBuilderList() {
+      return pieces_;
+    }
+    /**
+     * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+     */
+    public int getPiecesCount() {
+      return pieces_.size();
+    }
+    /**
+     * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+     */
+    public MsgPB.Msg.Msg_Chess_Piece getPieces(int index) {
+      return pieces_.get(index);
+    }
+    /**
+     * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+     */
+    public MsgPB.Msg.Msg_Chess_PieceOrBuilder getPiecesOrBuilder(
+        int index) {
+      return pieces_.get(index);
+    }
+
+    // optional int32 turnId = 3;
+    public static final int TURNID_FIELD_NUMBER = 3;
+    private int turnId_;
+    /**
+     * <code>optional int32 turnId = 3;</code>
+     */
+    public boolean hasTurnId() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional int32 turnId = 3;</code>
+     */
+    public int getTurnId() {
+      return turnId_;
+    }
+
+    private void initFields() {
+      msgId_ = MsgPB.Msg.MsgType.Chess_Regret_S2C;
+      pieces_ = java.util.Collections.emptyList();
+      turnId_ = 0;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeEnum(1, msgId_.getNumber());
+      }
+      for (int i = 0; i < pieces_.size(); i++) {
+        output.writeMessage(2, pieces_.get(i));
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt32(3, turnId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, msgId_.getNumber());
+      }
+      for (int i = 0; i < pieces_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, pieces_.get(i));
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, turnId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static MsgPB.Msg.Msg_Chess_Regret_S2C parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static MsgPB.Msg.Msg_Chess_Regret_S2C parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static MsgPB.Msg.Msg_Chess_Regret_S2C parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static MsgPB.Msg.Msg_Chess_Regret_S2C parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static MsgPB.Msg.Msg_Chess_Regret_S2C parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static MsgPB.Msg.Msg_Chess_Regret_S2C parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static MsgPB.Msg.Msg_Chess_Regret_S2C parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static MsgPB.Msg.Msg_Chess_Regret_S2C parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static MsgPB.Msg.Msg_Chess_Regret_S2C parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static MsgPB.Msg.Msg_Chess_Regret_S2C parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(MsgPB.Msg.Msg_Chess_Regret_S2C prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code MsgPB.Msg_Chess_Regret_S2C}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements MsgPB.Msg.Msg_Chess_Regret_S2COrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return MsgPB.Msg.internal_static_MsgPB_Msg_Chess_Regret_S2C_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return MsgPB.Msg.internal_static_MsgPB_Msg_Chess_Regret_S2C_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                MsgPB.Msg.Msg_Chess_Regret_S2C.class, MsgPB.Msg.Msg_Chess_Regret_S2C.Builder.class);
+      }
+
+      // Construct using MsgPB.Msg.Msg_Chess_Regret_S2C.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getPiecesFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        msgId_ = MsgPB.Msg.MsgType.Chess_Regret_S2C;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (piecesBuilder_ == null) {
+          pieces_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          piecesBuilder_.clear();
+        }
+        turnId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return MsgPB.Msg.internal_static_MsgPB_Msg_Chess_Regret_S2C_descriptor;
+      }
+
+      public MsgPB.Msg.Msg_Chess_Regret_S2C getDefaultInstanceForType() {
+        return MsgPB.Msg.Msg_Chess_Regret_S2C.getDefaultInstance();
+      }
+
+      public MsgPB.Msg.Msg_Chess_Regret_S2C build() {
+        MsgPB.Msg.Msg_Chess_Regret_S2C result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public MsgPB.Msg.Msg_Chess_Regret_S2C buildPartial() {
+        MsgPB.Msg.Msg_Chess_Regret_S2C result = new MsgPB.Msg.Msg_Chess_Regret_S2C(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.msgId_ = msgId_;
+        if (piecesBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+            pieces_ = java.util.Collections.unmodifiableList(pieces_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.pieces_ = pieces_;
+        } else {
+          result.pieces_ = piecesBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.turnId_ = turnId_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof MsgPB.Msg.Msg_Chess_Regret_S2C) {
+          return mergeFrom((MsgPB.Msg.Msg_Chess_Regret_S2C)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(MsgPB.Msg.Msg_Chess_Regret_S2C other) {
+        if (other == MsgPB.Msg.Msg_Chess_Regret_S2C.getDefaultInstance()) return this;
+        if (other.hasMsgId()) {
+          setMsgId(other.getMsgId());
+        }
+        if (piecesBuilder_ == null) {
+          if (!other.pieces_.isEmpty()) {
+            if (pieces_.isEmpty()) {
+              pieces_ = other.pieces_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensurePiecesIsMutable();
+              pieces_.addAll(other.pieces_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.pieces_.isEmpty()) {
+            if (piecesBuilder_.isEmpty()) {
+              piecesBuilder_.dispose();
+              piecesBuilder_ = null;
+              pieces_ = other.pieces_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              piecesBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getPiecesFieldBuilder() : null;
+            } else {
+              piecesBuilder_.addAllMessages(other.pieces_);
+            }
+          }
+        }
+        if (other.hasTurnId()) {
+          setTurnId(other.getTurnId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        MsgPB.Msg.Msg_Chess_Regret_S2C parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (MsgPB.Msg.Msg_Chess_Regret_S2C) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // optional .MsgPB.MsgType MsgId = 1 [default = Chess_Regret_S2C];
+      private MsgPB.Msg.MsgType msgId_ = MsgPB.Msg.MsgType.Chess_Regret_S2C;
+      /**
+       * <code>optional .MsgPB.MsgType MsgId = 1 [default = Chess_Regret_S2C];</code>
+       */
+      public boolean hasMsgId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional .MsgPB.MsgType MsgId = 1 [default = Chess_Regret_S2C];</code>
+       */
+      public MsgPB.Msg.MsgType getMsgId() {
+        return msgId_;
+      }
+      /**
+       * <code>optional .MsgPB.MsgType MsgId = 1 [default = Chess_Regret_S2C];</code>
+       */
+      public Builder setMsgId(MsgPB.Msg.MsgType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        msgId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .MsgPB.MsgType MsgId = 1 [default = Chess_Regret_S2C];</code>
+       */
+      public Builder clearMsgId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        msgId_ = MsgPB.Msg.MsgType.Chess_Regret_S2C;
+        onChanged();
+        return this;
+      }
+
+      // repeated .MsgPB.Msg_Chess_Piece Pieces = 2;
+      private java.util.List<MsgPB.Msg.Msg_Chess_Piece> pieces_ =
+        java.util.Collections.emptyList();
+      private void ensurePiecesIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          pieces_ = new java.util.ArrayList<MsgPB.Msg.Msg_Chess_Piece>(pieces_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          MsgPB.Msg.Msg_Chess_Piece, MsgPB.Msg.Msg_Chess_Piece.Builder, MsgPB.Msg.Msg_Chess_PieceOrBuilder> piecesBuilder_;
+
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public java.util.List<MsgPB.Msg.Msg_Chess_Piece> getPiecesList() {
+        if (piecesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(pieces_);
+        } else {
+          return piecesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public int getPiecesCount() {
+        if (piecesBuilder_ == null) {
+          return pieces_.size();
+        } else {
+          return piecesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public MsgPB.Msg.Msg_Chess_Piece getPieces(int index) {
+        if (piecesBuilder_ == null) {
+          return pieces_.get(index);
+        } else {
+          return piecesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public Builder setPieces(
+          int index, MsgPB.Msg.Msg_Chess_Piece value) {
+        if (piecesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePiecesIsMutable();
+          pieces_.set(index, value);
+          onChanged();
+        } else {
+          piecesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public Builder setPieces(
+          int index, MsgPB.Msg.Msg_Chess_Piece.Builder builderForValue) {
+        if (piecesBuilder_ == null) {
+          ensurePiecesIsMutable();
+          pieces_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          piecesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public Builder addPieces(MsgPB.Msg.Msg_Chess_Piece value) {
+        if (piecesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePiecesIsMutable();
+          pieces_.add(value);
+          onChanged();
+        } else {
+          piecesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public Builder addPieces(
+          int index, MsgPB.Msg.Msg_Chess_Piece value) {
+        if (piecesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePiecesIsMutable();
+          pieces_.add(index, value);
+          onChanged();
+        } else {
+          piecesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public Builder addPieces(
+          MsgPB.Msg.Msg_Chess_Piece.Builder builderForValue) {
+        if (piecesBuilder_ == null) {
+          ensurePiecesIsMutable();
+          pieces_.add(builderForValue.build());
+          onChanged();
+        } else {
+          piecesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public Builder addPieces(
+          int index, MsgPB.Msg.Msg_Chess_Piece.Builder builderForValue) {
+        if (piecesBuilder_ == null) {
+          ensurePiecesIsMutable();
+          pieces_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          piecesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public Builder addAllPieces(
+          java.lang.Iterable<? extends MsgPB.Msg.Msg_Chess_Piece> values) {
+        if (piecesBuilder_ == null) {
+          ensurePiecesIsMutable();
+          super.addAll(values, pieces_);
+          onChanged();
+        } else {
+          piecesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public Builder clearPieces() {
+        if (piecesBuilder_ == null) {
+          pieces_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          piecesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public Builder removePieces(int index) {
+        if (piecesBuilder_ == null) {
+          ensurePiecesIsMutable();
+          pieces_.remove(index);
+          onChanged();
+        } else {
+          piecesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public MsgPB.Msg.Msg_Chess_Piece.Builder getPiecesBuilder(
+          int index) {
+        return getPiecesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public MsgPB.Msg.Msg_Chess_PieceOrBuilder getPiecesOrBuilder(
+          int index) {
+        if (piecesBuilder_ == null) {
+          return pieces_.get(index);  } else {
+          return piecesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public java.util.List<? extends MsgPB.Msg.Msg_Chess_PieceOrBuilder> 
+           getPiecesOrBuilderList() {
+        if (piecesBuilder_ != null) {
+          return piecesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(pieces_);
+        }
+      }
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public MsgPB.Msg.Msg_Chess_Piece.Builder addPiecesBuilder() {
+        return getPiecesFieldBuilder().addBuilder(
+            MsgPB.Msg.Msg_Chess_Piece.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public MsgPB.Msg.Msg_Chess_Piece.Builder addPiecesBuilder(
+          int index) {
+        return getPiecesFieldBuilder().addBuilder(
+            index, MsgPB.Msg.Msg_Chess_Piece.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .MsgPB.Msg_Chess_Piece Pieces = 2;</code>
+       */
+      public java.util.List<MsgPB.Msg.Msg_Chess_Piece.Builder> 
+           getPiecesBuilderList() {
+        return getPiecesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          MsgPB.Msg.Msg_Chess_Piece, MsgPB.Msg.Msg_Chess_Piece.Builder, MsgPB.Msg.Msg_Chess_PieceOrBuilder> 
+          getPiecesFieldBuilder() {
+        if (piecesBuilder_ == null) {
+          piecesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              MsgPB.Msg.Msg_Chess_Piece, MsgPB.Msg.Msg_Chess_Piece.Builder, MsgPB.Msg.Msg_Chess_PieceOrBuilder>(
+                  pieces_,
+                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  getParentForChildren(),
+                  isClean());
+          pieces_ = null;
+        }
+        return piecesBuilder_;
+      }
+
+      // optional int32 turnId = 3;
+      private int turnId_ ;
+      /**
+       * <code>optional int32 turnId = 3;</code>
+       */
+      public boolean hasTurnId() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional int32 turnId = 3;</code>
+       */
+      public int getTurnId() {
+        return turnId_;
+      }
+      /**
+       * <code>optional int32 turnId = 3;</code>
+       */
+      public Builder setTurnId(int value) {
+        bitField0_ |= 0x00000004;
+        turnId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 turnId = 3;</code>
+       */
+      public Builder clearTurnId() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        turnId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:MsgPB.Msg_Chess_Regret_S2C)
+    }
+
+    static {
+      defaultInstance = new Msg_Chess_Regret_S2C(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:MsgPB.Msg_Chess_Regret_S2C)
+  }
+
+  public interface Msg_Chess_Pause_C2SOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // optional .MsgPB.MsgType MsgId = 1 [default = Chess_Pause_C2S];
+    /**
+     * <code>optional .MsgPB.MsgType MsgId = 1 [default = Chess_Pause_C2S];</code>
+     */
+    boolean hasMsgId();
+    /**
+     * <code>optional .MsgPB.MsgType MsgId = 1 [default = Chess_Pause_C2S];</code>
+     */
+    MsgPB.Msg.MsgType getMsgId();
+  }
+  /**
+   * Protobuf type {@code MsgPB.Msg_Chess_Pause_C2S}
+   */
+  public static final class Msg_Chess_Pause_C2S extends
+      com.google.protobuf.GeneratedMessage
+      implements Msg_Chess_Pause_C2SOrBuilder {
+    // Use Msg_Chess_Pause_C2S.newBuilder() to construct.
+    private Msg_Chess_Pause_C2S(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Msg_Chess_Pause_C2S(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Msg_Chess_Pause_C2S defaultInstance;
+    public static Msg_Chess_Pause_C2S getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Msg_Chess_Pause_C2S getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Msg_Chess_Pause_C2S(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              int rawValue = input.readEnum();
+              MsgPB.Msg.MsgType value = MsgPB.Msg.MsgType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(1, rawValue);
+              } else {
+                bitField0_ |= 0x00000001;
+                msgId_ = value;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return MsgPB.Msg.internal_static_MsgPB_Msg_Chess_Pause_C2S_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return MsgPB.Msg.internal_static_MsgPB_Msg_Chess_Pause_C2S_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              MsgPB.Msg.Msg_Chess_Pause_C2S.class, MsgPB.Msg.Msg_Chess_Pause_C2S.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Msg_Chess_Pause_C2S> PARSER =
+        new com.google.protobuf.AbstractParser<Msg_Chess_Pause_C2S>() {
+      public Msg_Chess_Pause_C2S parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Msg_Chess_Pause_C2S(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Msg_Chess_Pause_C2S> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // optional .MsgPB.MsgType MsgId = 1 [default = Chess_Pause_C2S];
+    public static final int MSGID_FIELD_NUMBER = 1;
+    private MsgPB.Msg.MsgType msgId_;
+    /**
+     * <code>optional .MsgPB.MsgType MsgId = 1 [default = Chess_Pause_C2S];</code>
+     */
+    public boolean hasMsgId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional .MsgPB.MsgType MsgId = 1 [default = Chess_Pause_C2S];</code>
+     */
+    public MsgPB.Msg.MsgType getMsgId() {
+      return msgId_;
+    }
+
+    private void initFields() {
+      msgId_ = MsgPB.Msg.MsgType.Chess_Pause_C2S;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeEnum(1, msgId_.getNumber());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, msgId_.getNumber());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static MsgPB.Msg.Msg_Chess_Pause_C2S parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static MsgPB.Msg.Msg_Chess_Pause_C2S parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static MsgPB.Msg.Msg_Chess_Pause_C2S parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static MsgPB.Msg.Msg_Chess_Pause_C2S parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static MsgPB.Msg.Msg_Chess_Pause_C2S parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static MsgPB.Msg.Msg_Chess_Pause_C2S parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static MsgPB.Msg.Msg_Chess_Pause_C2S parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static MsgPB.Msg.Msg_Chess_Pause_C2S parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static MsgPB.Msg.Msg_Chess_Pause_C2S parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static MsgPB.Msg.Msg_Chess_Pause_C2S parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(MsgPB.Msg.Msg_Chess_Pause_C2S prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code MsgPB.Msg_Chess_Pause_C2S}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements MsgPB.Msg.Msg_Chess_Pause_C2SOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return MsgPB.Msg.internal_static_MsgPB_Msg_Chess_Pause_C2S_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return MsgPB.Msg.internal_static_MsgPB_Msg_Chess_Pause_C2S_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                MsgPB.Msg.Msg_Chess_Pause_C2S.class, MsgPB.Msg.Msg_Chess_Pause_C2S.Builder.class);
+      }
+
+      // Construct using MsgPB.Msg.Msg_Chess_Pause_C2S.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        msgId_ = MsgPB.Msg.MsgType.Chess_Pause_C2S;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return MsgPB.Msg.internal_static_MsgPB_Msg_Chess_Pause_C2S_descriptor;
+      }
+
+      public MsgPB.Msg.Msg_Chess_Pause_C2S getDefaultInstanceForType() {
+        return MsgPB.Msg.Msg_Chess_Pause_C2S.getDefaultInstance();
+      }
+
+      public MsgPB.Msg.Msg_Chess_Pause_C2S build() {
+        MsgPB.Msg.Msg_Chess_Pause_C2S result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public MsgPB.Msg.Msg_Chess_Pause_C2S buildPartial() {
+        MsgPB.Msg.Msg_Chess_Pause_C2S result = new MsgPB.Msg.Msg_Chess_Pause_C2S(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.msgId_ = msgId_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof MsgPB.Msg.Msg_Chess_Pause_C2S) {
+          return mergeFrom((MsgPB.Msg.Msg_Chess_Pause_C2S)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(MsgPB.Msg.Msg_Chess_Pause_C2S other) {
+        if (other == MsgPB.Msg.Msg_Chess_Pause_C2S.getDefaultInstance()) return this;
+        if (other.hasMsgId()) {
+          setMsgId(other.getMsgId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        MsgPB.Msg.Msg_Chess_Pause_C2S parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (MsgPB.Msg.Msg_Chess_Pause_C2S) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // optional .MsgPB.MsgType MsgId = 1 [default = Chess_Pause_C2S];
+      private MsgPB.Msg.MsgType msgId_ = MsgPB.Msg.MsgType.Chess_Pause_C2S;
+      /**
+       * <code>optional .MsgPB.MsgType MsgId = 1 [default = Chess_Pause_C2S];</code>
+       */
+      public boolean hasMsgId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional .MsgPB.MsgType MsgId = 1 [default = Chess_Pause_C2S];</code>
+       */
+      public MsgPB.Msg.MsgType getMsgId() {
+        return msgId_;
+      }
+      /**
+       * <code>optional .MsgPB.MsgType MsgId = 1 [default = Chess_Pause_C2S];</code>
+       */
+      public Builder setMsgId(MsgPB.Msg.MsgType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        msgId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .MsgPB.MsgType MsgId = 1 [default = Chess_Pause_C2S];</code>
+       */
+      public Builder clearMsgId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        msgId_ = MsgPB.Msg.MsgType.Chess_Pause_C2S;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:MsgPB.Msg_Chess_Pause_C2S)
+    }
+
+    static {
+      defaultInstance = new Msg_Chess_Pause_C2S(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:MsgPB.Msg_Chess_Pause_C2S)
+  }
+
+  public interface Msg_Chess_Pause_S2COrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // optional .MsgPB.MsgType MsgId = 1 [default = Chess_Pause_S2C];
+    /**
+     * <code>optional .MsgPB.MsgType MsgId = 1 [default = Chess_Pause_S2C];</code>
+     */
+    boolean hasMsgId();
+    /**
+     * <code>optional .MsgPB.MsgType MsgId = 1 [default = Chess_Pause_S2C];</code>
+     */
+    MsgPB.Msg.MsgType getMsgId();
+  }
+  /**
+   * Protobuf type {@code MsgPB.Msg_Chess_Pause_S2C}
+   */
+  public static final class Msg_Chess_Pause_S2C extends
+      com.google.protobuf.GeneratedMessage
+      implements Msg_Chess_Pause_S2COrBuilder {
+    // Use Msg_Chess_Pause_S2C.newBuilder() to construct.
+    private Msg_Chess_Pause_S2C(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private Msg_Chess_Pause_S2C(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final Msg_Chess_Pause_S2C defaultInstance;
+    public static Msg_Chess_Pause_S2C getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public Msg_Chess_Pause_S2C getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Msg_Chess_Pause_S2C(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              int rawValue = input.readEnum();
+              MsgPB.Msg.MsgType value = MsgPB.Msg.MsgType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(1, rawValue);
+              } else {
+                bitField0_ |= 0x00000001;
+                msgId_ = value;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return MsgPB.Msg.internal_static_MsgPB_Msg_Chess_Pause_S2C_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return MsgPB.Msg.internal_static_MsgPB_Msg_Chess_Pause_S2C_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              MsgPB.Msg.Msg_Chess_Pause_S2C.class, MsgPB.Msg.Msg_Chess_Pause_S2C.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<Msg_Chess_Pause_S2C> PARSER =
+        new com.google.protobuf.AbstractParser<Msg_Chess_Pause_S2C>() {
+      public Msg_Chess_Pause_S2C parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Msg_Chess_Pause_S2C(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Msg_Chess_Pause_S2C> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // optional .MsgPB.MsgType MsgId = 1 [default = Chess_Pause_S2C];
+    public static final int MSGID_FIELD_NUMBER = 1;
+    private MsgPB.Msg.MsgType msgId_;
+    /**
+     * <code>optional .MsgPB.MsgType MsgId = 1 [default = Chess_Pause_S2C];</code>
+     */
+    public boolean hasMsgId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional .MsgPB.MsgType MsgId = 1 [default = Chess_Pause_S2C];</code>
+     */
+    public MsgPB.Msg.MsgType getMsgId() {
+      return msgId_;
+    }
+
+    private void initFields() {
+      msgId_ = MsgPB.Msg.MsgType.Chess_Pause_S2C;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeEnum(1, msgId_.getNumber());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, msgId_.getNumber());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static MsgPB.Msg.Msg_Chess_Pause_S2C parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static MsgPB.Msg.Msg_Chess_Pause_S2C parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static MsgPB.Msg.Msg_Chess_Pause_S2C parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static MsgPB.Msg.Msg_Chess_Pause_S2C parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static MsgPB.Msg.Msg_Chess_Pause_S2C parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static MsgPB.Msg.Msg_Chess_Pause_S2C parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static MsgPB.Msg.Msg_Chess_Pause_S2C parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static MsgPB.Msg.Msg_Chess_Pause_S2C parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static MsgPB.Msg.Msg_Chess_Pause_S2C parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static MsgPB.Msg.Msg_Chess_Pause_S2C parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(MsgPB.Msg.Msg_Chess_Pause_S2C prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code MsgPB.Msg_Chess_Pause_S2C}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements MsgPB.Msg.Msg_Chess_Pause_S2COrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return MsgPB.Msg.internal_static_MsgPB_Msg_Chess_Pause_S2C_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return MsgPB.Msg.internal_static_MsgPB_Msg_Chess_Pause_S2C_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                MsgPB.Msg.Msg_Chess_Pause_S2C.class, MsgPB.Msg.Msg_Chess_Pause_S2C.Builder.class);
+      }
+
+      // Construct using MsgPB.Msg.Msg_Chess_Pause_S2C.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        msgId_ = MsgPB.Msg.MsgType.Chess_Pause_S2C;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return MsgPB.Msg.internal_static_MsgPB_Msg_Chess_Pause_S2C_descriptor;
+      }
+
+      public MsgPB.Msg.Msg_Chess_Pause_S2C getDefaultInstanceForType() {
+        return MsgPB.Msg.Msg_Chess_Pause_S2C.getDefaultInstance();
+      }
+
+      public MsgPB.Msg.Msg_Chess_Pause_S2C build() {
+        MsgPB.Msg.Msg_Chess_Pause_S2C result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public MsgPB.Msg.Msg_Chess_Pause_S2C buildPartial() {
+        MsgPB.Msg.Msg_Chess_Pause_S2C result = new MsgPB.Msg.Msg_Chess_Pause_S2C(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.msgId_ = msgId_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof MsgPB.Msg.Msg_Chess_Pause_S2C) {
+          return mergeFrom((MsgPB.Msg.Msg_Chess_Pause_S2C)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(MsgPB.Msg.Msg_Chess_Pause_S2C other) {
+        if (other == MsgPB.Msg.Msg_Chess_Pause_S2C.getDefaultInstance()) return this;
+        if (other.hasMsgId()) {
+          setMsgId(other.getMsgId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        MsgPB.Msg.Msg_Chess_Pause_S2C parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (MsgPB.Msg.Msg_Chess_Pause_S2C) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // optional .MsgPB.MsgType MsgId = 1 [default = Chess_Pause_S2C];
+      private MsgPB.Msg.MsgType msgId_ = MsgPB.Msg.MsgType.Chess_Pause_S2C;
+      /**
+       * <code>optional .MsgPB.MsgType MsgId = 1 [default = Chess_Pause_S2C];</code>
+       */
+      public boolean hasMsgId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional .MsgPB.MsgType MsgId = 1 [default = Chess_Pause_S2C];</code>
+       */
+      public MsgPB.Msg.MsgType getMsgId() {
+        return msgId_;
+      }
+      /**
+       * <code>optional .MsgPB.MsgType MsgId = 1 [default = Chess_Pause_S2C];</code>
+       */
+      public Builder setMsgId(MsgPB.Msg.MsgType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        msgId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .MsgPB.MsgType MsgId = 1 [default = Chess_Pause_S2C];</code>
+       */
+      public Builder clearMsgId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        msgId_ = MsgPB.Msg.MsgType.Chess_Pause_S2C;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:MsgPB.Msg_Chess_Pause_S2C)
+    }
+
+    static {
+      defaultInstance = new Msg_Chess_Pause_S2C(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:MsgPB.Msg_Chess_Pause_S2C)
   }
 
   private static com.google.protobuf.Descriptors.Descriptor
@@ -7497,6 +14784,36 @@ public final class Msg {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_MsgPB_Msg_Gobang_Over_S2C_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_MsgPB_Msg_Gobang_Giveup_C2S_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_MsgPB_Msg_Gobang_Giveup_C2S_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_MsgPB_Msg_Gobang_Giveup_S2C_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_MsgPB_Msg_Gobang_Giveup_S2C_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_MsgPB_Msg_Gobang_Regret_C2S_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_MsgPB_Msg_Gobang_Regret_C2S_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_MsgPB_Msg_Gobang_Regret_S2C_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_MsgPB_Msg_Gobang_Regret_S2C_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_MsgPB_Msg_Gobang_Pause_C2S_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_MsgPB_Msg_Gobang_Pause_C2S_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_MsgPB_Msg_Gobang_Pause_S2C_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_MsgPB_Msg_Gobang_Pause_S2C_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
     internal_static_MsgPB_Msg_Chess_Match_C2S_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -7506,6 +14823,11 @@ public final class Msg {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_MsgPB_Msg_Chess_Start_S2C_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_MsgPB_Msg_Chess_Piece_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_MsgPB_Msg_Chess_Piece_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
     internal_static_MsgPB_Msg_Chess_Action_C2S_descriptor;
   private static
@@ -7521,6 +14843,36 @@ public final class Msg {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_MsgPB_Msg_Chess_Over_S2C_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_MsgPB_Msg_Chess_Giveup_C2S_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_MsgPB_Msg_Chess_Giveup_C2S_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_MsgPB_Msg_Chess_Giveup_S2C_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_MsgPB_Msg_Chess_Giveup_S2C_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_MsgPB_Msg_Chess_Regret_C2S_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_MsgPB_Msg_Chess_Regret_C2S_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_MsgPB_Msg_Chess_Regret_S2C_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_MsgPB_Msg_Chess_Regret_S2C_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_MsgPB_Msg_Chess_Pause_C2S_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_MsgPB_Msg_Chess_Pause_C2S_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_MsgPB_Msg_Chess_Pause_S2C_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_MsgPB_Msg_Chess_Pause_S2C_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -7540,7 +14892,7 @@ public final class Msg {
       "2C\022(\n\005MsgID\030\001 \001(\0162\016.MsgPB.MsgType:\tLOGIN" +
       "_S2C\022\n\n\002Id\030\002 \001(\005\022\026\n\016LoginTimeStamp\030\003 \001(\003" +
       "\0228\n\n_ErrorCode\030\004 \001(\0162\036.MsgPB.Msg_Login_S",
-      "2C.ERRORCODE:\004NULL\"p\n\tERRORCODE\022\010\n\004NULL\020" +
+      "2C.ERRORCODE:\004Null\"p\n\tERRORCODE\022\010\n\004Null\020" +
       "\000\022\020\n\014LoginSuccess\020\001\022\021\n\rErrorPassword\020\002\022\020" +
       "\n\014EmptyAccount\020\003\022\021\n\rRegistSuccess\020\013\022\017\n\013E" +
       "xistedName\020\014\"G\n\024Msg_Gobang_Match_C2S\022/\n\005" +
@@ -7556,28 +14908,65 @@ public final class Msg {
       ":\021Gobang_Action_S2C\022\034\n\006Turner\030\002 \001(\0162\014.Ms" +
       "gPB.COLOR\"c\n\023Msg_Gobang_Over_S2C\022.\n\005MsgI" +
       "d\030\001 \001(\0162\016.MsgPB.MsgType:\017Gobang_Over_S2C" +
-      "\022\034\n\006Winner\030\002 \001(\0162\014.MsgPB.COLOR\"E\n\023Msg_Ch" +
-      "ess_Match_C2S\022.\n\005MsgId\030\001 \001(\0162\016.MsgPB.Msg" +
-      "Type:\017Chess_Match_C2S\"U\n\023Msg_Chess_Start" +
-      "_S2C\022.\n\005MsgId\030\001 \001(\0162\016.MsgPB.MsgType:\017Che",
-      "ss_Start_S2C\022\016\n\006GameID\030\002 \001(\003\"G\n\024Msg_Ches" +
-      "s_Action_C2S\022/\n\005MsgId\030\001 \001(\0162\016.MsgPB.MsgT" +
-      "ype:\020Chess_Action_C2S\"G\n\024Msg_Chess_Actio" +
-      "n_S2C\022/\n\005MsgId\030\001 \001(\0162\016.MsgPB.MsgType:\020Ch" +
-      "ess_Action_S2C\"C\n\022Msg_Chess_Over_S2C\022-\n\005" +
-      "MsgId\030\001 \001(\0162\016.MsgPB.MsgType:\016Chess_Over_" +
-      "S2C*\244\002\n\007MsgType\022\r\n\tLOGIN_C2S\020\000\022\r\n\tLOGIN_" +
-      "S2C\020\001\022\017\n\013Connect_S2C\020\002\022\014\n\010Chat_C2S\020\003\022\024\n\020" +
-      "Gobang_Match_C2S\020e\022\024\n\020Gobang_Start_S2C\020f" +
-      "\022\025\n\021Gobang_Action_C2S\020g\022\025\n\021Gobang_Action",
-      "_S2C\020h\022\023\n\017Gobang_Over_S2C\020i\022\024\n\017Chess_Mat" +
-      "ch_C2S\020\311\001\022\024\n\017Chess_Start_S2C\020\312\001\022\025\n\020Chess" +
-      "_Action_C2S\020\313\001\022\025\n\020Chess_Action_S2C\020\314\001\022\023\n" +
-      "\016Chess_Over_S2C\020\315\001*\'\n\005COLOR\022\010\n\004Null\020\000\022\t\n" +
-      "\005White\020\001\022\t\n\005Black\020\002*e\n\tCHESSTYPE\022\013\n\007Gene" +
-      "ral\020\001\022\014\n\010Bechalor\020\002\022\014\n\010Minister\020\003\022\t\n\005Hor" +
-      "se\020\004\022\013\n\007Charoit\020\005\022\n\n\006Cannon\020\006\022\013\n\007Solider" +
-      "\020\007"
+      "\022\034\n\006Winner\030\002 \001(\0162\014.MsgPB.COLOR\"I\n\025Msg_Go" +
+      "bang_Giveup_C2S\0220\n\005MsgId\030\001 \001(\0162\016.MsgPB.M" +
+      "sgType:\021Gobang_Giveup_C2S\"I\n\025Msg_Gobang_" +
+      "Giveup_S2C\0220\n\005MsgId\030\001 \001(\0162\016.MsgPB.MsgTyp",
+      "e:\021Gobang_Giveup_S2C\"I\n\025Msg_Gobang_Regre" +
+      "t_C2S\0220\n\005MsgId\030\001 \001(\0162\016.MsgPB.MsgType:\021Go" +
+      "bang_Regret_C2S\"I\n\025Msg_Gobang_Regret_S2C" +
+      "\0220\n\005MsgId\030\001 \001(\0162\016.MsgPB.MsgType:\021Gobang_" +
+      "Regret_S2C\"G\n\024Msg_Gobang_Pause_C2S\022/\n\005Ms" +
+      "gId\030\001 \001(\0162\016.MsgPB.MsgType:\020Gobang_Pause_" +
+      "C2S\"G\n\024Msg_Gobang_Pause_S2C\022/\n\005MsgId\030\001 \001" +
+      "(\0162\016.MsgPB.MsgType:\020Gobang_Pause_S2C\"E\n\023" +
+      "Msg_Chess_Match_C2S\022.\n\005MsgId\030\001 \001(\0162\016.Msg" +
+      "PB.MsgType:\017Chess_Match_C2S\"q\n\023Msg_Chess",
+      "_Start_S2C\022.\n\005MsgId\030\001 \001(\0162\016.MsgPB.MsgTyp" +
+      "e:\017Chess_Start_S2C\022\016\n\006GameID\030\002 \001(\003\022\032\n\004Ro" +
+      "le\030\003 \001(\0162\014.MsgPB.COLOR\"e\n\017Msg_Chess_Piec" +
+      "e\022\n\n\002id\030\001 \001(\005\022\020\n\010ori_posx\030\002 \001(\005\022\020\n\010ori_p" +
+      "osy\030\003 \001(\005\022\020\n\010des_posx\030\004 \001(\005\022\020\n\010des_posy\030" +
+      "\005 \001(\005\"o\n\024Msg_Chess_Action_C2S\022/\n\005MsgId\030\001" +
+      " \001(\0162\016.MsgPB.MsgType:\020Chess_Action_C2S\022&" +
+      "\n\006Pieces\030\002 \003(\0132\026.MsgPB.Msg_Chess_Piece\"\177" +
+      "\n\024Msg_Chess_Action_S2C\022/\n\005MsgId\030\001 \001(\0162\016." +
+      "MsgPB.MsgType:\020Chess_Action_S2C\022&\n\006Piece",
+      "s\030\002 \003(\0132\026.MsgPB.Msg_Chess_Piece\022\016\n\006turnI" +
+      "d\030\003 \001(\005\"a\n\022Msg_Chess_Over_S2C\022-\n\005MsgId\030\001" +
+      " \001(\0162\016.MsgPB.MsgType:\016Chess_Over_S2C\022\034\n\006" +
+      "Winner\030\002 \001(\0162\014.MsgPB.COLOR\"d\n\024Msg_Chess_" +
+      "Giveup_C2S\022/\n\005MsgId\030\001 \001(\0162\016.MsgPB.MsgTyp" +
+      "e:\020Chess_Giveup_C2S\022\033\n\005Loser\030\002 \001(\0162\014.Msg" +
+      "PB.COLOR\"d\n\024Msg_Chess_Giveup_S2C\022/\n\005MsgI" +
+      "d\030\001 \001(\0162\016.MsgPB.MsgType:\020Chess_Giveup_S2" +
+      "C\022\033\n\005Loser\030\002 \001(\0162\014.MsgPB.COLOR\"G\n\024Msg_Ch" +
+      "ess_Regret_C2S\022/\n\005MsgId\030\001 \001(\0162\016.MsgPB.Ms",
+      "gType:\020Chess_Regret_C2S\"\177\n\024Msg_Chess_Reg" +
+      "ret_S2C\022/\n\005MsgId\030\001 \001(\0162\016.MsgPB.MsgType:\020" +
+      "Chess_Regret_S2C\022&\n\006Pieces\030\002 \003(\0132\026.MsgPB" +
+      ".Msg_Chess_Piece\022\016\n\006turnId\030\003 \001(\005\"E\n\023Msg_" +
+      "Chess_Pause_C2S\022.\n\005MsgId\030\001 \001(\0162\016.MsgPB.M" +
+      "sgType:\017Chess_Pause_C2S\"E\n\023Msg_Chess_Pau" +
+      "se_S2C\022.\n\005MsgId\030\001 \001(\0162\016.MsgPB.MsgType:\017C" +
+      "hess_Pause_S2C*\264\004\n\007MsgType\022\r\n\tLOGIN_C2S\020" +
+      "\000\022\r\n\tLOGIN_S2C\020\001\022\017\n\013Connect_S2C\020\002\022\014\n\010Cha" +
+      "t_C2S\020\003\022\024\n\020Gobang_Match_C2S\020e\022\024\n\020Gobang_",
+      "Start_S2C\020f\022\025\n\021Gobang_Action_C2S\020g\022\025\n\021Go" +
+      "bang_Action_S2C\020h\022\023\n\017Gobang_Over_S2C\020i\022\025" +
+      "\n\021Gobang_Giveup_C2S\020j\022\025\n\021Gobang_Giveup_S" +
+      "2C\020k\022\025\n\021Gobang_Regret_C2S\020l\022\025\n\021Gobang_Re" +
+      "gret_S2C\020m\022\024\n\020Gobang_Pause_C2S\020n\022\024\n\020Goba" +
+      "ng_Pause_S2C\020o\022\024\n\017Chess_Match_C2S\020\311\001\022\024\n\017" +
+      "Chess_Start_S2C\020\312\001\022\025\n\020Chess_Action_C2S\020\313" +
+      "\001\022\025\n\020Chess_Action_S2C\020\314\001\022\023\n\016Chess_Over_S" +
+      "2C\020\315\001\022\025\n\020Chess_Giveup_C2S\020\316\001\022\025\n\020Chess_Gi" +
+      "veup_S2C\020\317\001\022\025\n\020Chess_Regret_C2S\020\320\001\022\025\n\020Ch",
+      "ess_Regret_S2C\020\321\001\022\024\n\017Chess_Pause_C2S\020\322\001\022" +
+      "\024\n\017Chess_Pause_S2C\020\323\001*\'\n\005COLOR\022\010\n\004Null\020\000" +
+      "\022\t\n\005White\020\001\022\t\n\005Black\020\002*O\n\tCHESSTYPE\022\010\n\004K" +
+      "ing\020\001\022\t\n\005Queen\020\002\022\007\n\003Car\020\003\022\014\n\010Elephant\020\004\022" +
+      "\t\n\005Horse\020\005\022\013\n\007Solider\020\006"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -7632,35 +15021,113 @@ public final class Msg {
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_MsgPB_Msg_Gobang_Over_S2C_descriptor,
               new java.lang.String[] { "MsgId", "Winner", });
-          internal_static_MsgPB_Msg_Chess_Match_C2S_descriptor =
+          internal_static_MsgPB_Msg_Gobang_Giveup_C2S_descriptor =
             getDescriptor().getMessageTypes().get(8);
+          internal_static_MsgPB_Msg_Gobang_Giveup_C2S_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_MsgPB_Msg_Gobang_Giveup_C2S_descriptor,
+              new java.lang.String[] { "MsgId", });
+          internal_static_MsgPB_Msg_Gobang_Giveup_S2C_descriptor =
+            getDescriptor().getMessageTypes().get(9);
+          internal_static_MsgPB_Msg_Gobang_Giveup_S2C_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_MsgPB_Msg_Gobang_Giveup_S2C_descriptor,
+              new java.lang.String[] { "MsgId", });
+          internal_static_MsgPB_Msg_Gobang_Regret_C2S_descriptor =
+            getDescriptor().getMessageTypes().get(10);
+          internal_static_MsgPB_Msg_Gobang_Regret_C2S_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_MsgPB_Msg_Gobang_Regret_C2S_descriptor,
+              new java.lang.String[] { "MsgId", });
+          internal_static_MsgPB_Msg_Gobang_Regret_S2C_descriptor =
+            getDescriptor().getMessageTypes().get(11);
+          internal_static_MsgPB_Msg_Gobang_Regret_S2C_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_MsgPB_Msg_Gobang_Regret_S2C_descriptor,
+              new java.lang.String[] { "MsgId", });
+          internal_static_MsgPB_Msg_Gobang_Pause_C2S_descriptor =
+            getDescriptor().getMessageTypes().get(12);
+          internal_static_MsgPB_Msg_Gobang_Pause_C2S_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_MsgPB_Msg_Gobang_Pause_C2S_descriptor,
+              new java.lang.String[] { "MsgId", });
+          internal_static_MsgPB_Msg_Gobang_Pause_S2C_descriptor =
+            getDescriptor().getMessageTypes().get(13);
+          internal_static_MsgPB_Msg_Gobang_Pause_S2C_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_MsgPB_Msg_Gobang_Pause_S2C_descriptor,
+              new java.lang.String[] { "MsgId", });
+          internal_static_MsgPB_Msg_Chess_Match_C2S_descriptor =
+            getDescriptor().getMessageTypes().get(14);
           internal_static_MsgPB_Msg_Chess_Match_C2S_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_MsgPB_Msg_Chess_Match_C2S_descriptor,
               new java.lang.String[] { "MsgId", });
           internal_static_MsgPB_Msg_Chess_Start_S2C_descriptor =
-            getDescriptor().getMessageTypes().get(9);
+            getDescriptor().getMessageTypes().get(15);
           internal_static_MsgPB_Msg_Chess_Start_S2C_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_MsgPB_Msg_Chess_Start_S2C_descriptor,
-              new java.lang.String[] { "MsgId", "GameID", });
+              new java.lang.String[] { "MsgId", "GameID", "Role", });
+          internal_static_MsgPB_Msg_Chess_Piece_descriptor =
+            getDescriptor().getMessageTypes().get(16);
+          internal_static_MsgPB_Msg_Chess_Piece_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_MsgPB_Msg_Chess_Piece_descriptor,
+              new java.lang.String[] { "Id", "OriPosx", "OriPosy", "DesPosx", "DesPosy", });
           internal_static_MsgPB_Msg_Chess_Action_C2S_descriptor =
-            getDescriptor().getMessageTypes().get(10);
+            getDescriptor().getMessageTypes().get(17);
           internal_static_MsgPB_Msg_Chess_Action_C2S_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_MsgPB_Msg_Chess_Action_C2S_descriptor,
-              new java.lang.String[] { "MsgId", });
+              new java.lang.String[] { "MsgId", "Pieces", });
           internal_static_MsgPB_Msg_Chess_Action_S2C_descriptor =
-            getDescriptor().getMessageTypes().get(11);
+            getDescriptor().getMessageTypes().get(18);
           internal_static_MsgPB_Msg_Chess_Action_S2C_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_MsgPB_Msg_Chess_Action_S2C_descriptor,
-              new java.lang.String[] { "MsgId", });
+              new java.lang.String[] { "MsgId", "Pieces", "TurnId", });
           internal_static_MsgPB_Msg_Chess_Over_S2C_descriptor =
-            getDescriptor().getMessageTypes().get(12);
+            getDescriptor().getMessageTypes().get(19);
           internal_static_MsgPB_Msg_Chess_Over_S2C_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_MsgPB_Msg_Chess_Over_S2C_descriptor,
+              new java.lang.String[] { "MsgId", "Winner", });
+          internal_static_MsgPB_Msg_Chess_Giveup_C2S_descriptor =
+            getDescriptor().getMessageTypes().get(20);
+          internal_static_MsgPB_Msg_Chess_Giveup_C2S_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_MsgPB_Msg_Chess_Giveup_C2S_descriptor,
+              new java.lang.String[] { "MsgId", "Loser", });
+          internal_static_MsgPB_Msg_Chess_Giveup_S2C_descriptor =
+            getDescriptor().getMessageTypes().get(21);
+          internal_static_MsgPB_Msg_Chess_Giveup_S2C_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_MsgPB_Msg_Chess_Giveup_S2C_descriptor,
+              new java.lang.String[] { "MsgId", "Loser", });
+          internal_static_MsgPB_Msg_Chess_Regret_C2S_descriptor =
+            getDescriptor().getMessageTypes().get(22);
+          internal_static_MsgPB_Msg_Chess_Regret_C2S_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_MsgPB_Msg_Chess_Regret_C2S_descriptor,
+              new java.lang.String[] { "MsgId", });
+          internal_static_MsgPB_Msg_Chess_Regret_S2C_descriptor =
+            getDescriptor().getMessageTypes().get(23);
+          internal_static_MsgPB_Msg_Chess_Regret_S2C_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_MsgPB_Msg_Chess_Regret_S2C_descriptor,
+              new java.lang.String[] { "MsgId", "Pieces", "TurnId", });
+          internal_static_MsgPB_Msg_Chess_Pause_C2S_descriptor =
+            getDescriptor().getMessageTypes().get(24);
+          internal_static_MsgPB_Msg_Chess_Pause_C2S_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_MsgPB_Msg_Chess_Pause_C2S_descriptor,
+              new java.lang.String[] { "MsgId", });
+          internal_static_MsgPB_Msg_Chess_Pause_S2C_descriptor =
+            getDescriptor().getMessageTypes().get(25);
+          internal_static_MsgPB_Msg_Chess_Pause_S2C_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_MsgPB_Msg_Chess_Pause_S2C_descriptor,
               new java.lang.String[] { "MsgId", });
           return null;
         }

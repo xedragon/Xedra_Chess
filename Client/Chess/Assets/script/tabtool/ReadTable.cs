@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.IO;
+using UnityEngine;
 
 namespace tabtool
 {
@@ -81,10 +82,14 @@ namespace tabtool
         {
             DataTable dt = new DataTable();
             //首行是字段名 之后是字段值
-            string[] lines = File.ReadAllLines(filepath);
+            filepath = filepath.Replace(".txt", "");
+            TextAsset txt = Resources.Load(filepath) as TextAsset;
+            string[] lines = txt.text.Split('\n');
+            //string[] lines = File.ReadAllLines(filepath);
             bool firstline = true;
-            foreach (var line in lines)
+            foreach (var lin in lines)
             {
+                string line = lin.Replace("\r", "");
                 string[] words = line.Split('\t');
                 if (words == null || words.Length == 0)
                 {
@@ -97,6 +102,10 @@ namespace tabtool
                     {
                         dt.Columns.Add(word);
                     }
+                    continue;
+                }
+                if (line.Length == 0)
+                {
                     continue;
                 }
                 DataRow row = dt.NewRow();

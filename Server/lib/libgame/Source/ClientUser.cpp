@@ -8,7 +8,7 @@
 #include <Game/Chess/ChessGame.h>
 #include <Game/Chess/ChessManager.h>
 
-#include "MySqlServer.h"
+#include "MySqlService.h"
 using namespace std;
 
 ClientUser::ClientUser(SOCKET socket)
@@ -24,8 +24,16 @@ bool ClientUser::Init()
 	//Gobang
 	m_MsgMgr->RegisterProMsg(this, &ClientUser::onMsg_Gobang_Match_C2S);
 	m_MsgMgr->RegisterProMsg(this, &ClientUser::onMsg_Gobang_Action_C2S);
+	m_MsgMgr->RegisterProMsg(this, &ClientUser::onMsg_Gobang_Giveup_C2S);
+	m_MsgMgr->RegisterProMsg(this, &ClientUser::onMsg_Gobang_Regret_C2S);
+	m_MsgMgr->RegisterProMsg(this, &ClientUser::onMsg_Gobang_Pause_C2S);
 
 	//Chess
+	m_MsgMgr->RegisterProMsg(this, &ClientUser::onMsg_Chess_Match_C2S);
+	m_MsgMgr->RegisterProMsg(this, &ClientUser::onMsg_Chess_Action_C2S);
+	m_MsgMgr->RegisterProMsg(this, &ClientUser::onMsg_Chess_Giveup_C2S);
+	m_MsgMgr->RegisterProMsg(this, &ClientUser::onMsg_Chess_Regret_C2S);
+	m_MsgMgr->RegisterProMsg(this, &ClientUser::onMsg_Chess_Pause_C2S);
 
 	Msg_Connect_S2C msg;
 	m_MsgMgr->SendMsg(msg);
@@ -58,6 +66,16 @@ void ClientUser::joinChess(ChessGame* game)
 	m_pChessGame = game;
 }
 
+void ClientUser::exitGobang()
+{
+	m_pGobangGame = nullptr;
+}
+
+void ClientUser::exitChess()
+{
+	m_pChessGame = nullptr;
+}
+
 GobangGame* ClientUser::getGobangGame()
 {
 	return m_pGobangGame;
@@ -72,7 +90,7 @@ void ClientUser::onLogin_C2S(const Msg_Login_C2S& msg)
 	{
 		//登录
 		auto expreesion = fmt::format("Select id,name,password from user where name = '{0}';", msg.szname());
-		auto result = MySqlServer::getInstance().Query(expreesion);
+		auto result = MySqlService::getInstance().Query(expreesion);
 		if (result)
 		{
 			result->Read();
@@ -98,7 +116,7 @@ void ClientUser::onLogin_C2S(const Msg_Login_C2S& msg)
 	{
 		//注册
 		auto expreesion = fmt::format("insert into user(name, password) values('{0}', '{1}');", msg.szname(),msg.szpassword());
-		if (MySqlServer::getInstance().Execute(expreesion))
+		if (MySqlService::getInstance().Execute(expreesion))
 		{
 			cout << "注册成功" << endl;
 			ConenctToAccount(msg.szname());
@@ -128,10 +146,58 @@ void ClientUser::onMsg_Gobang_Action_C2S(const Msg_Gobang_Action_C2S& msg)
 		m_pGobangGame->onMsg_Gobang_Action_C2S(msg);
 }
 
+void ClientUser::onMsg_Gobang_Giveup_C2S(const Msg_Gobang_Giveup_C2S& msg)
+{
+	if (m_pGobangGame)
+		m_pGobangGame->onMsg_Gobang_Giveup_C2S(msg);
+}
+
+void ClientUser::onMsg_Gobang_Regret_C2S(const Msg_Gobang_Regret_C2S& msg)
+{
+	if (m_pGobangGame)
+		m_pGobangGame->onMsg_Gobang_Regret_C2S(msg);
+}
+
+void ClientUser::onMsg_Gobang_Pause_C2S(const Msg_Gobang_Pause_C2S& msg)
+{
+	if (m_pGobangGame)
+		m_pGobangGame->onMsg_Gobang_Pause_C2S(msg);
+}
+
+void ClientUser::onMsg_Chess_Match_C2S(const Msg_Chess_Match_C2S& msg)
+{
+	//Todo: begin matching
+	ChessManager::getInstance().addMatch(this);
+}
+
+void ClientUser::onMsg_Chess_Action_C2S(const Msg_Chess_Action_C2S& msg)
+{
+	if (m_pChessGame)
+		m_pChessGame->onMsg_Chess_Action_C2S(msg);
+}
+
+void ClientUser::onMsg_Chess_Giveup_C2S(const Msg_Chess_Giveup_C2S& msg)
+{
+	if (m_pChessGame)
+		m_pChessGame->onMsg_Chess_Giveup_C2S(msg);
+}
+
+void ClientUser::onMsg_Chess_Regret_C2S(const Msg_Chess_Regret_C2S& msg)
+{
+	if (m_pChessGame)
+		m_pChessGame->onMsg_Chess_Regret_C2S(msg);
+}
+
+void ClientUser::onMsg_Chess_Pause_C2S(const Msg_Chess_Pause_C2S& msg)
+{
+	if (m_pChessGame)
+		m_pChessGame->onMsg_Chess_Pause_C2S(msg);
+}
+
 void ClientUser::ConenctToAccount(std::string name)
 {
 	auto expreesion = fmt::format("Select id,name from user where name = '{0}';", name);
-	auto result = MySqlServer::getInstance().Query(expreesion);
+	auto result = MySqlService::getInstance().Query(expreesion);
 	if (result&&result->Read())
 	{
 		_id = result->get_int(0);

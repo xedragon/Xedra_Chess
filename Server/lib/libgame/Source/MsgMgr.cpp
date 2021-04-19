@@ -9,7 +9,7 @@ void MsgMgr::RegisterProMsg(UINT16 msgid, CallBack* callback)
 
 bool MsgMgr::Init()
 {
-	return false;
+	return true;
 }
 
 bool MsgMgr::Update()
@@ -86,6 +86,7 @@ void MsgMgr::SendMsg(char* pMsg, UINT16 size, UINT16 type)
 	m_SendBuf.append((char*)&size, 2);
 	m_SendBuf.append((char*)&type, 2);
 	m_SendBuf.append(pMsg, size);
+	std::cout << "MsgLen" << size << endl;
 }
 
 void MsgMgr::NotifyMsg(UINT16 msgid, const::google::protobuf::Message& msg)
@@ -101,6 +102,7 @@ void MsgMgr::NotifyMsg(UINT16 msgid, const::google::protobuf::Message& msg)
 void MsgMgr::NotifyMsg(UINT16 msgid, const char* buff, UINT16 len)
 {
 	auto&& range = m_CallBackMap.equal_range(msgid);
+	//cout << "Notify:" << msgid;
 
 	for (auto&& itr = range.first; itr != range.second; itr++)
 	{

@@ -1,35 +1,33 @@
 ﻿#include "GobangGame.h"
 #include <MsgMgr.h>
+#include <Game/Gobang/GobangManager.h>
 
 using namespace std;
 
-void GobangGame::Init()
+bool GobangGame::Init()
 {
-	/*for (int i = CoordID(-9,-9); i <= CoordID(9, 9); i++)
-	{
-		m_State[i] = MsgPB::COLOR::Null;
-	}*/
+	return true;
 }
 
-void GobangGame::Start()
+bool GobangGame::Start()
 {
 	MsgPB::Msg_Gobang_Start_S2C msg;
 	msg.set_gameid(m_GameId);
+
 	msg.set_role(MsgPB::COLOR::White);
 	m_User1->getMsgMgr()->SendMsg(msg);
+	msg.set_role(MsgPB::COLOR::Black);
+	m_User2->getMsgMgr()->SendMsg(msg);
 
-	//MsgPB::Msg_Gobang_Start_S2C msg;
-	//msg.set_gameid(m_GameId);
-	//msg.set_role(MsgPB::COLOR::Black);
-	//m_User2->getMsgMgr()->SendMsg(msg);
+	return true;
 }
 
-void GobangGame::Update()
+bool GobangGame::Shut()
 {
-}
-
-void GobangGame::Shut()
-{
+	m_User1->exitGobang();
+	m_User2->exitGobang();
+	//todo:写出游戏记录
+	return true;
 }
 
 void GobangGame::onMsg_Gobang_Action_C2S(const Msg_Gobang_Action_C2S& msg)
@@ -50,16 +48,15 @@ void GobangGame::onMsg_Gobang_Action_C2S(const Msg_Gobang_Action_C2S& msg)
 	{
 		//有效棋步
 		m_State[coord] = msg.role();
-		m_CurrentTurn++;
 
-		//记录
-		m_RecordsMap.emplace(m_CurrentTurn, GobangAction{ msg.role(),msg.x(),msg.y() });
+		//游戏记录
+		m_RecordsMap.emplace(++m_CurrentTurn, GobangAction{ msg.role(),msg.x(),msg.y() });
 
 		//回复消息
 		Msg_Gobang_Action_C2S reply(msg);
 		reply.set_turnid(m_CurrentTurn);
-		m_User1->getMsgMgr()->SendMsg(msg);
-		//SendToPlayers(reply);
+		//m_User1->getMsgMgr()->SendMsg(msg);
+		SendToPlayers(reply);
 	}
 
 	//检测游戏结束
@@ -68,7 +65,25 @@ void GobangGame::onMsg_Gobang_Action_C2S(const Msg_Gobang_Action_C2S& msg)
 		Msg_Gobang_Over_S2C overmsg;
 		overmsg.set_winner(getPiece(msg.x(), msg.y()));
 		SendToPlayers(overmsg);
+
+		GobangManager::getInstance().ShutGame(m_GameId);
 	}
+}
+
+void GobangGame::onMsg_Gobang_Giveup_C2S(const Msg_Gobang_Giveup_C2S& msg)
+{
+	Msg_Gobang_Giveup_S2C reply;
+	SendToPlayers(reply);
+}
+
+void GobangGame::onMsg_Gobang_Regret_C2S(const Msg_Gobang_Regret_C2S& msg)
+{
+}
+
+void GobangGame::onMsg_Gobang_Pause_C2S(const Msg_Gobang_Pause_C2S& msg)
+{
+	Msg_Gobang_Pause_S2C reply;
+	SendToPlayers(reply);
 }
 
 bool GobangGame::ckeckGameOver(int x, int y)

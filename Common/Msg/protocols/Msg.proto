@@ -13,12 +13,24 @@ enum MsgType
 	Gobang_Action_C2S=103;
 	Gobang_Action_S2C=104;
 	Gobang_Over_S2C=105;
+	Gobang_Giveup_C2S=106;
+	Gobang_Giveup_S2C=107;
+	Gobang_Regret_C2S=108;
+	Gobang_Regret_S2C=109;
+	Gobang_Pause_C2S=110;
+	Gobang_Pause_S2C=111;
 	
 	Chess_Match_C2S=201;
 	Chess_Start_S2C=202;
 	Chess_Action_C2S=203;
 	Chess_Action_S2C=204;
 	Chess_Over_S2C=205;
+	Chess_Giveup_C2S=206;
+	Chess_Giveup_S2C=207;
+	Chess_Regret_C2S=208;
+	Chess_Regret_S2C=209;
+	Chess_Pause_C2S=210;
+	Chess_Pause_S2C=211;
  }
 
 //连接
@@ -46,7 +58,7 @@ message Msg_Login_S2C
 {
 	enum ERRORCODE
 	{
-		NULL = 0;
+		Null = 0;
 		
 		LoginSuccess = 1;
 		ErrorPassword = 2;
@@ -58,7 +70,7 @@ message Msg_Login_S2C
 	optional MsgType MsgID=1[default = LOGIN_S2C];
 	optional int32 Id=2;
 	optional int64 LoginTimeStamp=3;
-	optional ERRORCODE _ErrorCode=4[default = NULL];
+	optional ERRORCODE _ErrorCode=4[default = Null];
 }
 
 enum COLOR
@@ -101,15 +113,44 @@ message Msg_Gobang_Over_S2C
 	optional COLOR Winner=2;
 }
 
+message Msg_Gobang_Giveup_C2S
+{
+	optional MsgType MsgId=1[default = Gobang_Giveup_C2S];
+}
+
+message Msg_Gobang_Giveup_S2C
+{
+	optional MsgType MsgId=1[default = Gobang_Giveup_S2C];
+}
+
+message Msg_Gobang_Regret_C2S
+{
+	optional MsgType MsgId=1[default = Gobang_Regret_C2S];
+}
+
+message Msg_Gobang_Regret_S2C
+{
+	optional MsgType MsgId=1[default = Gobang_Regret_S2C];
+}
+
+message Msg_Gobang_Pause_C2S
+{
+	optional MsgType MsgId=1[default = Gobang_Pause_C2S];
+}
+
+message Msg_Gobang_Pause_S2C
+{
+	optional MsgType MsgId=1[default = Gobang_Pause_S2C];
+}
+
 enum CHESSTYPE
 {
-	General=1;
-	Bechalor=2;
-	Minister=3;
-	Horse=4;
-	Charoit=5;
-	Cannon=6;
-	Solider=7;
+	King=1;
+	Queen=2;
+	Car=3;
+	Elephant=4;
+	Horse=5;
+	Solider=6;
 };
 	
 message Msg_Chess_Match_C2S
@@ -121,19 +162,69 @@ message Msg_Chess_Start_S2C
 {
 	optional MsgType MsgId=1[default = Chess_Start_S2C];
 	optional int64 GameID=2;
+	optional COLOR Role=3;
+}
+
+message Msg_Chess_Piece
+{
+	optional int32 id=1;
+	optional int32 ori_posx=2;
+	optional int32 ori_posy=3;
+	optional int32 des_posx=4;
+	optional int32 des_posy=5;
 }
 
 message Msg_Chess_Action_C2S
 {
 	optional MsgType MsgId=1[default = Chess_Action_C2S];
+	repeated Msg_Chess_Piece Pieces=2;
 }
 
 message Msg_Chess_Action_S2C
 {
 	optional MsgType MsgId=1[default = Chess_Action_S2C];
+	repeated Msg_Chess_Piece Pieces=2;
+	optional int32 turnId=3;
 }
 
 message Msg_Chess_Over_S2C
 {
 	optional MsgType MsgId=1[default = Chess_Over_S2C];
+	optional COLOR Winner=2;
 }
+
+message Msg_Chess_Giveup_C2S
+{
+	optional MsgType MsgId=1[default = Chess_Giveup_C2S];
+	optional COLOR Loser=2;
+}
+
+message Msg_Chess_Giveup_S2C
+{
+	optional MsgType MsgId=1[default = Chess_Giveup_S2C];
+	optional COLOR Loser=2;
+}
+
+message Msg_Chess_Regret_C2S
+{
+	optional MsgType MsgId=1[default = Chess_Regret_C2S];
+}
+
+message Msg_Chess_Regret_S2C
+{
+	optional MsgType MsgId=1[default = Chess_Regret_S2C];
+	repeated Msg_Chess_Piece Pieces=2;
+	optional int32 turnId=3;
+}
+
+message Msg_Chess_Pause_C2S
+{
+	optional MsgType MsgId=1[default = Chess_Pause_C2S];
+}
+
+message Msg_Chess_Pause_S2C
+{
+	optional MsgType MsgId=1[default = Chess_Pause_S2C];
+}
+
+

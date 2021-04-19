@@ -21,11 +21,22 @@ public:
 	MsgMgr* getMsgMgr();
 	void joinGobang(GobangGame* game);
 	void joinChess(ChessGame* game);
+	void exitGobang();
+	void exitChess();
 	GobangGame* getGobangGame();
 private:
 	void onLogin_C2S(const Msg_Login_C2S& msg);
 	void onMsg_Gobang_Match_C2S(const Msg_Gobang_Match_C2S& msg);
 	void onMsg_Gobang_Action_C2S(const Msg_Gobang_Action_C2S& msg);
+	void onMsg_Gobang_Giveup_C2S(const Msg_Gobang_Giveup_C2S& msg);
+	void onMsg_Gobang_Regret_C2S(const Msg_Gobang_Regret_C2S& msg);
+	void onMsg_Gobang_Pause_C2S(const Msg_Gobang_Pause_C2S& msg);
+
+	void onMsg_Chess_Match_C2S(const Msg_Chess_Match_C2S& msg);
+	void onMsg_Chess_Action_C2S(const Msg_Chess_Action_C2S& msg);
+	void onMsg_Chess_Giveup_C2S(const Msg_Chess_Giveup_C2S& msg);
+	void onMsg_Chess_Regret_C2S(const Msg_Chess_Regret_C2S& msg);
+	void onMsg_Chess_Pause_C2S(const Msg_Chess_Pause_C2S& msg);
 private:
 	void ConenctToAccount(std::string name);
 private:

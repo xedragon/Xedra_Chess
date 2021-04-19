@@ -1,9 +1,7 @@
 #pragma once
+#include <BaseUtil.h>
 #include <WinSock2.h>
 #include <Moudle.h>
-#include <vector>
-#include <string>
-#include <iostream>
 
 using namespace std;
 
@@ -14,9 +12,9 @@ public:
 	NetMoudle();
 	static NetMoudle& getInstance();
 public:
-	virtual void Init();
-	virtual void Update() ;
-	virtual void Shut() ;
+	virtual bool Init();
+	virtual bool Update() ;
+	virtual bool Shut() ;
 	void Accept();
 private:
 	void addClient(SOCKET socket);

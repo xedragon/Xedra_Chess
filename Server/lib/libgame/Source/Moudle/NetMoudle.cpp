@@ -2,7 +2,7 @@
 #include <iostream>
 #include <Facade.h>
 #include <ClientUser.h>
-#include <ConfigModule.h>
+#include <ConfigService.h>
 #include <automake/tableconfig.h>
 using namespace std;
 
@@ -21,9 +21,9 @@ NetMoudle& NetMoudle::getInstance()
 	return *g_NetMoudle;
 }
 
-void NetMoudle::Init()
+bool NetMoudle::Init()
 {
-	auto GloabalCfg = ConfigModule::getInstance().tbsGlobalCfgItemItem();
+	auto GloabalCfg = ConfigService::getInstance().tbsGlobalCfgItemItem();
 	//³õÊ¼»¯
 	WSADATA wsaData;
 	WSAStartup(MAKEWORD(2, 2), &wsaData);
@@ -42,20 +42,12 @@ void NetMoudle::Init()
 	bind(_socket, (const struct sockaddr*)&sockaddr, sizeof(sockaddr));
 	listen(_socket, 1);
 
-	Facade::getInstance().RegisterMoudle(this);
+	return true;
 }
 
-void NetMoudle::Update()
+bool NetMoudle::Update()
 {
 	Accept();
-
-	//for (auto&& user : m_ClientUsersVec)
-	//{
-	//	if (!user->Update())
-	//	{
-	//		//remove
-	//	}
-	//}
 
 	auto itr = m_ClientUsersVec.begin();
 	while (true)
@@ -72,10 +64,13 @@ void NetMoudle::Update()
 			itr++;
 		}
 	}
+
+	return true;
 }
 
-void NetMoudle::Shut()
+bool NetMoudle::Shut()
 {
+	return true;
 }
 
 void NetMoudle::Accept()

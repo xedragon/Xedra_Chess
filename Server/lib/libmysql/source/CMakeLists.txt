@@ -20,8 +20,8 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 project (static_mysql)
 
 set(ALL_FILES
-	MySqlServer.h
-	MySqlServer.cpp
+	MySqlService.h
+	MySqlService.cpp
 	
 	IQueryResult.h
 	MySqlQueryResult.h

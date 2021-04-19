@@ -4,7 +4,15 @@
 #include "ClientUser.h"
 #include "../lib/libmsg/source/msg/Msg.pb.h"
 
-#define CoordID(x,y) (((x) * 19) + (y))
+struct ChessPiece
+{
+	int id;
+	int color;
+	int type;
+	int posx;
+	int posy;
+	int posid;
+};
 
 class ChessGame :public Game
 {
@@ -25,14 +33,19 @@ public:
 	{
 		Shut();
 	}
-private:
-	void Init();
-	void Start();
-	void Update();
-	void Shut();
+public:
+	bool Init()override;
+	bool Start()override;
+	bool Shut()override;
 public:
 	void onMsg_Chess_Action_C2S(const Msg_Chess_Action_C2S& msg);
-	bool ckeckGameOver(int x, int y);
+	void onMsg_Chess_Giveup_C2S(const Msg_Chess_Giveup_C2S& msg);
+	void onMsg_Chess_Regret_C2S(const Msg_Chess_Regret_C2S& msg);
+	void onMsg_Chess_Pause_C2S(const Msg_Chess_Pause_C2S& msg);
+
+	bool ckeckGameOver();
+	bool ckeckActionAble(int id, int x, int y);
+	void Action(int id, int x, int y);
 
 	template<class MsgT>
 	inline void SendToPlayers(const MsgT& msg)
@@ -44,5 +57,9 @@ private:
 	ClientUser* m_User1;
 	ClientUser* m_User2;
 	int m_GameId{};
-	std::map<int, MsgPB::CHESSTYPE> m_State{};
+	std::map<int, ChessPiece> m_Pieces{};
+	std::map<int/*pos*/, int/*piece id*/> m_Board{};
+
+	int m_turn_id{};
+	std::map<int/*turnId*/, Msg_Chess_Action_S2C> m_RecordsMap{};
 };

@@ -13,24 +13,28 @@ ChessManager& ChessManager::getInstance()
 	return *g_ChessManager;
 }
 
-void ChessManager::Init()
+bool ChessManager::Init()
 {
+	return true;
 }
 
-void ChessManager::Update()
+bool ChessManager::Update()
 {
 	m_mutex.lock();
-	while (m_MatchQueue.size() >= 1)
+	while (m_MatchQueue.size() >= 2)
 	{
-		AssignGame(m_MatchQueue[0], m_MatchQueue[0]);
+		AssignGame(m_MatchQueue[0], m_MatchQueue[1]);
 		m_MatchQueue.pop_front();
-		//m_MatchQueue.pop_front();
+		m_MatchQueue.pop_front();
 	}
 	m_mutex.unlock();
+
+	return true;
 }
 
-void ChessManager::Shut()
+bool ChessManager::Shut()
 {
+	return true;
 }
 
 void ChessManager::addMatch(ClientUser* user)
@@ -38,8 +42,21 @@ void ChessManager::addMatch(ClientUser* user)
 	m_MatchQueue.push_back(user);
 }
 
-void ChessManager::AssignGame(ClientUser* user1, ClientUser* user2)
+bool ChessManager::AssignGame(ClientUser* user1, ClientUser* user2)
 {
 	auto&& game = new ChessGame(user1, user2, m_serial);
 	m_GameVec.emplace(m_serial++,game);
+	return true;
+}
+
+bool ChessManager::ShutGame(int gameId)
+{
+	auto&& pGame = m_GameVec[gameId];
+	if (!pGame)return false;
+
+	bool bSucShut = pGame->Shut();
+	delete pGame;
+	pGame = nullptr;
+	m_GameVec.erase(gameId);
+	return true;
 }

@@ -1,2 +1,0 @@
-﻿host	user	password	database	port	unix_socket	clientflag
-127.0.0.1	root	123456	xedra_chess	3306	0	0

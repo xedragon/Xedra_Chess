@@ -21,8 +21,8 @@ automake/tableconfig.cpp
 automake/tablestruct.h
 
 
-ConfigModule.cpp
-ConfigModule.h
+ConfigService.cpp
+ConfigService.h
 )
 
 group_sources("${ALL_FILES}")

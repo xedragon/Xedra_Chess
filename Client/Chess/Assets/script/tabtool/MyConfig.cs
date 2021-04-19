@@ -8,6 +8,6 @@ namespace tabtool
 {
     class MyConfig
     {
-        public const string WorkDir = "Assets/script/config/";
+        public const string WorkDir = "config/";
     }
 }

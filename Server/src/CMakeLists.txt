@@ -31,14 +31,12 @@ link_directories(${LIBRARY_PATH}/libconfig/source/lib)
 # 添加源码
 set(ALl_FILES
 
-main.h
 main.cpp
 
 Facade.h
 Facade.cpp
 
 Moudle.h
-Moudle.cpp
 
 BaseUtil.h
 )

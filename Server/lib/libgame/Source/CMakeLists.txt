@@ -37,6 +37,8 @@ set(ALL_FILES
 	Game/Chess/ChessManager.cpp
 	Game/Chess/ChessGame.h
 	Game/Chess/ChessGame.cpp
+	Game/Chess/ChessRule.h
+	Game/Chess/ChessRule.cpp
 )
 
 group_sources("${ALL_FILES}")

@@ -32,13 +32,16 @@ public:
 	{
 		Shut();
 	}
-private:
-	void Init();
-	void Start();
-	void Update();
-	void Shut();
+public:
+	bool Init()override;
+	bool Start()override;
+	bool Shut()override;
 public:
 	void onMsg_Gobang_Action_C2S(const Msg_Gobang_Action_C2S& msg);
+	void onMsg_Gobang_Giveup_C2S(const Msg_Gobang_Giveup_C2S& msg);
+	void onMsg_Gobang_Regret_C2S(const Msg_Gobang_Regret_C2S& msg);
+	void onMsg_Gobang_Pause_C2S(const Msg_Gobang_Pause_C2S& msg);
+
 	bool ckeckGameOver(int x, int y);
 
 	MsgPB::COLOR getPiece(int x, int y);
