@@ -26,6 +26,9 @@ bool GobangGame::Shut()
 {
 	m_User1->exitGobang();
 	m_User2->exitGobang();
+	//通知玩家游戏关闭
+	Msg_Gobang_Close_S2C msg;
+	SendToPlayers(msg);
 	//todo:写出游戏记录
 	return true;
 }
@@ -47,15 +50,15 @@ void GobangGame::onMsg_Gobang_Action_C2S(const Msg_Gobang_Action_C2S& msg)
 	else
 	{
 		//有效棋步
+		m_Turn_Id++;
 		m_State[coord] = msg.role();
 
 		//游戏记录
-		m_RecordsMap.emplace(++m_CurrentTurn, GobangAction{ msg.role(),msg.x(),msg.y() });
+		m_RecordsMap.emplace(m_Turn_Id, GobangAction{ msg.role(),msg.x(),msg.y() });
 
 		//回复消息
 		Msg_Gobang_Action_C2S reply(msg);
-		reply.set_turnid(m_CurrentTurn);
-		//m_User1->getMsgMgr()->SendMsg(msg);
+		reply.set_turnid(m_Turn_Id);
 		SendToPlayers(reply);
 	}
 
@@ -73,11 +76,27 @@ void GobangGame::onMsg_Gobang_Action_C2S(const Msg_Gobang_Action_C2S& msg)
 void GobangGame::onMsg_Gobang_Giveup_C2S(const Msg_Gobang_Giveup_C2S& msg)
 {
 	Msg_Gobang_Giveup_S2C reply;
+
 	SendToPlayers(reply);
 }
 
 void GobangGame::onMsg_Gobang_Regret_C2S(const Msg_Gobang_Regret_C2S& msg)
 {
+	if (m_RecordsMap.size() < 2)return;
+	Msg_Gobang_Regret_S2C reply;
+	for (int i = 0; i < 2; i++)
+	{
+		auto&& lastStep = m_RecordsMap[m_Turn_Id--];
+		m_State[CoordID(lastStep.x, lastStep.y)] = COLOR::Null;
+
+		auto&& piece = reply.add_pieces();
+		piece->set_role((COLOR)lastStep.role);
+		piece->set_x(lastStep.x);
+		piece->set_y(lastStep.y);
+		m_RecordsMap.erase(m_Turn_Id + 1);
+	}
+	reply.set_turnid(m_Turn_Id);
+	SendToPlayers(reply);
 }
 
 void GobangGame::onMsg_Gobang_Pause_C2S(const Msg_Gobang_Pause_C2S& msg)
@@ -118,7 +137,7 @@ bool GobangGame::ckeckGameOver(int x, int y)
 			count++;
 			ty++;
 		}
-		tx = x;
+		ty = y;
 		while (getPiece(tx, ty) == here)
 		{
 			count++;
@@ -138,6 +157,7 @@ bool GobangGame::ckeckGameOver(int x, int y)
 			ty++;
 		}
 		tx = x;
+		ty = y;
 		while (getPiece(tx, ty) == here)
 		{
 			count++;
@@ -158,6 +178,7 @@ bool GobangGame::ckeckGameOver(int x, int y)
 			ty--;
 		}
 		tx = x;
+		ty = y;
 		while (getPiece(tx, ty) == here)
 		{
 			count++;

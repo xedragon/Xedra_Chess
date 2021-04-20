@@ -56,6 +56,7 @@ bool NetMoudle::Update()
 			break;
 		if (!(*itr)->Update())
 		{
+			(*itr)->Shut();
 			itr = m_ClientUsersVec.erase(itr);
 		}
 

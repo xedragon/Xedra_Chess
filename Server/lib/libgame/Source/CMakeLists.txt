@@ -35,10 +35,10 @@ set(ALL_FILES
 	
 	Game/Chess/ChessManager.h
 	Game/Chess/ChessManager.cpp
+	Game/Chess/ChessPiece.h
+	Game/Chess/ChessPiece.cpp
 	Game/Chess/ChessGame.h
 	Game/Chess/ChessGame.cpp
-	Game/Chess/ChessRule.h
-	Game/Chess/ChessRule.cpp
 )
 
 group_sources("${ALL_FILES}")

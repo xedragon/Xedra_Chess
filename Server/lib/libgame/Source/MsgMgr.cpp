@@ -27,7 +27,6 @@ bool MsgMgr::Update()
 			auto error = GetLastError();
 			if (error != WSAEWOULDBLOCK)
 			{
-				cout << "断开链接"<<endl;
 				return false;
 			}
 			else
@@ -86,7 +85,6 @@ void MsgMgr::SendMsg(char* pMsg, UINT16 size, UINT16 type)
 	m_SendBuf.append((char*)&size, 2);
 	m_SendBuf.append((char*)&type, 2);
 	m_SendBuf.append(pMsg, size);
-	std::cout << "MsgLen" << size << endl;
 }
 
 void MsgMgr::NotifyMsg(UINT16 msgid, const::google::protobuf::Message& msg)

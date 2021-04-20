@@ -1,18 +1,11 @@
 ﻿#pragma once
+#include <tuple>
 #include <iostream>
 #include <Game/Game.h>
+#include <Game/Chess/ChessPiece.h>
 #include "ClientUser.h"
 #include "../lib/libmsg/source/msg/Msg.pb.h"
 
-struct ChessPiece
-{
-	int id;
-	int color;
-	int type;
-	int posx;
-	int posy;
-	int posid;
-};
 
 class ChessGame :public Game
 {
@@ -46,6 +39,10 @@ public:
 	bool ckeckGameOver();
 	bool ckeckActionAble(int id, int x, int y);
 	void Action(int id, int x, int y);
+	inline int getGameID()
+	{
+		return m_GameId;
+	}
 
 	template<class MsgT>
 	inline void SendToPlayers(const MsgT& msg)

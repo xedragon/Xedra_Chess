@@ -44,6 +44,7 @@ private:
 	GobangGame* m_pGobangGame{};
 	ChessGame* m_pChessGame{};
 private:
+	SOCKET _socket{};
 	int _id{};
 	std::string _name{};
 };

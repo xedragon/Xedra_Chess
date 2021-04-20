@@ -13,7 +13,9 @@ using namespace std;
 
 ClientUser::ClientUser(SOCKET socket)
 {
-	m_MsgMgr = std::make_shared<MsgMgr>(this,socket);
+	m_MsgMgr = std::make_shared<MsgMgr>(this, socket);
+	_socket = socket;
+	std::cout << fmt::format("用户{0}连接\n", socket);
 }
 
 bool ClientUser::Init()
@@ -41,12 +43,17 @@ bool ClientUser::Init()
 }
 
 bool ClientUser::Update()
-{ 
+{
 	return m_MsgMgr->Update();
 }
 
 bool ClientUser::Shut()
 {
+	std::cout << fmt::format("用户{0}退出\n", _socket);
+	if (m_pChessGame)
+		ChessManager::getInstance().ShutGame(m_pChessGame->getGameID());
+	if (m_pGobangGame)
+		GobangManager::getInstance().ShutGame(m_pGobangGame->getGameID());
 	return false;
 }
 
@@ -115,7 +122,7 @@ void ClientUser::onLogin_C2S(const Msg_Login_C2S& msg)
 	else if (msg.conmethod() == Msg_Login_C2S::CONMETHOD::Msg_Login_C2S_CONMETHOD_Regist)
 	{
 		//注册
-		auto expreesion = fmt::format("insert into user(name, password) values('{0}', '{1}');", msg.szname(),msg.szpassword());
+		auto expreesion = fmt::format("insert into user(name, password) values('{0}', '{1}');", msg.szname(), msg.szpassword());
 		if (MySqlService::getInstance().Execute(expreesion))
 		{
 			cout << "注册成功" << endl;
@@ -198,7 +205,7 @@ void ClientUser::ConenctToAccount(std::string name)
 {
 	auto expreesion = fmt::format("Select id,name from user where name = '{0}';", name);
 	auto result = MySqlService::getInstance().Query(expreesion);
-	if (result&&result->Read())
+	if (result && result->Read())
 	{
 		_id = result->get_int(0);
 		_name = result->get_string(1);

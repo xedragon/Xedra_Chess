@@ -44,6 +44,10 @@ public:
 
 	bool ckeckGameOver(int x, int y);
 
+	inline int getGameID()
+	{
+		return m_GameId;
+	}
 	MsgPB::COLOR getPiece(int x, int y);
 
 	template<class MsgT>
@@ -55,7 +59,7 @@ public:
 private:
 	ClientUser* m_User1;
 	ClientUser* m_User2;
-	int m_CurrentTurn{};
+	int m_Turn_Id{};
 	int m_GameId{};
 	std::map<int, MsgPB::COLOR> m_State{};
 	std::map<int/*turn_Id*/, GobangAction> m_RecordsMap{};
