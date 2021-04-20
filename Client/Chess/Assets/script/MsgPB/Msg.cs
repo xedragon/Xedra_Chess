@@ -197,6 +197,40 @@ namespace MsgPB
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
+  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"Msg_Gobang_Piece")]
+  public partial class Msg_Gobang_Piece : global::ProtoBuf.IExtensible
+  {
+    public Msg_Gobang_Piece() {}
+    
+    private MsgPB.COLOR _Role = MsgPB.COLOR.Null;
+    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"Role", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    [global::System.ComponentModel.DefaultValue(MsgPB.COLOR.Null)]
+    public MsgPB.COLOR Role
+    {
+      get { return _Role; }
+      set { _Role = value; }
+    }
+    private int _x = default(int);
+    [global::ProtoBuf.ProtoMember(2, IsRequired = false, Name=@"x", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    [global::System.ComponentModel.DefaultValue(default(int))]
+    public int x
+    {
+      get { return _x; }
+      set { _x = value; }
+    }
+    private int _y = default(int);
+    [global::ProtoBuf.ProtoMember(3, IsRequired = false, Name=@"y", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    [global::System.ComponentModel.DefaultValue(default(int))]
+    public int y
+    {
+      get { return _y; }
+      set { _y = value; }
+    }
+    private global::ProtoBuf.IExtension extensionObject;
+    global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+      { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
+  }
+  
   [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"Msg_Gobang_Action_C2S")]
   public partial class Msg_Gobang_Action_C2S : global::ProtoBuf.IExtensible
   {
@@ -366,6 +400,21 @@ namespace MsgPB
       get { return _MsgId; }
       set { _MsgId = value; }
     }
+    private readonly global::System.Collections.Generic.List<MsgPB.Msg_Gobang_Piece> _pieces = new global::System.Collections.Generic.List<MsgPB.Msg_Gobang_Piece>();
+    [global::ProtoBuf.ProtoMember(2, Name=@"pieces", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    public global::System.Collections.Generic.List<MsgPB.Msg_Gobang_Piece> pieces
+    {
+      get { return _pieces; }
+    }
+  
+    private int _turnId = default(int);
+    [global::ProtoBuf.ProtoMember(3, IsRequired = false, Name=@"turnId", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    [global::System.ComponentModel.DefaultValue(default(int))]
+    public int turnId
+    {
+      get { return _turnId; }
+      set { _turnId = value; }
+    }
     private global::ProtoBuf.IExtension extensionObject;
     global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
@@ -397,6 +446,24 @@ namespace MsgPB
     private MsgPB.MsgType _MsgId = MsgPB.MsgType.Gobang_Pause_S2C;
     [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"MsgId", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
     [global::System.ComponentModel.DefaultValue(MsgPB.MsgType.Gobang_Pause_S2C)]
+    public MsgPB.MsgType MsgId
+    {
+      get { return _MsgId; }
+      set { _MsgId = value; }
+    }
+    private global::ProtoBuf.IExtension extensionObject;
+    global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+      { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
+  }
+  
+  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"Msg_Gobang_Close_S2C")]
+  public partial class Msg_Gobang_Close_S2C : global::ProtoBuf.IExtensible
+  {
+    public Msg_Gobang_Close_S2C() {}
+    
+    private MsgPB.MsgType _MsgId = MsgPB.MsgType.Gobang_Close_S2C;
+    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"MsgId", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    [global::System.ComponentModel.DefaultValue(MsgPB.MsgType.Gobang_Close_S2C)]
     public MsgPB.MsgType MsgId
     {
       get { return _MsgId; }
@@ -732,6 +799,24 @@ namespace MsgPB
       { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
   }
   
+  [global::System.Serializable, global::ProtoBuf.ProtoContract(Name=@"Msg_Chess_Close_S2C")]
+  public partial class Msg_Chess_Close_S2C : global::ProtoBuf.IExtensible
+  {
+    public Msg_Chess_Close_S2C() {}
+    
+    private MsgPB.MsgType _MsgId = MsgPB.MsgType.Chess_Close_S2C;
+    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"MsgId", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    [global::System.ComponentModel.DefaultValue(MsgPB.MsgType.Chess_Close_S2C)]
+    public MsgPB.MsgType MsgId
+    {
+      get { return _MsgId; }
+      set { _MsgId = value; }
+    }
+    private global::ProtoBuf.IExtension extensionObject;
+    global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
+      { return global::ProtoBuf.Extensible.GetExtensionObject(ref extensionObject, createIfMissing); }
+  }
+  
     [global::ProtoBuf.ProtoContract(Name=@"MsgType")]
     public enum MsgType
     {
@@ -781,6 +866,9 @@ namespace MsgPB
       [global::ProtoBuf.ProtoEnum(Name=@"Gobang_Pause_S2C", Value=111)]
       Gobang_Pause_S2C = 111,
             
+      [global::ProtoBuf.ProtoEnum(Name=@"Gobang_Close_S2C", Value=112)]
+      Gobang_Close_S2C = 112,
+            
       [global::ProtoBuf.ProtoEnum(Name=@"Chess_Match_C2S", Value=201)]
       Chess_Match_C2S = 201,
             
@@ -812,7 +900,10 @@ namespace MsgPB
       Chess_Pause_C2S = 210,
             
       [global::ProtoBuf.ProtoEnum(Name=@"Chess_Pause_S2C", Value=211)]
-      Chess_Pause_S2C = 211
+      Chess_Pause_S2C = 211,
+            
+      [global::ProtoBuf.ProtoEnum(Name=@"Chess_Close_S2C", Value=212)]
+      Chess_Close_S2C = 212
     }
   
     [global::ProtoBuf.ProtoContract(Name=@"COLOR")]

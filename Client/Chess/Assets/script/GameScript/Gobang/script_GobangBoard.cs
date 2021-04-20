@@ -9,7 +9,7 @@ public class script_GobangBoard : MonoBehaviour
     {
         sizeX = GetComponent<Collider>().bounds.size.x;
         sizeZ = GetComponent<Collider>().bounds.size.z;
-        m_AllPieces = new Dictionary<int, COLOR>();
+        m_AllPieces = new Dictionary<int, script_GobangPieces>();
     }
 
     void Update()
@@ -27,7 +27,7 @@ public class script_GobangBoard : MonoBehaviour
         x = Mathf.RoundToInt((pos.x) / (sizeX / num_gridx));
         y = Mathf.RoundToInt((pos.z) / (sizeZ / num_gridz));
 
-        if (m_AllPieces.ContainsKey(19 * x + y) && m_AllPieces[19 * x + y] != COLOR.Null)
+        if (m_AllPieces.ContainsKey(19 * x + y) && m_AllPieces[19 * x + y].m_Color != COLOR.Null)
         {
             //该位置已有棋子
             return false;
@@ -64,7 +64,7 @@ public class script_GobangBoard : MonoBehaviour
         return obj.GetComponent<script_GobangPieces>();
     }
 
-    Dictionary<int, COLOR> m_AllPieces;
+    Dictionary<int, script_GobangPieces> m_AllPieces;
     public void AddPiece(COLOR color, int x, int y)
     {
         if (color == COLOR.Null) return;
@@ -74,7 +74,18 @@ public class script_GobangBoard : MonoBehaviour
         piece.coord_y = y;
         piece.transform.position = calPos(x, y);
 
-        m_AllPieces[piece.CoorId()] = color;
+        m_AllPieces[piece.CoorId()] = piece;
+    }
+
+    public void DelPiece(int x, int y)
+    {
+        int coordid = x * 19 + y;
+        if (m_AllPieces.ContainsKey(coordid))
+        {
+            var piece = m_AllPieces[coordid];
+            Destroy(piece.gameObject);
+            m_AllPieces.Remove(coordid);
+        }
     }
 
     public Vector3 calPos(int gridx, int gridz)

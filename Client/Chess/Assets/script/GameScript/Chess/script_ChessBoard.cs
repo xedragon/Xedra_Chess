@@ -122,7 +122,7 @@ public class script_ChessBoard : MonoBehaviour
         piece.m_coord_y = y;
 
         piece.transform.SetParent(this.transform);
-        piece.transform.position = calPos(x, y);
+        piece.transform.localPosition =  calPos(x, y);
     }
 
     public void setPiece(int id, int x, int y)
@@ -167,7 +167,7 @@ public class script_ChessBoard : MonoBehaviour
         var centerx = /*transform.position.x*/ -9f;
         var centery = /*transform.position.z*/ -9f;
 
-        float x = centerx + (gridx) * (sizeX / num_gridx);
+        float x = centerx/*原点*/ + (gridx)/*格子编号*/ * (sizeX / num_gridx)/*格子宽度*/;
         float z = centery + (gridz) * (sizeZ / num_gridz);
         float y = 1.3f;
         return new Vector3(x, y, z);

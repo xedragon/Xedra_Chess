@@ -13,6 +13,8 @@ public class chess_GameManager : MonoBehaviour, IObserver<IExtensible>
     public GameObject chessboard;//棋盘
     public GameObject startbutton;//开始按钮
     public GameObject overbutton;//结束按钮
+    public GameObject giveupbutton;//认输按钮
+    public GameObject regretbutton;//悔棋按钮
 
     private int m_TurnId;//当前回合
     private script_ChessPieces choosed_piecs;//已捻起的棋子
@@ -35,6 +37,12 @@ public class chess_GameManager : MonoBehaviour, IObserver<IExtensible>
 
         //register
         iDispose = (Unsubscriber<IExtensible>)MsgMgr.getInstance().Subscribe(this);
+
+        //Scene
+        startbutton.SetActive(true);
+        overbutton.SetActive(true);
+        regretbutton.SetActive(false);
+        giveupbutton.SetActive(false);
     }
 
     // Update is called once per frame
@@ -98,7 +106,7 @@ public class chess_GameManager : MonoBehaviour, IObserver<IExtensible>
             //放置
             int x;
             int y;
-            if(chessboard.GetComponent<script_ChessBoard>().calCoord(choosed_piecs.transform.position, out x, out y))
+            if(chessboard.GetComponent<script_ChessBoard>().calCoord(choosed_piecs.transform.localPosition, out x, out y))
             {
                 //发送消息
                 Msg_Chess_Action_C2S msg = new Msg_Chess_Action_C2S();
@@ -123,9 +131,8 @@ public class chess_GameManager : MonoBehaviour, IObserver<IExtensible>
         Msg_Chess_Match_C2S msg = new Msg_Chess_Match_C2S();
         MsgMgr.getInstance().SendMsg(msg);
 
-        chessboard.SetActive(true);
-
         startbutton.SetActive(false);
+        overbutton.SetActive(false);
     }
 
     public void OnOverGameButton()
@@ -149,25 +156,27 @@ public class chess_GameManager : MonoBehaviour, IObserver<IExtensible>
 
     public void TurnStart()
     {
-        //if (((int)m_Color + m_TurnId) % 2 == 0)
-        //{
-        //    bInMyTurn = true;
-        //}
-        //else 
-        //{
-        //    bInMyTurn = false;
-        //}
-        bInMyTurn = true;
+        if (((int)m_Color + m_TurnId) % 2 == 0)
+        {
+            bInMyTurn = true;
+        }
+        else
+        {
+            bInMyTurn = false;
+        }
+        //bInMyTurn = true;
+
+        regretbutton.SetActive(m_TurnId >= 3);
     }
 
     private void onMsg_Chess_Start_S2C(Msg_Chess_Start_S2C msg)
     {
         //数据初始化
-        //m_Color = COLOR.White;
         m_Color = msg.Role;
         m_TurnId = 1;
         //加载场景
         chessboard.GetComponent<script_ChessBoard>().InitBoard(m_Color);
+        giveupbutton.SetActive(true);
         //回合开始
         TurnStart();
     }
@@ -200,6 +209,8 @@ public class chess_GameManager : MonoBehaviour, IObserver<IExtensible>
     private void onMsg_Chess_Giveup_S2C(Msg_Chess_Giveup_S2C msg)
     {
         overbutton.SetActive(true);
+        regretbutton.SetActive(false);
+        giveupbutton.SetActive(false);
     }
 
 
@@ -209,10 +220,18 @@ public class chess_GameManager : MonoBehaviour, IObserver<IExtensible>
 
     private void onMsg_Chess_Over_S2C(Msg_Chess_Over_S2C msg)
     {
-        //if (msg.Winner == m_Color)
         {
             overbutton.SetActive(true);
+            regretbutton.SetActive(false);
+            giveupbutton.SetActive(false);
         }
+    }
+
+    private void onMsg_Chess_Close_S2C(Msg_Chess_Close_S2C msg)
+    {
+        overbutton.SetActive(true);
+        regretbutton.SetActive(false);
+        giveupbutton.SetActive(false);
     }
 
     public void OnCompleted()
@@ -257,6 +276,11 @@ public class chess_GameManager : MonoBehaviour, IObserver<IExtensible>
             case (ushort)MsgType.Chess_Pause_S2C:
                 {
                     onMsg_Chess_Pause_S2C((Msg_Chess_Pause_S2C)value);
+                }
+                break;
+            case (ushort)MsgType.Chess_Close_S2C:
+                {
+                    onMsg_Chess_Close_S2C((Msg_Chess_Close_S2C)value);
                 }
                 break;
 

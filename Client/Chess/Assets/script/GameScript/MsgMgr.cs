@@ -168,7 +168,12 @@ public class MsgMgr : IObservable<IExtensible>
                     msg = Serializer.Deserialize<Msg_Gobang_Pause_S2C>(stream);
                 }
                 break;
-                ///Chess
+            case (ushort)MsgType.Gobang_Close_S2C:
+                {
+                    msg = Serializer.Deserialize<Msg_Gobang_Close_S2C>(stream);
+                }
+                break;
+            ///Chess
             case (ushort)MsgType.Chess_Start_S2C:
                 {
                     msg = Serializer.Deserialize<Msg_Chess_Start_S2C>(stream);
@@ -201,6 +206,11 @@ public class MsgMgr : IObservable<IExtensible>
                     msg = Serializer.Deserialize<Msg_Chess_Pause_S2C>(stream);
                 }
                 break;
+            case (ushort)MsgType.Chess_Close_S2C:
+                {
+                    msg = Serializer.Deserialize<Msg_Chess_Close_S2C>(stream);
+                }
+                break;
         }
         if (msg != null)
             NotifyMsg(msgType, msg);
@@ -225,6 +235,7 @@ public class MsgMgr : IObservable<IExtensible>
         if (type.Equals(typeof(Msg_Gobang_Regret_S2C))) return 109;
         if (type.Equals(typeof(Msg_Gobang_Pause_C2S))) return 110;
         if (type.Equals(typeof(Msg_Gobang_Pause_S2C))) return 111;
+        if (type.Equals(typeof(Msg_Gobang_Close_S2C))) return 112;
 
         if (type.Equals(typeof(Msg_Chess_Match_C2S))) return 201;
         if (type.Equals(typeof(Msg_Chess_Start_S2C))) return 202;
@@ -236,7 +247,7 @@ public class MsgMgr : IObservable<IExtensible>
         if (type.Equals(typeof(Msg_Chess_Regret_C2S))) return 208;
         if (type.Equals(typeof(Msg_Chess_Regret_S2C))) return 209;
         if (type.Equals(typeof(Msg_Chess_Pause_C2S))) return 210;
-        if (type.Equals(typeof(Msg_Chess_Pause_S2C))) return 211;
+        if (type.Equals(typeof(Msg_Chess_Close_S2C))) return 211;
 
         return 9999;
     }
