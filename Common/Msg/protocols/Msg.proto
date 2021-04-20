@@ -19,6 +19,7 @@ enum MsgType
 	Gobang_Regret_S2C=109;
 	Gobang_Pause_C2S=110;
 	Gobang_Pause_S2C=111;
+	Gobang_Close_S2C=112;
 	
 	Chess_Match_C2S=201;
 	Chess_Start_S2C=202;
@@ -31,6 +32,7 @@ enum MsgType
 	Chess_Regret_S2C=209;
 	Chess_Pause_C2S=210;
 	Chess_Pause_S2C=211;
+	Chess_Close_S2C=212;
  }
 
 //连接
@@ -92,6 +94,13 @@ message Msg_Gobang_Start_S2C
 	optional COLOR Role=3;
 }
 
+message Msg_Gobang_Piece
+{
+	optional COLOR Role=1;
+	optional int32 x=2;
+	optional int32 y=3;
+}
+
 message Msg_Gobang_Action_C2S
 {
 	optional MsgType MsgId=1[default = Gobang_Action_C2S];
@@ -131,6 +140,8 @@ message Msg_Gobang_Regret_C2S
 message Msg_Gobang_Regret_S2C
 {
 	optional MsgType MsgId=1[default = Gobang_Regret_S2C];
+	repeated Msg_Gobang_Piece pieces = 2;
+	optional int32 turnId=3;
 }
 
 message Msg_Gobang_Pause_C2S
@@ -141,6 +152,11 @@ message Msg_Gobang_Pause_C2S
 message Msg_Gobang_Pause_S2C
 {
 	optional MsgType MsgId=1[default = Gobang_Pause_S2C];
+}
+
+message Msg_Gobang_Close_S2C
+{
+	optional MsgType MsgId=1[default = Gobang_Close_S2C];
 }
 
 enum CHESSTYPE
@@ -225,6 +241,11 @@ message Msg_Chess_Pause_C2S
 message Msg_Chess_Pause_S2C
 {
 	optional MsgType MsgId=1[default = Chess_Pause_S2C];
+}
+
+message Msg_Chess_Close_S2C
+{
+	optional MsgType MsgId=1[default = Chess_Close_S2C];
 }
 
 
